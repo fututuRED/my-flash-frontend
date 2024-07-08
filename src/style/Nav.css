@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  font-family: Roboto Mono, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+
+nav-bar {
+  position: sticky;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  margin: 15px 5px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #45a27a;
+  font-size: 1.2rem;
+  font: x-large;
+  /* text-align: center; */
+  padding: 4px 8px;
+  transition: color 0.3s, box-shadow 0.3s;
+}
+
+.nav-bar a:hover {
+  box-shadow: 0 0 0 5px #0222181a, 0 0 0 10px #7eb2a2;
+}

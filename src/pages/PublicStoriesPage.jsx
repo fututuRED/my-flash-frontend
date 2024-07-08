@@ -1,29 +1,31 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContextWrapper";
 import service from "../assets/service/api";
-function ProfilePage() {
-  const [profileStories, setProfileStories] = useState([]);
+import "../style/Pond.css";
+function PublicStoriesPage() {
+  const [stories, setStories] = useState([]);
+  // const [status, setStatus]= useDtate ("")
   const { user } = useContext(AuthContext);
 
-  async function getProfileStories() {
+  async function fetchStories() {
     try {
-      const response = await service.get(`/api/stories/users/${user._id}`);
-      setProfileStories(response.data);
+      const response = await service.get("/api/stories");
+      setStories(response.data);
       console.log(response);
     } catch (error) {
-      setProfileStories([]);
+      setStories([]);
       console.log("Error fetching stories:", error);
       // console.log(error);
     }
   }
   useEffect(() => {
-    getProfileStories();
+    fetchStories();
   }, []);
   return (
-    <div>
-      {profileStories.length > 0 ? (
-        profileStories.map((oneStory) => (
-          <div key={oneStory._id}>
+    <div className="pond-grid">
+      {stories.length > 0 ? (
+        stories.map((oneStory) => (
+          <div className="pond-tile" key={oneStory._id}>
             <h2>{oneStory.title}</h2>
             <label>{oneStory.emoticon}</label>
             <label>{oneStory.shape}</label>
@@ -37,4 +39,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default PublicStoriesPage;
