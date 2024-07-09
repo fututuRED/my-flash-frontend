@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import CreateStoryPage from "./pages/CreateStoryPage";
 import PublicStoriesPage from "./pages/PublicStoriesPage";
 import ProfilePage from "./pages/ProfilePage";
+import StoryPage from "./pages/StoryPage";
 import IsLoggedOut from "./components/Routing/isLoggedOut";
 import IsLoggedIn from "./components/Routing/isLoggedIn";
 import "@picocss/pico";
@@ -45,7 +46,11 @@ function App() {
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/login" element={<LoginPage />} />
           </Route>
+
           <Route path="/stories" element={<PublicStoriesPage />} />
+
+          <Route path="/stories/:id" element={<StoryPage />} />
+
           <Route element={<IsLoggedIn />}>
             <Route path="/create-story" element={<CreateStoryPage />} />
             <Route path="/profile" element={<ProfilePage />} />

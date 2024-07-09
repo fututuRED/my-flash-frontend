@@ -1,42 +1,44 @@
 import React from "react";
-import { useState, useParams } from "react";
+import { useEffect, useState, useContext } from "react";
+import { AuthContext } from "../context/AuthContextWrapper";
+import service from "../assets/service/api";
+import { useParams } from "react-router-dom";
+
 function StoryPage() {
-  // GET STORY/ Like and Respect POST /  Update PUT  /
-  const [story, setStory] = useState(Null);
-  // const [status, setStatus]= useDtate ("")
+  // GET STORY/ Like and Respect POST / Friend request
   const { user } = useContext(AuthContext);
-  // USEPARAMS
+  const { id } = useParams();
+  const [story, setStory] = useState({});
+
   async function fetchStory() {
-    const { id } = useParams();
-    // const navigate
-
     try {
-      const response = await service.get("/api/stories/:id");
-      setStories(response.data);
-
-      console.log(response);
+      console.log(`Fetching story with ID: ${id}`);
+      const response = await service.get(`/api/stories/${id}`);
+      setStory(response.data);
+      console.log("Fetched story:", response.data);
     } catch (error) {
-      setStories([]);
+      setStory({});
       console.log("Error fetching story:", error);
-      // console.log(error);
     }
   }
   useEffect(() => {
     fetchStory();
-  }, []);
+  }, [id]);
+
   return (
-    <div className="pond-grid">
-      {stories.length > 0 ? (
-        stories.map((oneStory) => (
-          <div className="pond-tile" key={oneStory._id}>
-            <h2>{oneStory.title}</h2>
-            <label>{oneStory.emoticon}</label>
-            <label>{oneStory.shape}</label>
-            <blockquote>{oneStory.content}</blockquote>
-          </div>
-        ))
+    <div className="story">
+      {story ? (
+        <div key={story._id}>
+          <h2>{story.title}</h2>
+          <span
+            className="emoticon"
+            dangerouslySetInnerHTML={{ __html: story.emoticon }}
+          ></span>
+          <blockquote>{story.content}</blockquote>
+          <quote>by {story.author}</quote>
+        </div>
       ) : (
-        <div>No stories available</div>
+        <div>No story available</div>
       )}
     </div>
   );

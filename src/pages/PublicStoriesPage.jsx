@@ -1,10 +1,12 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContextWrapper";
+import { Link } from "react-router-dom";
 import service from "../assets/service/api";
 import "../style/Pond.css";
+
 function PublicStoriesPage() {
   const [stories, setStories] = useState([]);
-  // const [status, setStatus]= useDtate ("")
+
   const { user } = useContext(AuthContext);
 
   async function fetchStories() {
@@ -15,7 +17,6 @@ function PublicStoriesPage() {
     } catch (error) {
       setStories([]);
       console.log("Error fetching stories:", error);
-      // console.log(error);
     }
   }
   useEffect(() => {
@@ -26,7 +27,11 @@ function PublicStoriesPage() {
       {stories.length > 0 ? (
         stories.map((oneStory) => (
           <div className="pond-tile" key={oneStory._id}>
-            <h2>{oneStory.title}</h2>
+            <h2>
+              <Link className="story" to={`/stories/${oneStory._id}`}>
+                {oneStory.title}
+              </Link>
+            </h2>
             <label>{oneStory.emoticon}</label>
             <label>{oneStory.shape}</label>
             <blockquote>{oneStory.content}</blockquote>

@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react"; // <== IMPORT
-import { useState } from "react";
 import { AuthContext } from "../context/AuthContextWrapper"; // <== IMPORT
 import "../style/Nav.css";
 function Navbar() {
@@ -18,6 +17,9 @@ function Navbar() {
       <li>
         <NavLink to="/stories">Stories</NavLink>
       </li>
+      {/* <li>
+        <NavLink to="/story">Story</NavLink>
+      </li> */}
       {isLoggedIn && (
         <>
           <li>

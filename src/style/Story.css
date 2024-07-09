@@ -1,0 +1,43 @@
+.profile-stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.story-grid-item {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.story-block {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add some margin to separate each story block */
+}
+
+.story-block h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.story-block .emoticon {
+  font-size: 24px; /* Adjust the icon size as needed */
+  display: block;
+  margin-bottom: 10px; /* Add some space between the emoticon and content */
+}
+
+.story-block p {
+  font-size: 1rem; /* Adjust the font size as needed */
+  margin: 0;
+  padding: 5px;
+  white-space: normal; /* Ensure content wraps properly */
+}
