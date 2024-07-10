@@ -32,9 +32,12 @@ function PublicStoriesPage() {
                 {oneStory.title}
               </Link>
             </h2>
-            <label>{oneStory.emoticon}</label>
-            <label>{oneStory.shape}</label>
+            <span
+              className="emoticon"
+              dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
+            ></span>
             <blockquote>{oneStory.content}</blockquote>
+            <blockquote>{oneStory.author.username}</blockquote>
           </div>
         ))
       ) : (

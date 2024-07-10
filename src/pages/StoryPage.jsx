@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContextWrapper";
 import service from "../assets/service/api";
@@ -25,6 +24,9 @@ function StoryPage() {
     fetchStory();
   }, [id]);
 
+  if (!story) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="story">
       {story ? (
@@ -35,7 +37,9 @@ function StoryPage() {
             dangerouslySetInnerHTML={{ __html: story.emoticon }}
           ></span>
           <blockquote>{story.content}</blockquote>
-          <quote>by {story.author}</quote>
+          <blockquote>
+            by {story.author?.username || "unknown author"}
+          </blockquote>
         </div>
       ) : (
         <div>No story available</div>

@@ -39,7 +39,7 @@ function ProfilePage() {
   }
   async function handleDelete(storyId) {
     try {
-      await service.del(`/api/stories/${storyId}`);
+      await service.delete(`/api/stories/${storyId}`);
       setProfileStories((prevStories) =>
         prevStories.filter((story) => story._id !== storyId)
       );
