@@ -1,43 +1,58 @@
-* {
-  .nav-bar {
-    list-style: none;
-    text-decoration: none;
-    position: sticky;
-    top: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-decoration: none;
-    box-shadow: 0 2px 4px rgba(149, 149, 149, 0.1);
-    border-radius: 50px;
-    padding: 10px 0;
-    margin: 15px 5px;
-    background-color: rgba(214, 236, 248, 0.2);
-    z-index: 10;
-  }
+/* Navbar Styles */
+.nav-bar {
+  list-style: none;
+  text-decoration: none;
+  position: sticky;
+  top: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(149, 149, 149, 0.1);
+  border-radius: 50px;
+  padding: 10px 0;
+  margin: 15px 5px;
+  background-color: rgba(214, 236, 248, 0.2);
+  z-index: 100;
+}
 
-  .nav-bar a {
-    list-style: none;
-    text-decoration: none;
-    color: #4d8adf;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #1f7c74;
-    background-color: rgba(214, 236, 248, 0.2);
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    padding: 4px 8px;
-    transition: color 0.3s, box-shadow 0.3s;
-  }
+.nav-bar a {
+  list-style: none;
+  text-decoration: none;
+  color: #4d8adf;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #1f7c74;
+  background-color: rgba(214, 236, 248, 0.2);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 4px 8px;
+  transition: color 0.3s, box-shadow 0.3s;
+}
 
-  .nav-bar a:hover {
-    color: #022218;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
-    background-color: #4093b6;
-  }
+.nav-bar a:hover {
+  color: #022218;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  background-color: #4093b6;
+}
+
+/* Dark Mode Navbar */
+[data-theme="dark"] .nav-bar {
+  background-color: rgba(44, 44, 44, 0.8); /* Adjust as needed */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .nav-bar a {
+  color: #e0e0e0;
+  border-color: #475588;
+  background-color: rgba(44, 44, 44, 0.7);
+}
+
+[data-theme="dark"] .nav-bar a:hover {
+  background-color: #333;
+  color: #ffffff;
 }

@@ -1,3 +1,4 @@
+/* General Styles */
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 * {
@@ -10,35 +11,55 @@
   padding: 0;
   text-align: center;
 }
+
 html,
 body {
   height: auto;
   overflow-x: hidden;
   text-align: center;
 }
+
 ul {
   list-style: none;
 }
 
+/* Pond Page Styles */
+.pond-page {
+  position: relative;
+  background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pond-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay for better text contrast */
+  z-index: 0;
+}
+
 .pond-grid {
+  position: relative;
+  z-index: 1; /* Ensure content appears above overlay */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
-  border: 5px outset #3f496c;
-  border-radius: 15%;
   width: 100%;
   height: 100%;
   justify-items: center;
   align-items: center;
 }
 
-/* Each tile */
+/* Pond Tile Styles */
 .pond-tile {
   position: relative;
   overflow: hidden;
-  width: 60%;
-  aspect-ratio: 1 / 1;
   transition: transform 0.3s;
   border: 5px ridge #3f496c;
   box-shadow: 0 2px 4px #0000001a;
@@ -57,7 +78,6 @@ ul {
 }
 
 .pond-tile-content {
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -66,12 +86,11 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #aa9e9e;
   padding: 10px;
   overflow: hidden;
   text-align: center;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
 }
 
 .pond-grid h2 a {
@@ -87,7 +106,7 @@ ul {
   color: rgb(16, 38, 53);
 }
 
-/* Dark mode styles */
+/* Dark Mode Styles */
 [data-theme="dark"] {
   background-color: #2c2c2c;
   color: #e0e0e0;
@@ -104,13 +123,22 @@ ul {
 
 [data-theme="dark"] .pond-tile-content {
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.5); /* Adjusted for better visibility */
 }
 
-[data-theme="dark"] .pond h2 {
+[data-theme="dark"] .pond h2 a,
+[data-theme="dark"] .pond a.story {
   color: #e0e0e0;
 }
 
 [data-theme="dark"] .pond-tile blockquote {
   color: #e0e0e0;
+}
+
+[data-theme="dark"] .emoticon {
+  color: #e0e0e0; /* Ensure emoticons are properly visible */
+}
+
+[data-theme="dark"] .pond {
+  color: #e0e0e0; /* Ensure general elements are properly styled */
 }

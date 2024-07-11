@@ -21,30 +21,32 @@ function PublicStoriesPage() {
     fetchStories();
   }, []);
   return (
-    <div className="pond-grid">
-      {stories.length > 0 ? (
-        stories.map((oneStory) => (
-          <div
-            className="pond-tile"
-            key={oneStory._id}
-            style={{ backgroundColor: oneStory.backgroundColor }}
-          >
-            <h2>
-              <Link className="story" to={`/stories/${oneStory._id}`}>
-                {oneStory.title}
-              </Link>
-            </h2>
-            <span
-              className="emoticon"
-              dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
-            ></span>
-            <blockquote>{oneStory.content}</blockquote>
-            <blockquote>{oneStory.author.username}</blockquote>
-          </div>
-        ))
-      ) : (
-        <div>No stories available</div>
-      )}
+    <div className="pond-page" data-theme="dark">
+      <div className="pond-grid">
+        {stories.length > 0 ? (
+          stories.map((oneStory) => (
+            <div
+              className="pond-tile"
+              key={oneStory._id}
+              style={{ backgroundColor: oneStory.backgroundColor }}
+            >
+              <h2>
+                <Link className="story" to={`/stories/${oneStory._id}`}>
+                  {oneStory.title}
+                </Link>
+              </h2>
+              <span
+                className="emoticon"
+                dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
+              ></span>
+              <blockquote>{oneStory.content}</blockquote>
+              <blockquote>{oneStory.author.username}</blockquote>
+            </div>
+          ))
+        ) : (
+          <div>No stories available</div>
+        )}
+      </div>
     </div>
   );
 }

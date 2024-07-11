@@ -3,10 +3,10 @@ import { AuthContext } from "../context/AuthContextWrapper";
 import service from "../assets/service/api";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import Respect from "../components/Respect";
-import Like from "../components/Like";
+
 function StoryPage() {
   const { user } = useContext(AuthContext);
+
   const { id } = useParams();
   const [story, setStory] = useState(null);
   const navigate = useNavigate();
@@ -32,8 +32,6 @@ function StoryPage() {
         <div key={story._id}>
           <h2>{story.title}</h2>
           <p>{story.content}</p>
-          <Like storyId={story._id} />
-          <Respect storyId={story._id} />
           <span
             className="emoticon"
             dangerouslySetInnerHTML={{ __html: story.emoticon }}

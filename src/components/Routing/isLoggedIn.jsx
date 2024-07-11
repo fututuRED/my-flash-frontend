@@ -9,7 +9,7 @@ function IsLoggedIn() {
     return <p>Loading...</p>;
   }
   if (!user) {
-    return <Navigate to={"/login"} />;
+    return <Navigate to={"/loginpm n"} />;
   }
 
   return <Outlet />;
