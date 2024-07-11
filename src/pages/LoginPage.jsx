@@ -39,39 +39,37 @@ function LoginPage() {
   const { password, email } = formData;
   return (
     <form onSubmit={handleSubmit}>
-      <div className="main-login">
-        <div className="title-login">
-          <div>Login</div>
-        </div>
-        <div className="input-login">
-          <label htmlFor="email">Email: </label>
-          <input
-            className="input-box"
-            type="email"
-            id="email"
-            value={email}
-            placeholder="Enter your email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="input-login">
-          <label htmlFor="username">Password: </label>
-          <input
-            className="input-box"
-            type="password"
-            id="password"
-            value={password}
-            placeholder="Enter your password here"
-            onChange={handleChange}
-          />
-        </div>
-        <p className="error">{errorMessage}</p>
-        <p>
-          No account? <Link to="/login">Sign up!</Link>
-        </p>
-        <div className="input-login">
-          <button className="input-button">Login</button>
-        </div>
+      <div className="title-login">
+        <div>Login</div>
+      </div>
+      <div className="input-login">
+        <label htmlFor="email">Email: </label>
+        <input
+          className="input-box"
+          type="email"
+          id="email"
+          value={email}
+          placeholder="Enter your email"
+          onChange={handleChange}
+        />
+      </div>
+      <div className="input-login">
+        <label htmlFor="username">Password: </label>
+        <input
+          className="input-box"
+          type="password"
+          id="password"
+          value={password}
+          placeholder="Enter your password here"
+          onChange={handleChange}
+        />
+      </div>
+      <p className="error">{errorMessage}</p>
+      <p>
+        No account? <Link to="/login">Sign up!</Link>
+      </p>
+      <div className="input-login">
+        <button className="input-button">Login</button>
       </div>
     </form>
   );

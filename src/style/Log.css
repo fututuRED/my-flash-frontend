@@ -1,39 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
-/* 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 * {
   font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-align: center;
-} */
+}
 
-/* html,
-body {
-  height: 100%; /* Ensure height is 100% 
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  /* justify-content: center; */
+  /* align-items: center; */
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* padding: 0;  */
   text-align: center;
-  overflow: hidden;
-} 
-*/
+}
 
-.main-login {
+form {
+  max-width: 500px; /* Adjustable maximum width */
+  width: 100%; /* Ensure it doesn't stretch beyond the parent */
+  margin: 0 auto; /* Center the form horizontally */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 4px solid rgb(67, 109, 153);
   border-radius: 50%;
-  width: 500px;
-  height: 500px;
+  padding: 50px;
+  margin-top: 40px;
 }
-
 .title-login {
   display: flex;
   flex-direction: column;
@@ -44,7 +55,7 @@ body {
 }
 
 .input-button {
-  display: flex; /* Need to add display flex for flexbox properties to work */
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
@@ -55,4 +66,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+[data-theme="dark"] .nav-bar {
+  background-color: rgba(44, 44, 44, 0.8); /* Adjust as needed */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .nav-bar a {
+  color: #e0e0e0;
+  border-color: #475588;
+  background-color: rgba(44, 44, 44, 0.7);
+}
+
+[data-theme="dark"] .nav-bar a:hover {
+  background-color: #333;
+  color: #ffffff;
 }
