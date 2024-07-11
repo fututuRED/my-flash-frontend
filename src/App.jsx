@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignupPage";
@@ -43,18 +43,16 @@ function App() {
 
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/stories" element={<PublicStoriesPage />} />
+          <Route path="/stories/:id" element={<StoryPage />} />
+
           <Route element={<IsLoggedOut />}>
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/login" element={<LoginPage />} />
           </Route>
-
-          <Route path="/stories" element={<PublicStoriesPage />} />
-
-          <Route path="/stories/:id" element={<StoryPage />} />
-
           <Route element={<IsLoggedIn />}>
-            <Route path="/create-story" element={<CreateStoryPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/create-story" element={<CreateStoryPage />} />
           </Route>
         </Routes>
       </div>
