@@ -9,14 +9,12 @@ import { RiChatDeleteLine } from "react-icons/ri";
 function ProfilePage() {
   const [profileStories, setProfileStories] = useState([]);
   const { user } = useContext(AuthContext);
-
   const { id } = useParams();
 
   async function getProfileStories() {
     try {
       const response = await service.get(`/api/stories/users/${user._id}`);
       setProfileStories(response.data);
-      console.log(response);
     } catch (error) {
       setProfileStories([]);
       console.log("Error fetching stories:", error);
@@ -27,7 +25,7 @@ function ProfilePage() {
     try {
       const newStatus = currentStatus === "Public" ? "Private" : "Public";
       await service.put(`/api/stories/${storyId}`, { status: newStatus });
-      // Refresh the stories immediately after updating the status
+
       setProfileStories((prevStories) =>
         prevStories.map((story) =>
           story._id === storyId ? { ...story, status: newStatus } : story
@@ -55,7 +53,11 @@ function ProfilePage() {
     <div className="profile-stories-grid">
       {profileStories.length > 0 ? (
         profileStories.map((oneStory) => (
-          <div key={oneStory._id} className="story-grid-item">
+          <div
+            key={oneStory._id}
+            className="profile-story-grid-item"
+            style={{ backgroundColor: oneStory.backgroundColor }}
+          >
             <button onClick={() => handleDelete(oneStory._id)}>
               <RiChatDeleteLine />
             </button>
@@ -64,7 +66,6 @@ function ProfilePage() {
                 {oneStory.title}
               </Link>
             </h2>
-
             <span
               className="emoticon"
               dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}

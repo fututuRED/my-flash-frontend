@@ -1,43 +1,81 @@
 .profile-stories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Gap between stories */
   padding: 20px;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  align-items: start; /* Align stories to the top */
 }
-
-.story-grid-item {
-  background: #fff;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.profile-story-grid-item {
   position: relative;
   overflow: hidden;
-}
-
-.story-block {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
   border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 8px;
+  background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* Add some margin to separate each story block */
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
 }
 
-.story-block h2 {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.story-block .emoticon {
-  font-size: 24px; /* Adjust the icon size as needed */
-  display: block;
-  margin-bottom: 10px; /* Add some space between the emoticon and content */
+.story-form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(93, 73, 73, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
 
-.story-block p {
-  font-size: 1rem; /* Adjust the font size as needed */
-  margin: 0;
+.emoticon-picker {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 150px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
   padding: 5px;
-  white-space: normal; /* Ensure content wraps properly */
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .profile-stories-grid {
+  border-color: #475588;
+}
+
+[data-theme="dark"] .profile-stories-grid-item {
+  border-color: #475588;
+  box-shadow: 0 2px 4px #fff1;
+}
+
+[data-theme="dark"] .profile-stories-grid-item {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .profile-stories-grid-item h2 {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .profile-stories-grid-item blockquote {
+  color: #e0e0e0;
 }

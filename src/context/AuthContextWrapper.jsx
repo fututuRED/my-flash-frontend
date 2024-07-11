@@ -17,7 +17,7 @@ function AuthContextWrapper({ children }) {
   async function authenticateUser() {
     try {
       const token = localStorage.getItem("authToken");
-      console.log("Token being sent: ", token);
+
       if (!token) {
         setUser(null);
         setIsLoading(false);
@@ -27,12 +27,10 @@ function AuthContextWrapper({ children }) {
       const response = await service.get("/auth/verify", {
         headers: { Authorization: `Bearer ${token}` },
       });
-      console.log("Response from server: ", response.data);
+
       setUser(response.data);
       setIsLoading(false);
       setIsLoggedIn(true);
-
-      console.log(response);
     } catch (error) {
       console.error(
         "Authentication error: ",

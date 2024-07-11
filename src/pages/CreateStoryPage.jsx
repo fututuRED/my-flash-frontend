@@ -1,10 +1,10 @@
-import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { HexColorPicker } from "react-colorful";
 import service from "../assets/service/api";
 import { AuthContext } from "../context/AuthContextWrapper";
-import axios from "axios";
-import { ChromePicker } from "react-color"; // Using react-color for the color picker
+import "../style/Story.css";
 
 function CreateStoryPage() {
   const [emoticon, setEmoticon] = useState("");
@@ -12,7 +12,7 @@ function CreateStoryPage() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [status, setStatus] = useState("");
-  const [color, setColor] = useState("#ffffff"); // Default color
+  const [color, setColor] = useState("#ffffff");
   const { user } = useContext(AuthContext);
   const nav = useNavigate();
 
@@ -34,7 +34,7 @@ function CreateStoryPage() {
       title,
       content,
       status,
-      color, // Include the selected color
+      color,
       author: user._id,
     };
     try {
@@ -51,8 +51,12 @@ function CreateStoryPage() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form
+      onSubmit={handleSubmit}
+      className="story-form"
+      style={{ backgroundColor: color }}
+    >
+      <div className="form-story-grid-item">
         <label htmlFor="title">Story title:</label>
         <input
           type="text"
@@ -60,8 +64,7 @@ function CreateStoryPage() {
           value={title}
           onChange={(e) => setTitle(e.currentTarget.value)}
         />
-      </div>
-      <div>
+
         <label htmlFor="emoticon">Emoticon:</label>
         <input
           type="text"
@@ -70,16 +73,7 @@ function CreateStoryPage() {
           value={emoticon}
           readOnly
         />
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            maxHeight: "150px",
-            overflowY: "scroll",
-            border: "1px solid #ccc",
-            padding: "5px",
-          }}
-        >
+        <div className="emoticon-picker">
           {emojis.length > 0 ? (
             emojis.map((emoji, index) => (
               <span
@@ -93,15 +87,10 @@ function CreateStoryPage() {
             <span>Loading emojis...</span>
           )}
         </div>
-      </div>
-      <div>
+
         <label htmlFor="color">Background Color:</label>
-        <ChromePicker
-          color={color}
-          onChangeComplete={(color) => setColor(color.hex)}
-        />
-      </div>
-      <div>
+        <HexColorPicker color={color} onChange={setColor} />
+
         <label htmlFor="content">Content:</label>
         <input
           type="textarea"
@@ -109,8 +98,7 @@ function CreateStoryPage() {
           value={content}
           onChange={(e) => setContent(e.currentTarget.value)}
         />
-      </div>
-      <div>
+
         <input
           type="radio"
           name="status"

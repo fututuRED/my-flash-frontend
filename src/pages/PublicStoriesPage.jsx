@@ -6,14 +6,12 @@ import "../style/Pond.css";
 
 function PublicStoriesPage() {
   const [stories, setStories] = useState([]);
-
   const { user } = useContext(AuthContext);
 
   async function fetchStories() {
     try {
       const response = await service.get("/api/stories");
       setStories(response.data);
-      console.log(response);
     } catch (error) {
       setStories([]);
       console.log("Error fetching stories:", error);
@@ -26,7 +24,11 @@ function PublicStoriesPage() {
     <div className="pond-grid">
       {stories.length > 0 ? (
         stories.map((oneStory) => (
-          <div className="pond-tile" key={oneStory._id}>
+          <div
+            className="pond-tile"
+            key={oneStory._id}
+            style={{ backgroundColor: oneStory.backgroundColor }}
+          >
             <h2>
               <Link className="story" to={`/stories/${oneStory._id}`}>
                 {oneStory.title}

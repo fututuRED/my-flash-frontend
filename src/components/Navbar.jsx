@@ -1,13 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { useContext } from "react"; // <== IMPORT
-import { AuthContext } from "../context/AuthContextWrapper"; // <== IMPORT
+import { useContext } from "react"; //
+import { AuthContext } from "../context/AuthContextWrapper";
 import "../style/Nav.css";
 function Navbar() {
   const { user, isLoggedIn, disconnect } = useContext(AuthContext);
-
-  // Add debug logging to check the context value
-
-  // Ensure contextValue is not undefined or null
 
   return (
     <ul className="nav-bar">
@@ -17,9 +13,6 @@ function Navbar() {
       <li>
         <NavLink to="/stories">Stories</NavLink>
       </li>
-      {/* <li>
-        <NavLink to="/story">Story</NavLink>
-      </li> */}
       {isLoggedIn && (
         <>
           <li>

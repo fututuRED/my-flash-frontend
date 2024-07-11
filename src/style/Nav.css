@@ -1,49 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-
 * {
-  font-family: Roboto Mono, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-html,
-body {
-  height: 100%;
-  overflow-x: hidden;
-}
-ul {
-  list-style: none;
-}
+  .nav-bar {
+    list-style: none;
+    text-decoration: none;
+    position: sticky;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(149, 149, 149, 0.1);
+    border-radius: 50px;
+    padding: 10px 0;
+    margin: 15px 5px;
+    background-color: rgba(214, 236, 248, 0.2);
+    z-index: 10;
+  }
 
-nav-bar {
-  position: sticky;
-  top: 10px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-decoration: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-  margin: 15px 5px;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-  backdrop-filter: blur(5px);
-  z-index: 10;
-}
+  .nav-bar a {
+    list-style: none;
+    text-decoration: none;
+    color: #4d8adf;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1f7c74;
+    background-color: rgba(214, 236, 248, 0.2);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 4px 8px;
+    transition: color 0.3s, box-shadow 0.3s;
+  }
 
-.nav-bar a {
-  text-decoration: none;
-  color: #45a27a;
-  font-size: 1.2rem;
-  font: x-large;
-  /* text-align: center; */
-  padding: 4px 8px;
-  transition: color 0.3s, box-shadow 0.3s;
-}
-
-.nav-bar a:hover {
-  box-shadow: 0 0 0 5px #0222181a, 0 0 0 10px #7eb2a2;
+  .nav-bar a:hover {
+    color: #022218;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    background-color: #4093b6;
+  }
 }

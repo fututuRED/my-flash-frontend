@@ -30,16 +30,17 @@ function App() {
     <>
       <div className="App">
         <Navbar />
-        <li className="toggle">
-          <a
-            href="#"
-            role="button"
-            className="outline secondary"
-            onClick={toggleTheme}
-          >
-            Toggle dark mode
-          </a>
-        </li>
+        <input
+          onChange={toggleTheme}
+          name="opt-in"
+          type="checkbox"
+          role="switch"
+          checked={theme === "dark"}
+        />
+        <label htmlFor="switch" className="toggle-label">
+          Toggle Dark Mode
+        </label>
+
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route element={<IsLoggedOut />}>
