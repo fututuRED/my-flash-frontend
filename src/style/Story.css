@@ -67,12 +67,10 @@ body,
 .form-story-grid-item {
   position: relative;
   overflow: hidden;
-  width: 1000%;
-
+  width: 100%;
   border: 5px ridge #3f496c;
-
   width: 400px;
-  height: 500px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
