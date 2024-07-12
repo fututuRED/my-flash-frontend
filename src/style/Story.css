@@ -68,13 +68,11 @@ body,
   position: relative;
   overflow: hidden;
   width: 1000%;
-  aspect-ratio: 1 / 1;
-  transition: transform 0.3s;
+
   border: 5px ridge #3f496c;
-  box-shadow: 0 2px 4px #0000001a;
-  /* border-radius: 50%; */
-  width: 600px;
-  height: 700px;
+
+  width: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
