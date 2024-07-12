@@ -64,6 +64,24 @@ body,
   padding: 20px;
 }
 
+.form-story-grid-item {
+  position: relative;
+  overflow: hidden;
+  width: 1000%;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.3s;
+  border: 5px ridge #3f496c;
+  box-shadow: 0 2px 4px #0000001a;
+  /* border-radius: 50%; */
+  width: 600px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .pond-tile:hover,
 .profile-story-grid-item:hover {
   transform: scale(1.05);
