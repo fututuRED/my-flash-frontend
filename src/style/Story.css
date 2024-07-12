@@ -66,9 +66,8 @@ body,
 }
 
 .form-story-grid-item {
-  width: fit-content;
   border: 5px ridge #3f496c;
-  display: flex;
+  display: contents;
   flex-direction: column;
   justify-content: center;
   align-items: center;
