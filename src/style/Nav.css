@@ -2,7 +2,7 @@
 .nav-bar {
   list-style: none;
   text-decoration: none;
-  position: sticky;
+  position: fixed;
   top: 5px;
   width: 100%;
   display: flex;
