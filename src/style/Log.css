@@ -45,6 +45,9 @@ form {
   padding: 50px;
   margin-top: 40px;
 }
+form a {
+  color: rgb(62, 143, 255);
+}
 .title-login {
   display: flex;
   flex-direction: column;

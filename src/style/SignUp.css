@@ -30,7 +30,9 @@ body,
 
   text-align: center;
 }
-
+form a {
+  color: rgb(62, 143, 255);
+}
 form {
   height: 50%;
   width: 100%;
