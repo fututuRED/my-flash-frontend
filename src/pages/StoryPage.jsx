@@ -3,6 +3,7 @@ import { AuthContext } from "../context/AuthContextWrapper";
 import service from "../assets/service/api";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import "../style/Story.css";
 
 function StoryPage() {
   const { user } = useContext(AuthContext);
@@ -29,7 +30,11 @@ function StoryPage() {
   return (
     <div className="story">
       {story ? (
-        <div key={story._id}>
+        <div
+          key={story._id}
+          className="bg-color-custom"
+          style={{ "--custom-bg-color": story.backgroundColor }}
+        >
           <h2>{story.title}</h2>
           <p>{story.content}</p>
           <span

@@ -30,7 +30,9 @@ body,
   padding: 0;
   text-align: center;
 }
-
+.bg-color-custom {
+  background-color: var(--custom-bg-color, #ffffff);
+}
 .profile-stories-grid,
 .pond-grid {
   display: grid;
@@ -108,6 +110,10 @@ body,
 [data-theme="dark"] .profile-stories-grid,
 [data-theme="dark"] .pond-grid {
   border-color: #475588;
+}
+[data-theme="dark"] .bg-color-custom {
+  border-color: #475588;
+  box-shadow: 0 2px 4px #fff1;
 }
 
 [data-theme="dark"] .profile-story-grid-item,

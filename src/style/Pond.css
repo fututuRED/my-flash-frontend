@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 *,
 *::before,
 *::after {
@@ -5,14 +6,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 * {
   font-family: "Mulish", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* text-align: center; */
 }
 
 html {
@@ -31,29 +30,7 @@ body,
   padding: 0;
   text-align: center;
 }
-/*
-html,
-body,
-#root,
-.App {
-  height: 100%; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center;  /
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
 
-/* Pond Page Styles */
 .pond-page {
   position: relative;
   background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
@@ -61,7 +38,9 @@ body {
   background-size: cover;
   background-position: center;
 }
-
+.bg-color-custom {
+  background-color: var(--custom-bg-color, #ffffff);
+}
 .pond-page::before {
   content: "";
   position: absolute;
@@ -75,7 +54,7 @@ body {
 
 .pond-grid {
   position: relative;
-  z-index: 1; /* Ensure content appears above overlay */
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -86,7 +65,6 @@ body {
   align-items: center;
 }
 
-/* Pond Tile Styles */
 .pond-tile {
   position: relative;
   overflow: hidden;
@@ -141,6 +119,10 @@ body {
   background-color: #2c2c2c;
   color: #e0e0e0;
 }
+[data-theme="dark"] .bg-color-custom {
+  border-color: #475588;
+  box-shadow: 0 2px 4px #fff1;
+}
 
 [data-theme="dark"] .pond-grid {
   border-color: #475588;
@@ -166,9 +148,9 @@ body {
 }
 
 [data-theme="dark"] .emoticon {
-  color: #e0e0e0; /* Ensure emoticons are properly visible */
+  color: #e0e0e0;
 }
 
 [data-theme="dark"] .pond {
-  color: #e0e0e0; /* Ensure general elements are properly styled */
+  color: #e0e0e0;
 }

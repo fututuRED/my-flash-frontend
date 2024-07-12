@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import service from "../assets/service/api";
-
+import "../style/SignUp.css";
 function SignUpPage() {
   const [formData, setFormData] = useState({
     username: "",
@@ -39,25 +39,36 @@ function SignUpPage() {
   const { username, password, email } = formData;
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className="title-sign">
+        <div>SignUp</div>
+      </div>
+      <div className="input-sign">
         <label htmlFor="username">Username: </label>
         <input
           type="text"
           id="username"
           value={username}
+          placeholder="Enter Username"
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="input-sign">
         <label htmlFor="email">Email: </label>
-        <input type="email" id="email" value={email} onChange={handleChange} />
+        <input
+          type="email"
+          id="email"
+          value={email}
+          placeholder="Enter your email"
+          onChange={handleChange}
+        />
       </div>
-      <div>
+      <div className="input-sign">
         <label htmlFor="username">Password: </label>
         <input
           type="password"
           id="password"
           value={password}
+          placeholder="Enter your password"
           onChange={handleChange}
         />
       </div>
@@ -67,7 +78,7 @@ function SignUpPage() {
       <p>
         Already have an account? <Link to={"/login"}>Login.</Link>
       </p>
-      <button>Signup</button>
+      <button className="sign-button">Signup</button>
     </form>
   );
 }

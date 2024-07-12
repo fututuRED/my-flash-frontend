@@ -6,6 +6,7 @@ import "../style/Pond.css";
 
 function PublicStoriesPage() {
   const [stories, setStories] = useState([]);
+  const [visibleContent, setVisibleContent] = useState([]);
   const { user } = useContext(AuthContext);
 
   async function fetchStories() {
@@ -17,6 +18,12 @@ function PublicStoriesPage() {
       console.log("Error fetching stories:", error);
     }
   }
+  const toggleContent = (id) => {
+    setVisibleContent((prevVisibleContent) => ({
+      ...prevVisibleContent,
+      [id]: !prevVisibleContent[id],
+    }));
+  };
   useEffect(() => {
     fetchStories();
   }, []);
@@ -25,22 +32,28 @@ function PublicStoriesPage() {
       <div className="pond-grid">
         {stories.length > 0 ? (
           stories.map((oneStory) => (
-            <div
-              className="pond-tile"
-              key={oneStory._id}
-              style={{ backgroundColor: oneStory.backgroundColor }}
-            >
-              <h2>
-                <Link className="story" to={`/stories/${oneStory._id}`}>
-                  {oneStory.title}
-                </Link>
-              </h2>
-              <span
-                className="emoticon"
-                dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
-              ></span>
-              <blockquote>{oneStory.content}</blockquote>
-              <blockquote>{oneStory.author.username}</blockquote>
+            <div className="pond-tile" key={oneStory._id}>
+              <div
+                className="bg-color-custom"
+                style={{ "--custom-bg-color": oneStory.backgroundColor }}
+              >
+                <h2>
+                  <Link className="story" to={`/stories/${oneStory._id}`}>
+                    {oneStory.title}
+                  </Link>
+                </h2>
+                <span
+                  className="emoticon"
+                  dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
+                ></span>
+                <div
+                  className="content-story"
+                  onClick={() => toggleContent(oneStory._id)}
+                >
+                  <p>{oneStory.content}</p>
+                  <p>{oneStory.author.username}</p>
+                </div>
+              </div>
             </div>
           ))
         ) : (

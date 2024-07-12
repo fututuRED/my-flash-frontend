@@ -50,6 +50,7 @@ function LoginPage() {
           id="email"
           value={email}
           placeholder="Enter your email"
+          autoComplete="email"
           onChange={handleChange}
         />
       </div>
@@ -60,13 +61,14 @@ function LoginPage() {
           type="password"
           id="password"
           value={password}
-          placeholder="Enter your password here"
+          placeholder="Enter your password"
           onChange={handleChange}
+          autoComplete="password"
         />
       </div>
       <p className="error">{errorMessage}</p>
       <p>
-        No account? <Link to="/login">Sign up!</Link>
+        No account? <Link to="/signup">Sign up!</Link>
       </p>
       <div className="input-login">
         <button className="input-button">Login</button>
