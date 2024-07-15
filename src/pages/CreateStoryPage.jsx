@@ -4,7 +4,7 @@ import axios from "axios";
 import { HexColorPicker } from "react-colorful";
 import service from "../assets/service/api";
 import { AuthContext } from "../context/AuthContextWrapper";
-import "../style/Story.css";
+import "../style/Create.css";
 
 function CreateStoryPage() {
   const [emoticon, setEmoticon] = useState("");

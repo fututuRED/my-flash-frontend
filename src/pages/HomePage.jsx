@@ -52,47 +52,46 @@ function HomePage() {
             <br />
             Sure so...
             <br />
-            <ol>
-              <li>
-                {" "}
-                An account?{" "}
-                <Link to="/signup">
-                  <strong>SignUp!</strong>
-                </Link>
-                <br />
-                The strictly minimum to join, the coolest it is, right!?
-              </li>
-              <li>
-                <strong>Create!</strong> Use a little web-notebook without any
-                lines!
-                <br />
-                A list of thematic EMOJIS will be at your disposal to give you a
-                theme to which you can easily connect ans which will be
-                different from time to time,
-                <br />
-                Pick a colour,
-                <br />
-                <strong>Deliver</strong> your piece on a round nymph that,
-                <br />
-                If you want, you can <strong>share</strong>(to the public,
-                where?)
-                <br />
-                <Link to="/stories">
-                  <strong>to The Pond</strong>
-                </Link>{" "}
-                or <strong>don't!</strong>
-                It's up to you... (Privacy matter to us anyway!)!
-                <br />
-                Keep in mind that the public could be... any internet onlookers
-                who accidently were looking for something..
-                <br /> Funny or else! Anyway..
-                <br /> NO WORIES, nobody will comment what you write...
-                <br /> Only likes and respects but that,
-                <br />
-                Is a work in progress!
-              </li>
-            </ol>
           </p>
+          <ol>
+            <li>
+              {" "}
+              An account?{" "}
+              <Link to="/signup">
+                <strong>SignUp!</strong>
+              </Link>
+              <br />
+              The strictly minimum to join, the coolest it is, right!?
+            </li>
+            <li>
+              <strong>Create!</strong> Use a little web-notebook without any
+              lines!
+              <br />
+              A list of thematic EMOJIS will be at your disposal to give you a
+              theme to which you can easily connect ans which will be different
+              from time to time,
+              <br />
+              Pick a colour,
+              <br />
+              <strong>Deliver</strong> your piece on a round nymph that,
+              <br />
+              If you want, you can <strong>share</strong>(to the public, where?)
+              <br />
+              <Link to="/stories">
+                <strong>to The Pond</strong>
+              </Link>{" "}
+              or <strong>don't!</strong>
+              It's up to you... (Privacy matter to us anyway!)!
+              <br />
+              Keep in mind that the public could be... any internet onlookers
+              who accidently were looking for something..
+              <br /> Funny or else! Anyway..
+              <br /> NO WORIES, nobody will comment what you write...
+              <br /> Only likes and respects but that,
+              <br />
+              Is a work in progress!
+            </li>
+          </ol>
         </div>
       </div>
       <footer>

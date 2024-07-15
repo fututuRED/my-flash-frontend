@@ -2,17 +2,14 @@
 .nav-bar {
   list-style: none;
   text-decoration: none;
-  position: relative;
+  position: sticky;
   top: 0;
   width: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(149, 149, 149, 0.1);
-
   padding: 10px 0;
-
   background-color: rgba(214, 236, 248, 0.2);
   z-index: 101;
 }
