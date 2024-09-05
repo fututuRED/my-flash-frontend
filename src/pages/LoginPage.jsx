@@ -37,7 +37,7 @@ function LoginPage() {
 
   const { password, email } = formData;
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="login-form">
       <div className="title-login">
         <div>Login</div>
       </div>

@@ -83,7 +83,6 @@ function ProfilePage() {
               className="emoticon"
               dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
             ></span>
-
             <p>{oneStory.content}</p>
             <label htmlFor={`status-${oneStory._id}`}>Status: </label>
             <input
