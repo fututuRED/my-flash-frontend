@@ -42,7 +42,8 @@ body,
   background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
   background-repeat: no-repeat;
   background-size: 90%;
-  filter: grayscale(15%) brightness(85%);
+  margin: 15px;
+  filter: grayscale(10%) brightness(90%);
   background-position: center;
 }
 .bg-color-custom {

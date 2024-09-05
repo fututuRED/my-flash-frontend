@@ -36,12 +36,14 @@ body,
   background-repeat: no-repeat;
   background-size: 90%;
   background-position: center;
-  filter: grayscale(15%) brightness(85%);
+  margin: 15px;
+  filter: grayscale(10%) brightness(90%);
   z-index: 0;
 }
 .about-page::before {
   content: "";
   position: absolute;
+  margin: 15px;
   top: 0;
   left: 0;
   width: 90%;

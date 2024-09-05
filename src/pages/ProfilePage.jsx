@@ -1,15 +1,26 @@
 import { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../context/AuthContextWrapper";
 import service from "../assets/service/api";
-import { useParams } from "react-router-dom";
-import "../style/Story.css";
+import { useParams, useLocation } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 import { RiChatDeleteLine } from "react-icons/ri";
+
+import "../style/Story.css";
 
 function ProfilePage() {
   const [profileStories, setProfileStories] = useState([]);
   const { user } = useContext(AuthContext);
   const { id } = useParams();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state && location.state.newStory) {
+      setProfileStories([location.state.newStory, ...profileStories]);
+    } else {
+      getProfileStories();
+    }
+  }, [location.state, user._id]);
 
   async function getProfileStories() {
     try {
@@ -45,9 +56,10 @@ function ProfilePage() {
       console.log("Error deleting story:", error);
     }
   }
-  useEffect(() => {
-    getProfileStories();
-  }, [user._id]);
+
+  // useEffect(() => {
+  //   getProfileStories();
+  // }, [user._id]);
 
   return (
     <div className="profile-stories-grid">
@@ -60,6 +72,7 @@ function ProfilePage() {
           >
             <button onClick={() => handleDelete(oneStory._id)}>
               <RiChatDeleteLine />
+              delete
             </button>
             <h2>
               <Link className="story" to={`/stories/${oneStory._id}`}>
