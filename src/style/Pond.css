@@ -30,7 +30,13 @@ body,
   padding: 0;
   text-align: center;
 }
+.content-story {
+  display: none; /* Hide by default */
+}
 
+.content-story.show {
+  display: block; /* Show when the 'show' class is added */
+}
 .pond-page {
   position: relative;
   background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");

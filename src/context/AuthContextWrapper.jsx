@@ -1,14 +1,20 @@
-import { createContext, useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import service from "../assets/service/api";
-export const AuthContext = createContext();
+
+export const AuthContext = React.createContext();
 
 function AuthContextWrapper({ children }) {
   const [user, setUser] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const storeToken = (token) => localStorage.setItem("authToken", token);
-  const removeToken = () => localStorage.removeItem("authToken");
+  const storeToken = (token) => {
+    localStorage.setItem("authToken", token);
+  };
+  const removeToken = () => {
+    localStorage.removeItem("authToken");
+  };
 
   useEffect(() => {
     authenticateUser();

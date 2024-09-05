@@ -30,10 +30,22 @@ body,
 
   text-align: center;
 }
-form a {
-  color: rgb(62, 143, 255);
+
+.signup-form a {
+  color: rgb(255, 140, 0);
+  font-weight: bold;
+  text-decoration: double;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
-form {
+
+.signup-form a:hover {
+  background-color: rgba(255, 165, 0, 0.2);
+  text-decoration: underline;
+}
+
+.signup-form {
   height: 50%;
   width: 100%;
   margin: 0 auto;
@@ -45,6 +57,7 @@ form {
   border-radius: 50%;
   padding: 50px;
   margin-top: 40px;
+  background-color: rgb(67, 153, 144);
 }
 
 .title-sign {
@@ -71,7 +84,7 @@ form {
 }
 
 [data-theme="dark"] .nav-bar {
-  background-color: rgba(44, 44, 44, 0.8); /* Adjust as needed */
+  background-color: rgba(44, 44, 44, 0.8);
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 

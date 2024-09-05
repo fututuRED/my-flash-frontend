@@ -17,7 +17,6 @@ function App() {
   const defaultTheme = localStorage.getItem("theme") || "light";
   const [theme, setTheme] = useState(defaultTheme);
   useEffect(() => {
-    // Apply the theme to the document element
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
@@ -34,12 +33,11 @@ function App() {
           onChange={toggleTheme}
           name="opt-in"
           type="checkbox"
+          id="swutch"
           role="switch"
           checked={theme === "dark"}
         />
-        <label htmlFor="switch" className="toggle-label">
-          Toggle Dark Mode
-        </label>
+        <label>Toggle Dark Mode</label>
 
         <Routes>
           <Route path="/" element={<HomePage />} />

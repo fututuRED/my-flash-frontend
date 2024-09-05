@@ -38,7 +38,7 @@ function SignUpPage() {
 
   const { username, password, email } = formData;
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="signup-form">
       <div className="title-sign">
         <div>SignUp</div>
       </div>

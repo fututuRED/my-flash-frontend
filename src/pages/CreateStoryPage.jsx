@@ -51,12 +51,8 @@ function CreateStoryPage() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="story-form"
-      style={{ backgroundColor: color }}
-    >
-      <div className="form-story-grid-item">
+    <form onSubmit={handleSubmit} style={{ backgroundColor: color }}>
+      <div className="story-form">
         <label htmlFor="title">Story title:</label>
         <input
           type="text"
@@ -64,7 +60,6 @@ function CreateStoryPage() {
           value={title}
           onChange={(e) => setTitle(e.currentTarget.value)}
         />
-
         <label htmlFor="emoticon">Emoticon:</label>
         <input
           type="text"
@@ -108,19 +103,20 @@ function CreateStoryPage() {
           onChange={(e) => setStatus(e.currentTarget.value)}
         />
         <label htmlFor="Private">Private</label>
+
+        <div>
+          <input
+            type="radio"
+            name="status"
+            id="Public"
+            value="Public"
+            checked={status === "Public"}
+            onChange={(e) => setStatus(e.currentTarget.value)}
+          />
+          <label htmlFor="Public">Public</label>
+        </div>
+        <button type="submit">Submit</button>
       </div>
-      <div>
-        <input
-          type="radio"
-          name="status"
-          id="Public"
-          value="Public"
-          checked={status === "Public"}
-          onChange={(e) => setStatus(e.currentTarget.value)}
-        />
-        <label htmlFor="Public">Public</label>
-      </div>
-      <button type="submit">Submit</button>
     </form>
   );
 }

@@ -37,7 +37,7 @@ function PublicStoriesPage() {
                 className="bg-color-custom"
                 style={{ "--custom-bg-color": oneStory.backgroundColor }}
               >
-                <h2>
+                <h2 onClick={() => toggleContent(oneStory._id)}>
                   <Link className="story" to={`/stories/${oneStory._id}`}>
                     {oneStory.title}
                   </Link>
@@ -47,8 +47,9 @@ function PublicStoriesPage() {
                   dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
                 ></span>
                 <div
-                  className="content-story"
-                  onClick={() => toggleContent(oneStory._id)}
+                  className={`content-story ${
+                    visibleContent[oneStory._id] ? "show" : ""
+                  }`}
                 >
                   <p>{oneStory.content}</p>
                   <p>{oneStory.author.username}</p>
