@@ -38,9 +38,7 @@ function PublicStoriesPage() {
                 style={{ "--custom-bg-color": oneStory.backgroundColor }}
               >
                 <h2 onClick={() => toggleContent(oneStory._id)}>
-                  <Link className="story" to={`/stories/${oneStory._id}`}>
-                    {oneStory.title}
-                  </Link>
+                  {oneStory.title}
                 </h2>
                 <span
                   className="emoticon"
@@ -53,6 +51,9 @@ function PublicStoriesPage() {
                 >
                   <p>{oneStory.content}</p>
                   <p>{oneStory.author.username}</p>
+                  <Link className="story" to={`/stories/${oneStory._id}`}>
+                    details
+                  </Link>
                 </div>
               </div>
             </div>

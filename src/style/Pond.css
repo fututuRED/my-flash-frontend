@@ -41,11 +41,15 @@ body,
   position: relative;
   background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 90%;
+  filter: grayscale(15%) brightness(85%);
   background-position: center;
 }
 .bg-color-custom {
-  background-color: var(--custom-bg-color, #ffffff);
+  background-color: var(
+    --custom-bg-color,
+    #ffffff
+  ); /* Default to white if no color provided */
 }
 .pond-page::before {
   content: "";
@@ -159,4 +163,8 @@ body,
 
 [data-theme="dark"] .pond {
   color: #e0e0e0;
+}
+
+.bg-color-custom {
+  background-color: var(--custom-bg-color) !important;
 }

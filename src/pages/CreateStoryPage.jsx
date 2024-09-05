@@ -34,7 +34,7 @@ function CreateStoryPage() {
       title,
       content,
       status,
-      color,
+      backgroundColor: color,
       author: user._id,
     };
     try {
@@ -51,73 +51,75 @@ function CreateStoryPage() {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ backgroundColor: color }}>
-      <div className="story-form">
-        <label htmlFor="title">Story title:</label>
-        <input
-          type="text"
-          id="title"
-          value={title}
-          onChange={(e) => setTitle(e.currentTarget.value)}
-        />
-        <label htmlFor="emoticon">Emoticon:</label>
-        <input
-          type="text"
-          id="emoticon"
-          placeholder="Select an emoticon"
-          value={emoticon}
-          readOnly
-        />
-        <div className="emoticon-picker">
-          {emojis.length > 0 ? (
-            emojis.map((emoji, index) => (
-              <span
-                key={index}
-                style={{ fontSize: "24px", margin: "5px", cursor: "pointer" }}
-                onClick={() => setEmoticon(emoji.htmlCode || emoji.emoji)}
-                dangerouslySetInnerHTML={{ __html: emoji.htmlCode }}
-              ></span>
-            ))
-          ) : (
-            <span>Loading emojis...</span>
-          )}
-        </div>
+    <div className="story-form-container">
+      <form onSubmit={handleSubmit} style={{ backgroundColor: color }}>
+        <div className="story-form">
+          <label htmlFor="title">Story title:</label>
+          <input
+            type="text"
+            id="title"
+            value={title}
+            onChange={(e) => setTitle(e.currentTarget.value)}
+          />
+          <label htmlFor="emoticon">Emoticon:</label>
+          <input
+            type="text"
+            id="emoticon"
+            placeholder="Select an emoticon"
+            value={emoticon}
+            readOnly
+          />
+          <div className="emoticon-picker">
+            {emojis.length > 0 ? (
+              emojis.map((emoji, index) => (
+                <span
+                  key={index}
+                  style={{ fontSize: "24px", margin: "5px", cursor: "pointer" }}
+                  onClick={() => setEmoticon(emoji.htmlCode || emoji.emoji)}
+                  dangerouslySetInnerHTML={{ __html: emoji.htmlCode }}
+                ></span>
+              ))
+            ) : (
+              <span>Loading emojis...</span>
+            )}
+          </div>
 
-        <label htmlFor="color">Background Color:</label>
-        <HexColorPicker color={color} onChange={setColor} />
+          <label htmlFor="color">Background Color:</label>
+          <HexColorPicker color={color} onChange={setColor} />
 
-        <label htmlFor="content">Content:</label>
-        <input
-          type="textarea"
-          id="content"
-          value={content}
-          onChange={(e) => setContent(e.currentTarget.value)}
-        />
+          <label htmlFor="content">Content:</label>
+          <input
+            type="textarea"
+            id="content"
+            value={content}
+            onChange={(e) => setContent(e.currentTarget.value)}
+          />
 
-        <input
-          type="radio"
-          name="status"
-          id="Private"
-          value="Private"
-          checked={status === "Private"}
-          onChange={(e) => setStatus(e.currentTarget.value)}
-        />
-        <label htmlFor="Private">Private</label>
-
-        <div>
           <input
             type="radio"
             name="status"
-            id="Public"
-            value="Public"
-            checked={status === "Public"}
+            id="Private"
+            value="Private"
+            checked={status === "Private"}
             onChange={(e) => setStatus(e.currentTarget.value)}
           />
-          <label htmlFor="Public">Public</label>
+          <label htmlFor="Private">Private</label>
+
+          <div>
+            <input
+              type="radio"
+              name="status"
+              id="Public"
+              value="Public"
+              checked={status === "Public"}
+              onChange={(e) => setStatus(e.currentTarget.value)}
+            />
+            <label htmlFor="Public">Public</label>
+          </div>
+          <button type="submit">Submit</button>
         </div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 

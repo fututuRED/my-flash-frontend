@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContextWrapper";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import service from "../assets/service/api";
 import "../style/Log.css";
 function LoginPage() {
@@ -10,7 +10,6 @@ function LoginPage() {
   });
   const { storeToken, authenticateUser } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate();
 
   function handleChange(event) {
     const value = event.currentTarget.value;
@@ -42,6 +41,9 @@ function LoginPage() {
       <div className="title-login">
         <div>Login</div>
       </div>
+      <p>
+        No account? <Link to="/signup">Sign up!</Link>
+      </p>
       <div className="input-login">
         <label htmlFor="email">Email: </label>
         <input
@@ -67,9 +69,7 @@ function LoginPage() {
         />
       </div>
       <p className="error">{errorMessage}</p>
-      <p>
-        No account? <Link to="/signup">Sign up!</Link>
-      </p>
+
       <div className="input-login">
         <button className="input-button">Login</button>
       </div>

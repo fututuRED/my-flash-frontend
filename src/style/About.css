@@ -34,9 +34,9 @@ body,
   position: relative;
   background-image: url("https://images.unsplash.com/photo-1497114046243-1154db4f4abf");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 90%;
   background-position: center;
-  filter: grayscale(5%) brightness(95%);
+  filter: grayscale(15%) brightness(85%);
   z-index: 0;
 }
 .about-page::before {
@@ -44,8 +44,8 @@ body,
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
