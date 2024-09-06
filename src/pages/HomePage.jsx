@@ -2,7 +2,7 @@ import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import "../style/About.css";
+import "../style/Home.css";
 function HomePage() {
   return (
     <>
@@ -17,9 +17,7 @@ function HomePage() {
           <p>
             Ever thought about getting published in the next
             <br />
-            <i>The Newyorker</i>
-            <br />
-            issue? <br />
+            <i>The Newyorker</i>issue? <br />
             Well I have! If you too, well we can easily agree that the road, if
             it exists is rather long but guess what?
             <br /> What?
@@ -35,8 +33,9 @@ function HomePage() {
             >
               Flashfictiononline
             </a>
-            I use pseudonyms to give you access to some excerpts, giving you
-            some ideas or just feeling a bit more comfortable being here.
+            <Link to="/stories">
+              <strong>Here to The Pond / Stories</strong>
+            </Link>{" "}
           </p>
           <h2>About what?</h2>
           <p>
@@ -49,9 +48,6 @@ function HomePage() {
             Ain't that SHORT?
             <br />
             Sure, right?
-            <br />
-            Sure so...
-            <br />
           </p>
           <ol>
             <li>
@@ -75,21 +71,15 @@ function HomePage() {
               <br />
               <strong>Deliver</strong> your piece on a round nymph that,
               <br />
-              If you want, you can <strong>share</strong>(to the public, where?)
+              If you want, you can <strong>share</strong>(to the public)
               <br />
-              <Link to="/stories">
-                <strong>to The Pond</strong>
-              </Link>{" "}
               or <strong>don't!</strong>
               It's up to you... (Privacy matter to us anyway!)!
               <br />
               Keep in mind that the public could be... any internet onlookers
               who accidently were looking for something..
               <br /> Funny or else! Anyway..
-              <br /> NO WORIES, nobody will comment what you write...
-              <br /> Only likes and respects but that,
-              <br />
-              Is a work in progress!
+              <br /> NO WORIES, nobody will comment what you write!
             </li>
           </ol>
         </div>

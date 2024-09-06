@@ -32,14 +32,14 @@ body,
   padding: 0;
   text-align: center;
 }
-/* Create.css */
-/* .story-form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* 
+.story-form-container {
 } */
 
 .story-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f8f9fa; /* Background color for form */
   border: 2px solid #3f496c; /* Border around the form */
   border-radius: 8px; /* Slightly rounded corners */
