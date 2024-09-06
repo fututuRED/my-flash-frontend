@@ -57,8 +57,8 @@ function CreateStoryPage({ story, onSave }) {
   }
 
   return (
-    <div className="story-form-container">
-      <form onSubmit={handleSubmit} style={{ backgroundColor: color }}>
+    <div className="story-form-container" style={{ backgroundColor: color }}>
+      <form onSubmit={handleSubmit}>
         <div className="story-form">
           <label htmlFor="title">Story title:</label>
           <input
@@ -96,31 +96,36 @@ function CreateStoryPage({ story, onSave }) {
           <label htmlFor="content">Content:</label>
           <textarea
             id="content"
+            rows="5"
+            cols="30"
             value={content}
             onChange={(e) => setContent(e.currentTarget.value)}
           />
-
-          <input
-            type="radio"
-            name="status"
-            id="Private"
-            value="Private"
-            checked={status === "Private"}
-            onChange={(e) => setStatus(e.currentTarget.value)}
-          />
-          <label htmlFor="Private">Private</label>
-
-          <div>
-            <input
-              type="radio"
-              name="status"
-              id="Public"
-              value="Public"
-              checked={status === "Public"}
-              onChange={(e) => setStatus(e.currentTarget.value)}
-            />
-            <label htmlFor="Public">Public</label>
-          </div>
+          <fieldset>
+            <legend>Status:</legend>
+            <div>
+              <input
+                type="radio"
+                name="status"
+                id="Private"
+                value="Private"
+                checked={status === "Private"}
+                onChange={(e) => setStatus(e.currentTarget.value)}
+              />
+              <label htmlFor="Private">Private</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="status"
+                id="Public"
+                value="Public"
+                checked={status === "Public"}
+                onChange={(e) => setStatus(e.currentTarget.value)}
+              />
+              <label htmlFor="Public">Public</label>
+            </div>
+          </fieldset>
           <button type="submit">Submit</button>
         </div>
       </form>

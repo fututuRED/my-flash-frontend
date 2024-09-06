@@ -3,23 +3,17 @@ import { AuthContext } from "../context/AuthContextWrapper";
 import service from "../assets/service/api";
 import { useParams, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { RiChatDeleteLine } from "react-icons/ri";
+import { TiDeleteOutline } from "react-icons/ti";
+import CreateStoryPage from "./CreateStoryPage";
 
 import "../style/Story.css";
 
 function ProfilePage() {
   const [profileStories, setProfileStories] = useState([]);
+  const [editingStory, setEditingStory] = useState(null);
   const { user } = useContext(AuthContext);
   const { id } = useParams();
   const location = useLocation();
-
-  useEffect(() => {
-    if (location.state && location.state.newStory) {
-      setProfileStories([location.state.newStory, ...profileStories]);
-    } else {
-      getProfileStories();
-    }
-  }, [location.state, user._id, getProfileStories]);
 
   async function getProfileStories() {
     try {
@@ -30,6 +24,26 @@ function ProfilePage() {
       console.log("Error fetching stories:", error);
     }
   }
+  useEffect(() => {
+    if (location.state && location.state.newStory) {
+      setProfileStories((prevStories) => [
+        location.state.newStory,
+        ...profileStories,
+      ]);
+    } else {
+      getProfileStories();
+    }
+  }, [location.state, user._id]);
+
+  // const getProfileStories = useCallback(async () => {
+  //   try {
+  //     const response = await service.get(`/api/stories/users/${user._id}`);
+  //     setProfileStories(response.data);
+  //   } catch (error) {
+  //     setProfileStories([]);
+  //     console.log("Error fetching stories:", error);
+  //   }
+  // }, [user._id]);
 
   async function handleStatus(storyId, currentStatus) {
     try {
@@ -55,6 +69,14 @@ function ProfilePage() {
       console.log("Error deleting story:", error);
     }
   }
+  function handleEdit(story) {
+    setEditingStory(story);
+  }
+
+  function handleSave() {
+    setEditingStory(null);
+    getProfileStories(); // Refresh the stories list after saving
+  }
 
   // useEffect(() => {
   //   getProfileStories();
@@ -62,16 +84,23 @@ function ProfilePage() {
 
   return (
     <div className="profile-stories-grid">
-      {profileStories.length > 0 ? (
+      {editingStory ? (
+        <CreateStoryPage story={editingStory} onSave={handleSave} />
+      ) : profileStories.length > 0 ? (
         profileStories.map((oneStory) => (
           <div
             key={oneStory._id}
             className="profile-story-grid-item"
             style={{ backgroundColor: oneStory.backgroundColor }}
           >
-            <button onClick={() => handleDelete(oneStory._id)}>
-              <RiChatDeleteLine />
-              delete
+            <button
+              onClick={() => handleDelete(oneStory._id)}
+              aria-label="Delete"
+            >
+              <TiDeleteOutline />
+            </button>
+            <button onClick={() => handleEdit(oneStory)} aria-label="Edit">
+              Edit
             </button>
             <h2>
               <Link className="story" to={`/stories/${oneStory._id}`}>

@@ -37,7 +37,7 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70%;
 }
 
 .story-form {
@@ -47,10 +47,10 @@ body,
   border: 2px solid #3f496c;
   border-radius: 8px;
   padding: 20px;
-  margin: 20px;
-  width: 80%;
+  /* margin: 20px; */
+  width: 100%;
   max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .story-form label {
@@ -58,9 +58,18 @@ body,
   margin-bottom: 8px;
   color: #333;
 }
+.story-form fieldset {
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Customize as needed */
+  border-radius: 4px; /* Customize as needed */
+}
 
-.story-form input,
-.story-form textarea,
+.story-form legend {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
 .story-form .HexColorPicker {
   width: 100%;
   padding: 8px;

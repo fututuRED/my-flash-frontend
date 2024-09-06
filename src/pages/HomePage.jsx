@@ -30,12 +30,15 @@ function HomePage() {
             <a
               href="https://www.flashfictiononline.com/"
               alt="Flashfictiononline site"
+              className="otherlink"
             >
               Flashfictiononline
             </a>{" "}
             <br />
-            <Link to="/stories">
-              <strong>or here to The Pond / Stories</strong>
+            or here
+            <br />
+            <Link to="/stories" className="otherlink">
+              <strong>to The Pond / Stories</strong>
             </Link>
           </p>
           <h2>About what?</h2>
@@ -48,39 +51,47 @@ function HomePage() {
             <br />
             Ain't that SHORT?
             <br />
-            Sure, right?
+            Sure, right?{" "}
           </p>
           <ol>
             <h2>How it works?</h2>
             <li>
               <strong>Create!</strong> Use a little web-notebook without any
               lines!
-              <br />
+            </li>
+            <li>
               A list of thematic EMOJIS will be at your disposal to give you a
               theme to which you can easily connect ans which will be different
               from time to time,
-              <br />
-              Pick a colour to write on,
-              <br />
-              <strong>Deliver</strong> your piece on a round nymph that,
-              <br />
-              You can <strong>share</strong>(to the public)
+            </li>
+            <li>Pick a colour to write on,</li>
+            <li>
+              {" "}
+              <strong>Deliver</strong> your piece on a round nymph that, You can{" "}
+              <strong>share</strong>(to the public)
               <br />
               or <strong>keep it to yourself!</strong>
               It's up to you... (Privacy matter to us anyway!)!
-              <br />
-              Keep in mind that the public could be... any internet onlookers
-              who accidently were looking for something..
-              <br /> Funny or else! Anyway..
-              <br /> NO WORIES, nobody will comment what you write!
-            </li>
-            <li>
-              An account?
-              <Link to="/signup">
-                <strong>SignUp!</strong>
-              </Link>
             </li>
           </ol>
+
+          <p>
+            {" "}
+            Keep in mind that the public could be... any internet onlookers who
+            accidently were looking for something..
+            <br /> Funny or else! Anyway..
+            <br /> NO WORIES, nobody will comment what you write!
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h3>An account?</h3>
+            <Link to="/signup" className="signlink">
+              <strong>SignUp!</strong>
+            </Link>
+          </p>
         </div>
       </div>
       <footer>

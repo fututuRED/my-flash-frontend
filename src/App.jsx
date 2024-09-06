@@ -36,8 +36,9 @@ function App() {
           id="swutch"
           role="switch"
           checked={theme === "dark"}
+          className="toggle-btn"
         />
-        <label>Toggle Dark Mode</label>
+        <label>Toggle Dark/Light Mode</label>
 
         <Routes>
           <Route path="/" element={<HomePage />} />

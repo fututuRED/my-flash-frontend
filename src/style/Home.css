@@ -26,7 +26,6 @@ body,
 .App {
   height: 100%;
   margin: 0;
-
   text-align: center;
 }
 
@@ -34,20 +33,20 @@ body,
   position: relative;
   background-image: url("https://images.unsplash.com/photo-1497114046243-1154db4f4abf");
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: cover;
   background-position: center;
   margin: 15px;
-  filter: grayscale(10%) brightness(90%);
-  z-index: 0;
+  filter: opacity(85%) brightness(95%);
+  /* z-index: 0; */
 }
 .about-page::before {
   content: "";
   position: absolute;
-  margin: 15px;
+
   top: 0;
   left: 0;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
@@ -57,34 +56,55 @@ body,
   justify-content: center;
   text-align: center;
   padding: 20px;
+  margin: 4rem;
 }
 
 .about-container p {
   color: rgb(124, 175, 246);
   font-size: 0.4rem;
-  margin-bottom: 10px;
 }
+
 .about-container h1,
-h3,
-h4,
-a {
-  color: rgb(124, 175, 246);
-}
-.about-container h1,
-h2 {
+h2,
+h3 {
   font-weight: bolder;
+  color: rgb(91, 136, 194);
+  background: -webkit-linear-gradient(#8e96f1, #852bb2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about-container h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 .about-container h2 {
+  font-size: 2rem;
+  color: rgb(91, 136, 194);
+  margin-bottom: 1.5rem;
+}
+.about-container h3 {
+  font-size: 1.8rem;
   color: rgb(91, 136, 194);
 }
 .about-container h4 {
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 .about-container ol {
-  list-style: none;
+  list-style: circle;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 1.2rem;
   color: rgb(124, 175, 246);
 }
-
+.otherlink {
+  color: rgb(242, 144, 53);
+  text-decoration: double;
+}
+.signlink {
+  text-decoration: double;
+  font-size: 1.5rem;
+  color: rgb(242, 144, 53);
+}
 .avatar {
   width: 10px;
   height: 10px;
@@ -118,6 +138,7 @@ a:hover .icon {
   background-color: #f1f1f1;
   text-align: center;
 }
+
 @media (max-width: 768px) {
   .footer {
     flex-direction: row;
@@ -195,4 +216,14 @@ h4 {
 }
 [data-theme="dark"] .about-container ol {
   color: #a69e9e;
+}
+
+[data-theme="dark"] .footer {
+  background-color: rgb(49, 77, 106);
+}
+[data-theme="dark"] .footer h4 {
+  color: rgb(117, 160, 204);
+}
+[data-theme="dark"] .footer p {
+  color: rgb(76, 123, 170);
 }
