@@ -110,3 +110,7 @@ body,
 .story-form-container h2 {
   color: #3f496c;
 }
+
+.hidden-navbar {
+  display: none;
+}

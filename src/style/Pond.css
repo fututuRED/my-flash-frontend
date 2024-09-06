@@ -29,15 +29,6 @@ body,
   margin: 0;
   padding: 0;
   text-align: center;
-}
-.content-story {
-  display: none;
-}
-
-.content-story.show {
-  display: block;
-}
-.pond-page {
   position: relative;
   background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
   background-repeat: no-repeat;
@@ -46,6 +37,22 @@ body,
   background-position: center;
   min-height: 100vh;
 }
+.content-story {
+  display: none;
+}
+
+.content-story.show {
+  display: block;
+}
+/* .pond-page {
+  position: relative;
+  background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(10%) brightness(90%);
+  background-position: center;
+  min-height: 100vh;
+} */
 .bg-color-custom {
   background-color: var(
     --custom-bg-color,

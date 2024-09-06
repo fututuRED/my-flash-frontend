@@ -33,24 +33,26 @@ function PublicStoriesPage() {
         {stories.length > 0 ? (
           stories.map((oneStory) => (
             <div className="pond-tile" key={oneStory._id}>
-              <div
-                className="bg-color-custom"
-                style={{ "--custom-bg-color": oneStory.backgroundColor }}
-              >
+              <div className="bg-color-custom">
                 <h2 onClick={() => toggleContent(oneStory._id)}>
                   {oneStory.title}
                 </h2>
                 <span
                   className="emoticon"
                   dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
+                  style={{ color: oneStory.textColor }}
                 ></span>
                 <div
                   className={`content-story ${
                     visibleContent[oneStory._id] ? "show" : ""
                   }`}
                 >
-                  <p>{oneStory.content}</p>
-                  <p>{oneStory.author.username}</p>
+                  <p style={{ color: oneStory.textColor }}>
+                    {oneStory.content}
+                  </p>
+                  <p style={{ color: oneStory.textColor }}>
+                    {oneStory.author.username}
+                  </p>
                   <Link className="story" to={`/stories/${oneStory._id}`}>
                     details
                   </Link>

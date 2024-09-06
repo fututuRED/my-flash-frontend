@@ -12,7 +12,7 @@ function CreateStoryPage({ story, onSave }) {
   const [title, setTitle] = useState(story?.title || "");
   const [content, setContent] = useState(story?.content || "");
   const [status, setStatus] = useState(story?.status || "Private");
-  const [color, setColor] = useState(story?.backgroundColor || "#ffffff");
+  const [textColor, setTextColor] = useState(story?.textColor || "#000000");
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -34,7 +34,7 @@ function CreateStoryPage({ story, onSave }) {
       title,
       content,
       status,
-      backgroundColor: color,
+      textColor,
       author: user._id,
     };
 
@@ -57,7 +57,7 @@ function CreateStoryPage({ story, onSave }) {
   }
 
   return (
-    <div className="story-form-container" style={{ backgroundColor: color }}>
+    <div className="story-form-container">
       <form onSubmit={handleSubmit}>
         <div className="story-form">
           <label htmlFor="title">Story title:</label>
@@ -90,8 +90,8 @@ function CreateStoryPage({ story, onSave }) {
             )}
           </div>
 
-          <label htmlFor="color">Background Color:</label>
-          <HexColorPicker color={color} onChange={setColor} />
+          <label htmlFor="textColor">Text Color:</label>
+          <HexColorPicker color={textColor} onChange={setTextColor} />
 
           <label htmlFor="content">Content:</label>
           <textarea
@@ -102,7 +102,6 @@ function CreateStoryPage({ story, onSave }) {
             onChange={(e) => setContent(e.currentTarget.value)}
           />
           <fieldset>
-            <legend>Status:</legend>
             <div>
               <input
                 type="radio"

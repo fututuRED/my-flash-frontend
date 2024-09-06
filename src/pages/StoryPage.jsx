@@ -40,18 +40,15 @@ function StoryPage() {
       {isEditing ? (
         <CreateStoryPage story={story} onSave={handleSave} />
       ) : (
-        <div
-          key={story._id}
-          className="bg-color-custom"
-          style={{ "--custom-bg-color": story.backgroundColor }}
-        >
-          <h2>{story.title}</h2>
-          <p>{story.content}</p>
+        <div key={story._id}>
+          <h2 style={{ color: story.textColor }}>{story.title}</h2>
+          <p style={{ color: story.textColor }}>{story.content}</p>
           <span
             className="emoticon"
+            style={{ color: story.textColor }}
             dangerouslySetInnerHTML={{ __html: story.emoticon }}
           ></span>
-          <blockquote>
+          <blockquote style={{ color: story.textColor }}>
             by {story.author?.username || "unknown author"}
           </blockquote>
           {user._id === story.author._id && (

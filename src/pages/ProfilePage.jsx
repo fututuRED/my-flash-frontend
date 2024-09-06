@@ -35,16 +35,6 @@ function ProfilePage() {
     }
   }, [location.state, user._id]);
 
-  // const getProfileStories = useCallback(async () => {
-  //   try {
-  //     const response = await service.get(`/api/stories/users/${user._id}`);
-  //     setProfileStories(response.data);
-  //   } catch (error) {
-  //     setProfileStories([]);
-  //     console.log("Error fetching stories:", error);
-  //   }
-  // }, [user._id]);
-
   async function handleStatus(storyId, currentStatus) {
     try {
       const newStatus = currentStatus === "Public" ? "Private" : "Public";
@@ -75,12 +65,8 @@ function ProfilePage() {
 
   function handleSave() {
     setEditingStory(null);
-    getProfileStories(); // Refresh the stories list after saving
+    getProfileStories();
   }
-
-  // useEffect(() => {
-  //   getProfileStories();
-  // }, [user._id]);
 
   return (
     <div className="profile-stories-grid">
@@ -103,15 +89,20 @@ function ProfilePage() {
               Edit
             </button>
             <h2>
-              <Link className="story" to={`/stories/${oneStory._id}`}>
+              <Link
+                className="story"
+                to={`/stories/${oneStory._id}`}
+                style={{ color: oneStory.textColor }}
+              >
                 {oneStory.title}
               </Link>
             </h2>
             <span
               className="emoticon"
+              style={{ color: oneStory.textColor }}
               dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
             ></span>
-            <p>{oneStory.content}</p>
+            <p style={{ color: oneStory.textColor }}>{oneStory.content}</p>
             <label htmlFor={`status-${oneStory._id}`}>Status: </label>
             <input
               type="checkbox"
