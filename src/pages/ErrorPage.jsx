@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import "../style/ErrorPage.css"; // Ensure you have some basic styles
-
+import "../style/Error.css"; //
 function ErrorPage() {
   return (
     <div className="error-page">

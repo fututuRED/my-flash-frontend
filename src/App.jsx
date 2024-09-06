@@ -12,7 +12,7 @@ import IsLoggedOut from "./components/Routing/isLoggedOut";
 import IsLoggedIn from "./components/Routing/isLoggedIn";
 import "@picocss/pico";
 import "./App.css";
-import "./style/Error.css";
+
 import Navbar from "./components/Navbar";
 
 function App() {
