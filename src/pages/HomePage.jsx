@@ -105,7 +105,7 @@ function HomePage() {
           />
           <p>
             Hello! Im Reda, a passionate developer. Feel free to have a look at
-            those: the following platforms:
+            these:
           </p>
           <a
             href="www.linkedin.com/in/reda-d-76b0942b9"
