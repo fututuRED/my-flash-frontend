@@ -41,8 +41,7 @@ body,
   position: relative;
   background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
   background-repeat: no-repeat;
-  background-size: 90%;
-  margin: 15px;
+  background-size: cover;
   filter: grayscale(10%) brightness(90%);
   background-position: center;
 }
@@ -70,6 +69,7 @@ body,
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
+  margin: 0 15px;
   width: 100%;
   height: 100%;
   justify-items: center;

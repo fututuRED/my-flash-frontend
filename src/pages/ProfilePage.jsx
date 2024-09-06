@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../context/AuthContextWrapper";
 import service from "../assets/service/api";
 import { useParams, useLocation } from "react-router-dom";
-
 import { Link } from "react-router-dom";
 import { RiChatDeleteLine } from "react-icons/ri";
 
@@ -20,7 +19,7 @@ function ProfilePage() {
     } else {
       getProfileStories();
     }
-  }, [location.state, user._id]);
+  }, [location.state, user._id, getProfileStories]);
 
   async function getProfileStories() {
     try {
