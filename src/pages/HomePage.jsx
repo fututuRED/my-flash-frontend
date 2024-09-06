@@ -17,7 +17,7 @@ function HomePage() {
           <p>
             Ever thought about getting published in the next
             <br />
-            <i>The Newyorker</i>issue? <br />
+            <i>The Newyorker</i> issue? <br />
             Well I have! If you too, well we can easily agree that the road, if
             it exists is rather long but guess what?
             <br /> What?
@@ -26,20 +26,21 @@ function HomePage() {
             <br />
             If this of interest to you, WELCOME! <br />
             Here you are now, have a look at some random but interesting writing
-            piece found in this pretty website
+            piece found in this pretty website <br />
             <a
               href="https://www.flashfictiononline.com/"
               alt="Flashfictiononline site"
             >
               Flashfictiononline
-            </a>
+            </a>{" "}
+            <br />
             <Link to="/stories">
-              <strong>Here to The Pond / Stories</strong>
-            </Link>{" "}
+              <strong>or here to The Pond / Stories</strong>
+            </Link>
           </p>
           <h2>About what?</h2>
           <p>
-            Giving you the opportunity to access a platform for "short-short" or
+            Giving you the opportunity to access a platform for short-short or
             flash-fiction as the trend goes.
             <br />
             We offer you a private and peculiar environment to write, mostly
@@ -50,15 +51,7 @@ function HomePage() {
             Sure, right?
           </p>
           <ol>
-            <li>
-              {" "}
-              An account?{" "}
-              <Link to="/signup">
-                <strong>SignUp!</strong>
-              </Link>
-              <br />
-              The strictly minimum to join, the coolest it is, right!?
-            </li>
+            <h2>How it works?</h2>
             <li>
               <strong>Create!</strong> Use a little web-notebook without any
               lines!
@@ -67,19 +60,25 @@ function HomePage() {
               theme to which you can easily connect ans which will be different
               from time to time,
               <br />
-              Pick a colour,
+              Pick a colour to write on,
               <br />
               <strong>Deliver</strong> your piece on a round nymph that,
               <br />
-              If you want, you can <strong>share</strong>(to the public)
+              You can <strong>share</strong>(to the public)
               <br />
-              or <strong>don't!</strong>
+              or <strong>keep it to yourself!</strong>
               It's up to you... (Privacy matter to us anyway!)!
               <br />
               Keep in mind that the public could be... any internet onlookers
               who accidently were looking for something..
               <br /> Funny or else! Anyway..
               <br /> NO WORIES, nobody will comment what you write!
+            </li>
+            <li>
+              An account?
+              <Link to="/signup">
+                <strong>SignUp!</strong>
+              </Link>
             </li>
           </ol>
         </div>
