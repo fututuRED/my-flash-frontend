@@ -56,17 +56,17 @@ body,
   color: #333; /* Text color for labels */
 }
 
-.story-form input,
+/* .story-form input,
 .story-form textarea,
 .story-form .HexColorPicker {
-  width: 50%; /* Full width inputs */
+  width: 50%; 
   padding: 8px;
   margin-bottom: 16px;
-  margin-top: 5px; /* Space between inputs */
-  border: 1px solid #ccc; /* Border for inputs */
-  border-radius: 4px; /* Rounded corners for inputs */
-  font-size: 1rem; /* Consistent font size */
-}
+  margin-top: 5px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 1rem; 
+} */
 
 .story-form .emoticon-picker {
   display: flex;
