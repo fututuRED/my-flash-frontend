@@ -7,7 +7,10 @@ function Navbar({ hidden }) {
   const { user, isLoggedIn, disconnect } = useContext(AuthContext);
 
   return (
-    <ul className={`nav-bar ${hidden ? "hidden-navbar" : ""}`}>
+    <ul
+      className={`nav-bar ${hidden ? "hidden-navbar" : ""}`}
+      aria-hidden={hidden}
+    >
       <li>
         <NavLink to="/">Home</NavLink>
       </li>

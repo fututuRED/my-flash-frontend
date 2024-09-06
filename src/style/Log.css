@@ -108,3 +108,7 @@ body,
 [data-theme="dark"] .login-form a:hover {
   background-color: rgba(255, 140, 0, 0.2);
 }
+
+.hidden-navbar {
+  display: none;
+}

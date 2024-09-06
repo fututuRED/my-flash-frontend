@@ -27,7 +27,7 @@ function App() {
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };
-  const hideNavbarRoutes = ["/signup", "/login"];
+  const hideNavbarRoutes = ["/signup", "/login", "/home", "/create-story"];
   const shouldHideNavbar = () => {
     const pathname = window.location.pathname;
     return hideNavbarRoutes.includes(pathname);

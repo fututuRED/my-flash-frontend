@@ -98,3 +98,7 @@ body,
   background-color: #333;
   color: #ffffff;
 }
+
+.hidden-navbar {
+  display: none;
+}

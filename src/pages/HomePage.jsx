@@ -91,6 +91,10 @@ function HomePage() {
             <Link to="/signup" className="signlink">
               <strong>SignUp!</strong>
             </Link>
+            <h3>An account already:</h3>
+            <Link to="/login" className="loglink">
+              <strong>LogIn!</strong>
+            </Link>
           </p>
         </div>
       </div>

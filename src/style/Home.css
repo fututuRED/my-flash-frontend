@@ -100,6 +100,11 @@ h3 {
   color: rgb(242, 144, 53);
   text-decoration: double;
 }
+.loglink {
+  text-decoration: double;
+  font-size: 1.5rem;
+  color: rgb(19, 127, 107);
+}
 .signlink {
   text-decoration: double;
   font-size: 1.5rem;
@@ -158,9 +163,7 @@ a:hover .icon {
   .about-container h2 {
     font-size: 1.6rem;
   }
-  .about-container h4 {
-    font-size: 0.9rem;
-  }
+
   .about-container ol {
     font-size: 1.3rem;
   }
