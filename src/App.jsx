@@ -27,10 +27,15 @@ function App() {
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };
+  const hideNavbarRoutes = ["/signup", "/login"];
+  const shouldHideNavbar = () => {
+    const pathname = window.location.pathname;
+    return hideNavbarRoutes.includes(pathname);
+  };
   return (
     <>
       <div className="App">
-        <Navbar />
+        <Navbar hidden={shouldHideNavbar()} />
         <input
           onChange={toggleTheme}
           name="opt-in"

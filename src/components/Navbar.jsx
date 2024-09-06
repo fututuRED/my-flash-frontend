@@ -3,11 +3,11 @@ import { useContext } from "react"; //
 import { AuthContext } from "../context/AuthContextWrapper";
 
 import "../style/Nav.css";
-function Navbar() {
+function Navbar({ hidden }) {
   const { user, isLoggedIn, disconnect } = useContext(AuthContext);
 
   return (
-    <ul className="nav-bar">
+    <ul className={`nav-bar ${hidden ? "hidden-navbar" : ""}`}>
       <li>
         <NavLink to="/">Home</NavLink>
       </li>

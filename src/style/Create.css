@@ -24,7 +24,7 @@ html,
 body,
 #root,
 .App {
-  height: 60%;
+  height: 50%;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -36,7 +36,7 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70%;
+  height: 50%;
 }
 
 .story-form {
@@ -44,10 +44,10 @@ body,
   flex-direction: column; /* Ensure inputs stack vertically */
   background-color: #f8f9fa;
   border: 2px solid #3f496c;
-  border-radius: 8px;
+  border-radius: 10%;
   padding: 20px;
   /* margin: 20px; */
-  width: 100%;
+  width: auto;
   max-width: 600px;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
@@ -58,15 +58,12 @@ body,
   color: #333;
 }
 .story-form fieldset {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   padding: 10px;
-  border: 1px solid #ccc; /* Customize as needed */
-  border-radius: 4px; /* Customize as needed */
 }
 
 .story-form legend {
-  font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .story-form .HexColorPicker {
