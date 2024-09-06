@@ -34,6 +34,9 @@ function StoryPage() {
   useEffect(() => {
     fetchStory();
   }, [id]);
+
+  if (story === null) return <div>Error loading story...</div>;
+  if (!story) return <div>Loading...</div>;
   return (
     <div className="story-form">
       {isEditing ? (
