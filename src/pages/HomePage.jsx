@@ -54,6 +54,7 @@ function HomePage() {
             Sure, right?{" "}
           </p>
           <ol>
+            <br />
             <h2>How it works?</h2>
             <li>
               <strong>Create!</strong> Use a little web-notebook without any
@@ -91,6 +92,8 @@ function HomePage() {
             <Link to="/signup" className="signlink">
               <strong>SignUp!</strong>
             </Link>
+            <br />
+            <br />
             <h3>An account already:</h3>
             <Link to="/login" className="loglink">
               <strong>LogIn!</strong>

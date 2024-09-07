@@ -24,8 +24,7 @@ html,
 body,
 #root,
 .App {
-  height: 60%;
-
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 0;

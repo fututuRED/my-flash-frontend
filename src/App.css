@@ -15,7 +15,7 @@ html,
 body,
 #root,
 .App {
-  height: 100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -30,6 +30,27 @@ body,
     --primary-hover: #303f9f;
     --primary-focus: rgba(57, 73, 171, 0.125);
     --primary-inverse: #fff;
+  }
+
+  .toggle {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 40px;
+    width: 100px;
+    font-size: 0.8px;
+  }
+  .theme {
+    color: rgb(97, 119, 163);
+    background: -webkit-linear-gradient(#32545f, #0f428e);
+    -webkit-background-clip: text;
+    font-size: large;
+    text-decoration: overline;
+  }
+
+  .hidden-navbar {
+    display: none;
   }
 
   /* Indigo Dark scheme (Auto) */
@@ -133,18 +154,4 @@ main:not([data-theme="light"]) {
   --primary-hover: #f57c00;
   --primary-focus: rgba(251, 140, 0, 0.125);
   --primary-inverse: #fff;
-}
-
-.toggle {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  margin: 40px;
-  width: 100px;
-  font-size: 0.8px;
-}
-
-.hidden-navbar {
-  display: none;
 }

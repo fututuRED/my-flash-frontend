@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
@@ -18,6 +18,8 @@ import Navbar from "./components/Navbar";
 function App() {
   const defaultTheme = localStorage.getItem("theme") || "light";
   const [theme, setTheme] = useState(defaultTheme);
+  const location = useLocation();
+
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
@@ -27,15 +29,14 @@ function App() {
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };
+
   const hideNavbarRoutes = ["/signup", "/login", "/home", "/create-story"];
-  const shouldHideNavbar = () => {
-    const pathname = window.location.pathname;
-    return hideNavbarRoutes.includes(pathname);
-  };
+  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
+
   return (
     <>
       <div className="App">
-        <Navbar hidden={shouldHideNavbar()} />
+        <Navbar hidden={shouldHideNavbar} />
         <input
           onChange={toggleTheme}
           name="opt-in"
@@ -45,7 +46,7 @@ function App() {
           checked={theme === "dark"}
           className="toggle-btn"
         />
-        <label>Toggle Dark/Light Mode</label>
+        <label className="theme">Toggle Dark/Light Mode</label>
 
         <Routes>
           <Route path="/" element={<HomePage />} />
