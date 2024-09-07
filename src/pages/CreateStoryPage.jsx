@@ -113,7 +113,7 @@ function CreateStoryPage({ story, onSave }) {
               />
               <label htmlFor="Private">Private</label>
             </div>
-            <div>
+            <div className="pub-priv">
               <input
                 type="radio"
                 name="status"
