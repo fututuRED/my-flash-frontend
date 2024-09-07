@@ -36,10 +36,8 @@ body,
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* margin: 15px; */
   filter: opacity(75%) brightness(95%);
   width: 100%;
-  /* z-index: 0; */
 }
 .about-page::before {
   content: "";
@@ -63,7 +61,7 @@ body,
 
 .about-container p {
   color: rgb(124, 175, 246);
-  font-size: 0.4rem;
+  font-size: 1.4rem;
 }
 
 .about-container h1,
@@ -169,10 +167,10 @@ a:hover .icon {
   }
 
   .about-container ol {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .about-container p {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   .about-container h4 {
@@ -194,7 +192,7 @@ a:hover .icon {
     padding: 60px;
   }
   .about-container p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .about-container h4 {
     font-size: 2rem;

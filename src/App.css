@@ -37,9 +37,13 @@ body,
     display: flex;
     flex-direction: row;
     justify-content: end;
-    margin: 40px;
+    margin: 10rem;
     width: 100px;
     font-size: 0.8px;
+    background-color: none;
+  }
+  .toggle-btn {
+    background-color: blue;
   }
   .theme {
     color: rgb(97, 119, 163);
@@ -103,6 +107,7 @@ body,
     justify-content: end;
     margin: 20px;
     width: 100px;
+    background-color: none;
   }
 }
 [data-theme="light"],

@@ -43,7 +43,7 @@ html {
 .story-form {
   display: flex;
   flex-direction: column; /* Ensure inputs stack vertically */
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa; */
   border: 2px solid #3f496c;
   border-radius: 10%;
   padding: 20px;

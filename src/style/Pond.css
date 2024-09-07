@@ -64,7 +64,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   z-index: 0;
 }
 
@@ -128,7 +128,6 @@ html {
   overflow: hidden;
   text-align: center;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
 }
 
 .pond-grid h2 a {
@@ -161,7 +160,7 @@ html {
 
 [data-theme="dark"] .pond-tile-content {
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjusted for better visibility */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="dark"] .pond h2 a,

@@ -40,7 +40,7 @@ html {
   background-position: center;
   min-height: 100vh;
 }
-.nav-bar a {
+/* .nav-bar a {
   list-style: none;
   text-decoration: none;
   color: #4d8adf;
@@ -49,24 +49,21 @@ html {
   align-items: center;
   justify-content: center;
   border: 2px solid #1f7c74;
-  background-color: rgba(214, 236, 248, 0.2);
+
   border-radius: 50%;
   width: 100px;
   height: 100px;
   padding: 4px 8px;
   transition: color 0.3s, box-shadow 0.3s;
-}
+} */
 
-.nav-bar a:hover {
+/* .nav-bar a:hover {
   color: #022218;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
-  background-color: #4093b6;
-}
 
-.bg-color-custom {
-  background-color: var(--custom-bg-color, #ffffff);
-}
+} */
+
 .profile-stories-grid,
 .pond-grid {
   display: grid;
@@ -117,7 +114,7 @@ html {
   overflow: hidden;
   text-align: center;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 .pond-grid h2 a,
@@ -139,7 +136,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa; */
   border: 2px solid #3f496c;
   border-radius: 8px;
   padding: 20px;
@@ -187,10 +184,10 @@ button[aria-label="Delete"]:hover::after {
 [data-theme="dark"] .pond-grid {
   border-color: #475588;
 }
-[data-theme="dark"] .bg-color-custom {
+/* [data-theme="dark"] .bg-color-custom {
   border-color: #475588;
   box-shadow: 0 2px 4px #fff1;
-}
+} */
 
 [data-theme="dark"] .profile-story-grid-item,
 [data-theme="dark"] .pond-tile {

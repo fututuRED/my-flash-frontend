@@ -74,11 +74,7 @@ function ProfilePage() {
         <CreateStoryPage story={editingStory} onSave={handleSave} />
       ) : profileStories.length > 0 ? (
         profileStories.map((oneStory) => (
-          <div
-            key={oneStory._id}
-            className="profile-story-grid-item"
-            style={{ backgroundColor: oneStory.backgroundColor }}
-          >
+          <div key={oneStory._id} className="profile-story-grid-item">
             <button
               onClick={() => handleDelete(oneStory._id)}
               aria-label="Delete"

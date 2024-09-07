@@ -33,7 +33,7 @@ function PublicStoriesPage() {
         {stories.length > 0 ? (
           stories.map((oneStory) => (
             <div className="pond-tile" key={oneStory._id}>
-              <div className="bg-color-custom">
+              <div>
                 <h2 onClick={() => toggleContent(oneStory._id)}>
                   {oneStory.title}
                 </h2>

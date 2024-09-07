@@ -36,18 +36,11 @@ function App() {
   return (
     <>
       <div className="App">
-        <Navbar hidden={shouldHideNavbar} />
-        <input
-          onChange={toggleTheme}
-          name="opt-in"
-          type="checkbox"
-          id="swutch"
-          role="switch"
-          checked={theme === "dark"}
-          className="toggle-btn"
+        <Navbar
+          hidden={shouldHideNavbar}
+          heme={theme}
+          toggleTheme={toggleTheme}
         />
-        <label className="theme">Toggle Dark/Light Mode</label>
-
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/stories" element={<PublicStoriesPage />} />

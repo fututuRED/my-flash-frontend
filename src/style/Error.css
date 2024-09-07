@@ -1,3 +1,4 @@
+/* Navbar Styles */
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 *,
@@ -18,21 +19,28 @@
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  width: 100%;
 }
 
 html,
 body,
 #root,
 .App {
-  height: 60%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-
+html {
+  position: relative;
+  background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(10%) brightness(90%);
+  background-position: center;
+  min-height: 100vh;
+}
 .error-page {
   display: flex;
   flex-direction: column;

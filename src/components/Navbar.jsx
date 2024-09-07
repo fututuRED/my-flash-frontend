@@ -3,7 +3,7 @@ import { useContext } from "react"; //
 import { AuthContext } from "../context/AuthContextWrapper";
 
 import "../style/Nav.css";
-function Navbar({ hidden }) {
+function Navbar({ hidden, theme, toggleTheme }) {
   const { user, isLoggedIn, disconnect } = useContext(AuthContext);
 
   return (
@@ -40,6 +40,20 @@ function Navbar({ hidden }) {
             </li>
           </>
         )}
+        <li className="theme-toggle">
+          <input
+            onChange={toggleTheme}
+            name="opt-in"
+            type="checkbox"
+            id="swutch"
+            role="switch"
+            checked={theme === "dark"}
+            className="toggle-btn"
+          />
+          <label htmlFor="switch" className="theme">
+            Toggle Dark/Light Mode
+          </label>
+        </li>
       </ul>
     </nav>
   );
