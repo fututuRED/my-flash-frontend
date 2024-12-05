@@ -8,6 +8,7 @@ import PublicStoriesPage from "./pages/PublicStoriesPage";
 import ProfilePage from "./pages/ProfilePage";
 import StoryPage from "./pages/StoryPage";
 import ErrorPage from "./pages/ErrorPage";
+import AboutPage from "./pages/AboutPage";
 import IsLoggedOut from "./components/Routing/isLoggedOut";
 import IsLoggedIn from "./components/Routing/isLoggedIn";
 import "@picocss/pico";
@@ -45,7 +46,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/stories" element={<PublicStoriesPage />} />
           <Route path="/stories/:id" element={<StoryPage />} />
-
+          <Route path="/about" element={<AboutPage />} />
           <Route element={<IsLoggedOut />}>
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/login" element={<LoginPage />} />

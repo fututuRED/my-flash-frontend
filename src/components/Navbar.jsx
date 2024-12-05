@@ -18,6 +18,9 @@ function Navbar({ hidden, theme, toggleTheme }) {
         <li>
           <NavLink to="/stories">Stories</NavLink>
         </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
         {!isLoggedIn ? (
           <>
             <li>

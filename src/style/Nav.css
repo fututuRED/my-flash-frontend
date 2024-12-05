@@ -48,9 +48,6 @@ html {
   position: sticky;
   top: 0;
   width: auto;
-  /* display: flex; */
-  /* flex-direction: row;
-  justify-content: space-between; */
   gap: 4rem;
   box-shadow: 0 2px 4px rgba(149, 149, 149, 0.1);
   padding: 10px 0;
