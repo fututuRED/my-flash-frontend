@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 *,
 *::before,
@@ -47,15 +47,14 @@ html {
   align-content: center;
   justify-items: center;
   justify-content: center;
-  /* Ensure inputs stack vertically */
-  /* background-color: #f8f9fa; */
+
   border: 2px solid #3f496c;
   border-radius: 10%;
   padding: 20px;
-  /* margin: 20px; */
+
   width: auto;
   max-width: 600px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+
 }
 
 .story-form label,
@@ -89,9 +88,9 @@ html {
   justify-content: center;
   margin-bottom: 16px;
   width: 100%;
-  max-width: 300px; /* Restrict width */
-  height: 150px; /* Restrict height */
-  overflow-y: auto; /* Scrollable if content exceeds */
+  max-width: 300px; 
+  height: 150px; 
+  overflow-y: auto; 
 }
 
 .story-form .emoticon-picker span {
@@ -120,4 +119,4 @@ html {
 
 .hidden-navbar {
   display: none;
-}
+} */

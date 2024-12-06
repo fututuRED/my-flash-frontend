@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react"; //
 import { AuthContext } from "../context/AuthContextWrapper";
 
-import "../style/Nav.css";
+import "../style/Home.css";
 function Navbar({ hidden, theme, toggleTheme }) {
   const { user, isLoggedIn, disconnect } = useContext(AuthContext);
 
@@ -26,9 +26,9 @@ function Navbar({ hidden, theme, toggleTheme }) {
             <li>
               <NavLink to="/signup">Sign Up</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/login">Login</NavLink>
-            </li>
+            </li> */}
           </>
         ) : (
           <>
@@ -54,7 +54,7 @@ function Navbar({ hidden, theme, toggleTheme }) {
             className="toggle-btn"
           />
           <label htmlFor="switch" className="theme">
-            Toggle Dark/Light Mode
+            Dark/Light Mode
           </label>
         </li>
       </ul>

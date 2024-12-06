@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 *,
 *::before,
 *::after {
@@ -7,7 +8,176 @@
   box-sizing: border-box;
 }
 
-* {
+.about-page {
+  position: relative;
+  background-image: url("https://cdn.pixabay.com/photo/2017/07/06/18/36/background-2478897_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: opacity(75%) brightness(80%);
+  width: 100%;
+}
+
+.nav-bar {
+  list-style: none;
+  text-decoration: none;
+  position: sticky;
+  top: 0;
+  width: auto;
+  gap: 4rem;
+  box-shadow: 0 2px 4px rgba(149, 149, 149, 0.1);
+  padding: 10px 0;
+  background-color: rgba(146, 217, 255, 0.2);
+  z-index: 101;
+}
+.nav-bar ul,
+.nav-bar a,
+li .theme-toggle {
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.nav-bar a,
+li .theme-toggle {
+  list-style: none;
+  text-decoration: none;
+  color: #6491cf;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #1f7c74;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 4px 8px;
+  transition: color 0.3s, box-shadow 0.3s;
+}
+
+.nav-bar a:hover {
+  color: #022218;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  background-color: #65adcd;
+}
+
+.about-container p {
+  color: rgb(16, 45, 80);
+  font-size: 1.4rem;
+}
+
+.about-container h1 {
+  font-weight: bolder;
+  color: rgb(185, 94, 42);
+  background: -webkit-linear-gradient(#35395b, #852bb2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-container h1 {
+  font-size: 5.5rem;
+  /* margin-bottom: 1.5rem; */
+}
+.about-container h2 {
+  font-size: 2rem;
+  color: rgb(29, 65, 112);
+  /* margin-bottom: 1.5rem; */
+}
+.about-container h3 {
+  font-size: 1.4rem;
+  color: rgb(209, 138, 244);
+  /* margin-bottom: 0; */
+}
+.about-container h4 {
+  font-size: 1rem;
+}
+
+/* .otherlink {
+  color: rgb(129, 112, 213);
+  text-decoration: double;
+}
+.loglink {
+  text-decoration: double;
+  font-size: 1.5rem;
+  color: rgb(67, 109, 153);
+} */
+
+.login-form {
+  max-width: 500px;
+  width: auto;
+  height: auto;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid rgb(67, 109, 153);
+  border-radius: 50%;
+  padding: 40px;
+  margin-top: 40px;
+  background-color: rgb(67, 109, 153);
+  text-align: center;
+}
+
+.login-form a {
+  color: rgb(105, 188, 180);
+  font-weight: bold;
+  text-decoration: double;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login-form a:hover {
+  background-color: rgba(255, 165, 0, 0.2);
+  text-decoration: underline;
+}
+
+.title-login {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.input-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.input-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 5px 0;
+}
+/* * {
   font-family: "Mulish", sans-serif;
   box-sizing: border-box;
   margin: 0;
@@ -30,15 +200,7 @@ body,
   text-align: center;
 }
 
-.about-page {
-  position: relative;
-  background-image: url("https://images.unsplash.com/photo-1497114046243-1154db4f4abf");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: opacity(90%) brightness(99%);
-  width: 100%;
-}
+
 .about-page::before {
   content: "";
   position: absolute;
@@ -46,7 +208,7 @@ body,
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(214, 167, 247, 0.079);
   z-index: 0;
 }
 
@@ -56,47 +218,8 @@ body,
   text-align: center;
   padding: 20px;
   width: 100%;
-  /* margin: 4rem; */
 }
 
-.about-container p {
-  color: rgb(124, 175, 246);
-  font-size: 1.4rem;
-}
-
-.about-container h1 {
-  font-weight: bolder;
-  color: rgb(185, 121, 42);
-  background: -webkit-linear-gradient(#8e96f1, #852bb2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.rules p,
-ul,
-li {
-  color: rgb(255, 93, 75);
-  list-style-type: none;
-}
-.rules p {
-  font-weight: bolder;
-}
-.about-container h1 {
-  font-size: 5.5rem;
-  margin-bottom: 1.5rem;
-}
-.about-container h2 {
-  font-size: 2rem;
-  color: rgb(29, 65, 112);
-  margin-bottom: 1.5rem;
-}
-.about-container h3 {
-  font-size: 1.4rem;
-  color: rgb(209, 138, 244);
-  margin-bottom: 0;
-}
-.about-container h4 {
-  font-size: 1rem;
-}
 .about-container ol {
   list-style: circle;
   margin-left: 20%;
@@ -104,21 +227,14 @@ li {
   font-size: 1.2rem;
   color: rgb(124, 175, 246);
 }
-.otherlink {
-  color: rgb(129, 112, 213);
-  text-decoration: double;
-}
+
 .otherlink:hover {
   color: #30115e;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
   background-color: #5d2fac;
 }
-.loglink {
-  text-decoration: double;
-  font-size: 1.5rem;
-  color: rgb(67, 109, 153);
-}
+
 .signlink {
   text-decoration: double;
   font-size: 1.5rem;
@@ -136,13 +252,7 @@ li {
   transform: scale(1.1);
   background-color: #5d2fac;
 }
-.avatar {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 5px 0;
-}
+
 
 .social-links {
   display: flex;
@@ -154,25 +264,25 @@ li {
   font-size: 1rem;
   color: #0a66c2;
   transition: color 0.3s;
+  cursor: pointer;
 }
 
 a:hover .icon {
   color: #0056b3;
 }
 
-footer {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #f1f1f1;
-  text-align: center;
-  width: auto;
+
+
+.footer a {
+  display: inline-block; 
+  padding: 10px; 
 }
-footer p {
-  color: rgb(183, 147, 215);
+
+.icon {
+  font-size: 1.5rem;
+  color: #0a66c2;
+  transition: color 0.3s;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .footer {
@@ -205,10 +315,7 @@ footer p {
     font-size: 1.5rem;
   }
 
-  .avatar {
-    width: 40px;
-    height: 40px;
-  }
+
 
   .icon {
     font-size: 1.5rem;
@@ -235,15 +342,30 @@ footer p {
   }
 }
 
-/* DARK THEME */
+
+[data-theme="dark"] .nav-bar {
+  background-color: rgba(44, 44, 44, 0.8);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .nav-bar a {
+  color: #e0e0e0;
+  border-color: #475588;
+  background-color: rgba(44, 44, 44, 0.7);
+}
+
+[data-theme="dark"] .nav-bar a:hover {
+  background-color: #333;
+  color: #ffffff;
+  
 [data-theme="dark"] .about-page {
   position: relative;
   background-image: url("https://images.unsplash.com/photo-1497114046243-1154db4f4abf");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* filter: opacity(0%) brightness(50%); */
-  /* width: 100%; */
+  filter: opacity(40%) brightness(80%);
+  width: 100%;
 }
 [data-theme="dark"] .about-page::before {
   content: "";
@@ -252,7 +374,7 @@ footer p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(60, 0, 0, 0.5);
+  background-color: rgba(18, 27, 41, 0.5);
   z-index: 0;
 }
 
@@ -271,7 +393,28 @@ h4 {
 [data-theme="dark"] .about-container ol {
   color: #a69e9e;
 }
+[data-theme="dark"] .nav-bar {
+  background-color: rgba(44, 44, 44, 0.8);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
 
+[data-theme="dark"] .nav-bar a {
+  color: #e0e0e0;
+  border-color: #475588;
+  background-color: rgba(44, 44, 44, 0.7);
+}
+
+[data-theme="dark"] .nav-bar a:hover {
+  background-color: #333;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .login-form a {
+  color: rgb(255, 140, 0);
+}
+
+[data-theme="dark"] .login-form a:hover {
+  background-color: rgba(255, 140, 0, 0.2);
 [data-theme="dark"] .footer {
   background-color: rgb(49, 77, 106);
 }
@@ -280,4 +423,4 @@ h4 {
 }
 [data-theme="dark"] .footer p {
   color: rgb(76, 123, 170);
-}
+} */

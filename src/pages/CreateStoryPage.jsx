@@ -5,6 +5,7 @@ import { HexColorPicker } from "react-colorful";
 import service from "../assets/service/api";
 import { AuthContext } from "../context/AuthContextWrapper";
 import "../style/Create.css";
+import Footer from "../components/Footer";
 
 function CreateStoryPage({ story, onSave }) {
   const [emoticon, setEmoticon] = useState(story?.emoticon || "");
@@ -57,78 +58,87 @@ function CreateStoryPage({ story, onSave }) {
   }
 
   return (
-    <div className="story-form-container">
-      <form onSubmit={handleSubmit}>
-        <div className="story-form">
-          <label htmlFor="title">Story title:</label>
-          <input
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.currentTarget.value)}
-          />
-          <label htmlFor="emoticon">Emoticon:</label>
-          <input
-            type="text"
-            id="emoticon"
-            placeholder="Select an emoticon"
-            value={emoticon}
-            readOnly
-          />
-          <div className="emoticon-picker">
-            {emojis.length > 0 ? (
-              emojis.map((emoji, index) => (
-                <span
-                  key={index}
-                  style={{ fontSize: "24px", margin: "5px", cursor: "pointer" }}
-                  onClick={() => setEmoticon(emoji.htmlCode || emoji.emoji)}
-                  dangerouslySetInnerHTML={{ __html: emoji.htmlCode }}
-                ></span>
-              ))
-            ) : (
-              <span>Loading emojis...</span>
-            )}
-          </div>
-
-          <label htmlFor="textColor">Text Color:</label>
-          <HexColorPicker color={textColor} onChange={setTextColor} />
-
-          <label htmlFor="content">Content:</label>
-          <textarea
-            id="content"
-            rows="5"
-            cols="30"
-            value={content}
-            onChange={(e) => setContent(e.currentTarget.value)}
-          />
-          <fieldset>
-            <div>
+    <>
+      <div className="about-page">
+        <div className="story-form-container">
+          <form onSubmit={handleSubmit}>
+            <div className="story-form">
+              <label htmlFor="title">Story title:</label>
               <input
-                type="radio"
-                name="status"
-                id="Private"
-                value="Private"
-                checked={status === "Private"}
-                onChange={(e) => setStatus(e.currentTarget.value)}
+                type="text"
+                id="title"
+                value={title}
+                onChange={(e) => setTitle(e.currentTarget.value)}
               />
-              <label htmlFor="Private">Private</label>
-            </div>
-            <div className="pub-priv">
+              <label htmlFor="emoticon">Emoticon:</label>
               <input
-                type="radio"
-                name="status"
-                id="Public"
-                value="Public"
-                checked={status === "Public"}
-                onChange={(e) => setStatus(e.currentTarget.value)}
+                type="text"
+                id="emoticon"
+                placeholder="Select an emoticon"
+                value={emoticon}
+                readOnly
               />
-              <label htmlFor="Public">Public</label>
+              <div className="emoticon-picker">
+                {emojis.length > 0 ? (
+                  emojis.map((emoji, index) => (
+                    <span
+                      key={index}
+                      style={{
+                        fontSize: "24px",
+                        margin: "5px",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => setEmoticon(emoji.htmlCode || emoji.emoji)}
+                      dangerouslySetInnerHTML={{ __html: emoji.htmlCode }}
+                    ></span>
+                  ))
+                ) : (
+                  <span>Loading emojis...</span>
+                )}
+              </div>
+
+              <label htmlFor="textColor">Text Color:</label>
+              <HexColorPicker color={textColor} onChange={setTextColor} />
+
+              <label htmlFor="content">Content:</label>
+              <textarea
+                id="content"
+                rows="5"
+                cols="30"
+                value={content}
+                onChange={(e) => setContent(e.currentTarget.value)}
+              />
+              <fieldset>
+                <div>
+                  <input
+                    type="radio"
+                    name="status"
+                    id="Private"
+                    value="Private"
+                    checked={status === "Private"}
+                    onChange={(e) => setStatus(e.currentTarget.value)}
+                  />
+                  <label htmlFor="Private">Private</label>
+                </div>
+                <div className="pub-priv">
+                  <input
+                    type="radio"
+                    name="status"
+                    id="Public"
+                    value="Public"
+                    checked={status === "Public"}
+                    onChange={(e) => setStatus(e.currentTarget.value)}
+                  />
+                  <label htmlFor="Public">Public</label>
+                </div>
+              </fieldset>
+              <button type="submit">Submit</button>
             </div>
-          </fieldset>
-          <button type="submit">Submit</button>
+          </form>
         </div>
-      </form>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }
 

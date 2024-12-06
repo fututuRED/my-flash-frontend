@@ -38,9 +38,9 @@ function App() {
     <>
       <div className="App">
         <Navbar
-          hidden={shouldHideNavbar}
-          heme={theme}
-          toggleTheme={toggleTheme}
+        // hidden={shouldHideNavbar}
+        // heme={theme}
+        // toggleTheme={toggleTheme}
         />
         <Routes>
           <Route path="/" element={<HomePage />} />

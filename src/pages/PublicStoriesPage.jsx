@@ -3,6 +3,7 @@ import { AuthContext } from "../context/AuthContextWrapper";
 import { Link } from "react-router-dom";
 import service from "../assets/service/api";
 import "../style/Pond.css";
+import Footer from "../components/Footer";
 
 function PublicStoriesPage() {
   const [stories, setStories] = useState([]);
@@ -28,43 +29,46 @@ function PublicStoriesPage() {
     fetchStories();
   }, []);
   return (
-    <div className="pond-page" data-theme="dark">
-      <div className="pond-grid">
-        {stories.length > 0 ? (
-          stories.map((oneStory) => (
-            <div className="pond-tile" key={oneStory._id}>
-              <div>
-                <h2 onClick={() => toggleContent(oneStory._id)}>
-                  {oneStory.title}
-                </h2>
-                <span
-                  className="emoticon"
-                  dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
-                  style={{ color: oneStory.textColor }}
-                ></span>
-                <div
-                  className={`content-story ${
-                    visibleContent[oneStory._id] ? "show" : ""
-                  }`}
-                >
-                  <p style={{ color: oneStory.textColor }}>
-                    {oneStory.content}
-                  </p>
-                  <p style={{ color: oneStory.textColor }}>
-                    {oneStory.author.username}
-                  </p>
-                  <Link className="story" to={`/stories/${oneStory._id}`}>
-                    details
-                  </Link>
+    <>
+      <div className="pond-page" data-theme="dark">
+        <div className="pond-grid">
+          {stories.length > 0 ? (
+            stories.map((oneStory) => (
+              <div className="pond-tile" key={oneStory._id}>
+                <div>
+                  <h2 onClick={() => toggleContent(oneStory._id)}>
+                    {oneStory.title}
+                  </h2>
+                  <span
+                    className="emoticon"
+                    dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
+                    style={{ color: oneStory.textColor }}
+                  ></span>
+                  <div
+                    className={`content-story ${
+                      visibleContent[oneStory._id] ? "show" : ""
+                    }`}
+                  >
+                    <p style={{ color: oneStory.textColor }}>
+                      {oneStory.content}
+                    </p>
+                    <p style={{ color: oneStory.textColor }}>
+                      {oneStory.author.username}
+                    </p>
+                    <Link className="story" to={`/stories/${oneStory._id}`}>
+                      details
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <div>No stories available</div>
-        )}
+            ))
+          ) : (
+            <div>No stories available</div>
+          )}
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 
