@@ -2,7 +2,7 @@ import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
+
 import "../style/Home.css";
 
 function AboutPage() {
@@ -72,7 +72,6 @@ function AboutPage() {
           Respect and watch out what and especially how you write your stories
         </p>
       </div>
-      <Footer />
     </>
   );
 }

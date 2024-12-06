@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignupPage";
-import LoginPage from "./pages/LoginPage";
+// import LoginPage from "./pages/LoginPage";
 import CreateStoryPage from "./pages/CreateStoryPage";
 import PublicStoriesPage from "./pages/PublicStoriesPage";
 import ProfilePage from "./pages/ProfilePage";
@@ -11,6 +11,8 @@ import ErrorPage from "./pages/ErrorPage";
 import AboutPage from "./pages/AboutPage";
 import IsLoggedOut from "./components/Routing/isLoggedOut";
 import IsLoggedIn from "./components/Routing/isLoggedIn";
+import Footer from "./components/Footer";
+
 import "@picocss/pico";
 import "./App.css";
 
@@ -38,9 +40,9 @@ function App() {
     <>
       <div className="App">
         <Navbar
-        // hidden={shouldHideNavbar}
-        // heme={theme}
-        // toggleTheme={toggleTheme}
+          // hidden={shouldHideNavbar}
+          // heme={theme}
+          toggleTheme={toggleTheme}
         />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -49,7 +51,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route element={<IsLoggedOut />}>
             <Route path="/signup" element={<SignUpPage />} />
-            <Route path="/login" element={<LoginPage />} />
+            {/* <Route path="/login" element={<LoginPage />} /> */}
           </Route>
           <Route element={<IsLoggedIn />}>
             <Route path="/profile" element={<ProfilePage />} />
@@ -57,6 +59,7 @@ function App() {
           </Route>
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+        <Footer />
       </div>
     </>
   );

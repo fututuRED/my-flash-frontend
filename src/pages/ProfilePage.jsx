@@ -5,7 +5,7 @@ import { useParams, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { TiDeleteOutline } from "react-icons/ti";
 import CreateStoryPage from "./CreateStoryPage";
-import Footer from "../components/Footer";
+
 import "../style/Story.css";
 
 function ProfilePage() {
@@ -115,7 +115,6 @@ function ProfilePage() {
           <div>No stories available</div>
         )}
       </div>
-      <Footer />
     </>
   );
 }

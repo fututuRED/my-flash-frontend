@@ -5,7 +5,6 @@ import { HexColorPicker } from "react-colorful";
 import service from "../assets/service/api";
 import { AuthContext } from "../context/AuthContextWrapper";
 import "../style/Create.css";
-import Footer from "../components/Footer";
 
 function CreateStoryPage({ story, onSave }) {
   const [emoticon, setEmoticon] = useState(story?.emoticon || "");
@@ -137,7 +136,6 @@ function CreateStoryPage({ story, onSave }) {
           </form>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

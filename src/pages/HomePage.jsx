@@ -2,9 +2,8 @@ import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import Login from "../components/Login";
 
-import LoginPage from "./LoginPage";
-import Footer from "../components/Footer";
 import "../style/Home.css";
 function HomePage() {
   return (
@@ -13,9 +12,12 @@ function HomePage() {
         <div className="about-container">
           <h1>
             SHORT
+            <br />
             <AiOutlineThunderbolt />
             so
-            <AiOutlineThunderbolt /> short{" "}
+            <AiOutlineThunderbolt />
+            <br />
+            short
           </h1>
           <p>
             Ever wanted to be a writer?
@@ -25,10 +27,9 @@ function HomePage() {
             Anything that comes to mind...
             <br /> Write it down!
           </p>
-          <LoginPage />
+          <Login />
         </div>
       </div>
-      <Footer />
     </>
   );
 }

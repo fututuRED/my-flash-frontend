@@ -3,7 +3,6 @@ import { AuthContext } from "../context/AuthContextWrapper";
 import { Link } from "react-router-dom";
 import service from "../assets/service/api";
 import "../style/Pond.css";
-import Footer from "../components/Footer";
 
 function PublicStoriesPage() {
   const [stories, setStories] = useState([]);
@@ -67,7 +66,6 @@ function PublicStoriesPage() {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 }

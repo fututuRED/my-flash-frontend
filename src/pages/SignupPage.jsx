@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import service from "../assets/service/api";
 import "../style/SignUp.css";
 import "../style/Home.css";
-import Footer from "../components/Footer";
+
 function SignUpPage() {
   const [formData, setFormData] = useState({
     username: "",
@@ -40,49 +40,50 @@ function SignUpPage() {
 
   const { username, password, email } = formData;
   return (
-    <div className="about-page">
-      <form onSubmit={handleSubmit} className="signup-form">
-        <div className="title-sign">SignUp</div>
-        <div className="input-sign">
-          <label htmlFor="username">Username: </label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            placeholder="Enter Username"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="input-sign">
-          <label htmlFor="email">Email: </label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            placeholder="Enter your email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="input-sign">
-          <label htmlFor="username">Password: </label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            placeholder="Enter your password"
-            onChange={handleChange}
-          />
-        </div>
+    <>
+      <div className="about-page">
+        <form onSubmit={handleSubmit} className="signup-form">
+          <div className="title-sign">SignUp</div>
+          <div className="input-sign">
+            <label htmlFor="username">Username: </label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              placeholder="Enter Username"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-sign">
+            <label htmlFor="email">Email: </label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              placeholder="Enter your email"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-sign">
+            <label htmlFor="username">Password: </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              placeholder="Enter your password"
+              onChange={handleChange}
+            />
+          </div>
 
-        <p className="error">{errorMessage}</p>
+          <p className="error">{errorMessage}</p>
 
-        <p>
-          Already have an account? <Link to={"/login"}>Login.</Link>
-        </p>
-        <button className="sign-button">Signup</button>
-      </form>
-      <Footer />
-    </div>
+          <p>
+            Already have an account? <Link to={"/"}>Login</Link>
+          </p>
+          <button className="sign-button">Signup</button>
+        </form>
+      </div>
+    </>
   );
 }
 

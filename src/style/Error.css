@@ -41,6 +41,8 @@ html {
   background-position: center;
   min-height: 100vh;
 }
+*/
+
 .error-page {
   display: flex;
   flex-direction: column;
@@ -48,9 +50,9 @@ html {
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background-color: #f5f5f5;
+  background-image: url("https://cdn.pixabay.com/photo/2020/11/30/18/14/smpte-color-bars-5791787_1280.png");
 }
-
+/*
 .error-page h1 {
   font-size: 6rem;
   margin: 0;
