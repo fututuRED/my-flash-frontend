@@ -17,13 +17,19 @@
 
 .about-page {
   position: relative;
-  background-image: url("https://cdn.pixabay.com/photo/2017/07/06/18/36/background-2478897_1280.jpg");
+  background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #c6afe7;
+  background-blend-mode: hard-light, lighten;
+  filter: contrast(70%);
   width: 100%;
+  padding: 100px;
+  z-index: 1;
+  text-align: right;
 }
-
+/* NAVBAR */
 .nav-bar {
   list-style: none;
   text-decoration: none;
@@ -71,33 +77,54 @@ li .theme-toggle {
   transform: scale(1.1);
   background-color: #65adcd;
 }
+.about-page p {
+  color: #4ab990;
+  font-size: 1.5rem;
+  background-color: transparent;
+  filter: drop-shadow(40%);
+}
 
+.about-page h2 {
+  color: #1a6e74;
+  font-size: 1.5rem;
+}
+
+.about-page ol,
+li {
+  font-stretch: extra-condensed;
+  font-weight: bolder;
+  list-style: square;
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 1.2rem;
+  color: rgb(9, 72, 90);
+}
+/* CONTAINER*/
 .about-container p {
-  color: rgb(16, 45, 80);
-  font-size: 1.4rem;
+  color: rgb(250, 91, 17);
+  font-size: 1.5rem;
 }
 
 .about-container h1 {
   font-weight: bolder;
-  color: rgb(185, 94, 42);
-  background: -webkit-linear-gradient(#35395b, #852bb2);
+  color: rgb(250, 91, 17);
+  background: -webkit-linear-gradient(#535ec0, #852bb2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 5rem;
 }
 
 .about-container h1 {
   font-size: 5.5rem;
-  /* margin-bottom: 1.5rem; */
 }
 .about-container h2 {
   font-size: 2rem;
   color: rgb(29, 65, 112);
-  /* margin-bottom: 1.5rem; */
 }
 .about-container h3 {
   font-size: 1.4rem;
   color: rgb(209, 138, 244);
-  /* margin-bottom: 0; */
 }
 .about-container h4 {
   font-size: 1rem;
@@ -118,9 +145,12 @@ li .theme-toggle {
   margin-top: 40px;
   background-color: rgb(67, 109, 153);
   text-align: center;
+  z-index: 10;
+  position: relative;
 }
 
 .login-form a {
+  cursor: pointer;
   color: rgb(105, 188, 180);
   font-weight: bold;
   text-decoration: double;
@@ -156,7 +186,12 @@ li .theme-toggle {
   align-items: center;
   justify-content: center;
 }
-
+.warning h3 {
+  font-style: oblique;
+  font-weight: bolder;
+  color: rgb(251, 166, 54);
+  font-size: 3rem;
+}
 .footer {
   display: flex;
   flex-direction: row;
@@ -168,8 +203,8 @@ li .theme-toggle {
 }
 
 .avatar {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   margin: 5px 0;
@@ -177,17 +212,6 @@ li .theme-toggle {
 .footer a {
   display: inline-block;
   padding: 10px;
-}
-
-.about-page ol {
-  font-stretch: extra-condensed;
-  font-weight: bolder;
-  letter-spacing: 5px;
-  list-style: circle;
-  margin-left: 20%;
-  margin-right: 20%;
-  font-size: 1.2rem;
-  color: rgb(36, 23, 109);
 }
 
 [data-theme="dark"] .nav-bar {
@@ -206,27 +230,50 @@ li .theme-toggle {
   color: #ffffff;
 }
 
-[data-theme="dark"] .about-page {
+/* [data-theme="dark"] .about-page {
   position: relative;
   background-image: url("https://cdn.pixabay.com/photo/2022/12/30/10/47/typewriter-7686633_1280.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: opacity(70%) brightness(90%);
+  background-color: #010101;
+  background-blend-mode: screen;
   width: 100%;
+} */
+[data-theme="dark"] .about-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 27, 41, 0.5);
+  z-index: 0; /* Make sure this is lower than the login-form */
+}
+
+[data-theme="dark"] .about-page {
+  position: relative;
+  background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #ffffff;
+  background-blend-mode: difference;
+  width: 100%;
+  z-index: 1;
 }
 
 [data-theme="dark"] .about-container h1,
 a,
 h4 {
-  color: #ffffff;
+  color: white;
 }
 [data-theme="dark"] .about-container h2 {
-  color: #ffffff;
+  color: white;
 }
 
 [data-theme="dark"] .about-container p {
-  color: #ffffff;
+  color: white;
 }
 [data-theme="dark"] .nav-bar {
   background-color: rgba(44, 44, 44, 0.8);
@@ -272,13 +319,7 @@ h4 {
 /* 
 
 
-.about-container {
-  position: relative;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  width: 100%;
-}
+
 
 .about-container ol {
   list-style: circle;

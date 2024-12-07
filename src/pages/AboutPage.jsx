@@ -45,32 +45,44 @@ function AboutPage() {
           Sure, right?{" "}
         </p>
         <br />
-        <h2>How it works?</h2>
-        <ol className="rules">
-          <li>
-            <strong>Chose a title</strong>
-          </li>
-          <li>
-            A list of thematic EMOJIS will be at your disposal to give you a
-            theme to which you can easily connect ans which will be different
-            from time to time,
-          </li>
-          <li>
-            <strong>Pick a colour</strong> as a background for your story,
-          </li>
-          <li>
-            <strong>Type your story</strong> your piece on a round nymph that,
-            <br /> You can <br /> either
-            <strong>share</strong> by going PUBLIC📖
-            <br />
-            or <strong>keep it to yourself!</strong> by going PRIVATE🔒 It's up
-            to you... (Privacy matter to us anyway!)!
-          </li>
-        </ol>
-        <h3>KEEP IN MIND</h3>
-        <p>
-          Respect and watch out what and especially how you write your stories
-        </p>
+        <div className="last-section">
+          <div className="rules">
+            <h2>How it works?</h2>
+            <ol className="rules">
+              <li>
+                <strong>Chose a title</strong>
+              </li>
+              <li>
+                <strong>Take an emoticon</strong>
+                to set the mood...
+              </li>
+              <li>
+                <strong>Pick a colour</strong> as a background for your story,
+              </li>
+              <li>
+                <strong>Type your story</strong>
+              </li>{" "}
+              <li>
+                either <strong>share</strong> by going <br />
+                PUBLIC 📖
+                <br />
+                or <strong>keep it to yourself!</strong> <br />
+                PRIVATE🔒 <br />
+                It's up to you...
+              </li>
+            </ol>
+          </div>
+          <div className="warning">
+            <h3>
+              <strong>
+                KEEP IN MIND
+                <br />
+                IF YOU GO PUBLIC, <br />
+                BE RESPECTFUL!!!!!!!{" "}
+              </strong>
+            </h3>
+          </div>
+        </div>
       </div>
     </>
   );

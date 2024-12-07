@@ -8,17 +8,19 @@
 
 .about-page {
   position: relative;
-  background-image: url("https://cdn.pixabay.com/photo/2017/07/06/18/36/background-2478897_1280.jpg");
+  background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: opacity(75%) brightness(80%);
   width: 100%;
   padding: 100px;
+  z-index: 1;
 }
 
 .signup-form {
-  width: 600px;
+  max-width: 650px;
+  width: auto;
+  height: auto;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -29,6 +31,8 @@
   padding: 40px;
   background-color: rgb(67, 153, 144);
   text-align: center;
+  z-index: 10;
+  position: relative;
 }
 .signup-form a {
   color: rgb(255, 140, 0);

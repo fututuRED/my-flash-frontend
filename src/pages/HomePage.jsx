@@ -20,12 +20,10 @@ function HomePage() {
             short
           </h1>
           <p>
-            Ever wanted to be a writer?
-            <br /> Here is a platform where you can write a short piece of
-            fiction and share it
+            Ever wanted to be a writer? Here is a platform where you can write a
+            short piece of fiction and share it
             <br />
-            Anything that comes to mind...
-            <br /> Write it down!
+            Anything that comes to mind... Write it down!
           </p>
           <Login />
         </div>
