@@ -77,29 +77,7 @@ li .theme-toggle {
   transform: scale(1.1);
   background-color: #65adcd;
 }
-.about-page p {
-  color: #4ab990;
-  font-size: 1.5rem;
-  background-color: transparent;
-  filter: drop-shadow(40%);
-}
 
-.about-page h2 {
-  color: #1a6e74;
-  font-size: 1.5rem;
-}
-
-.about-page ol,
-li {
-  font-stretch: extra-condensed;
-  font-weight: bolder;
-  list-style: square;
-  text-align: left;
-  margin-left: 20%;
-  margin-right: 20%;
-  font-size: 1.2rem;
-  color: rgb(9, 72, 90);
-}
 /* CONTAINER*/
 .about-container p {
   color: rgb(250, 91, 17);
@@ -186,12 +164,7 @@ li {
   align-items: center;
   justify-content: center;
 }
-.warning h3 {
-  font-style: oblique;
-  font-weight: bolder;
-  color: rgb(251, 166, 54);
-  font-size: 3rem;
-}
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -214,6 +187,53 @@ li {
   padding: 10px;
 }
 
+/* ABOUT PAGE */
+
+.about {
+  position: relative;
+  background-image: url("https://media.istockphoto.com/id/1349351147/fr/vectoriel/ic%C3%B4nes-de-puzzle-s%C3%A9rie-classic-line.jpg?s=612x612&w=0&k=20&c=8ouOTW33X-4o7CLdSkaZ4M--3P4s4Kf39pmW1476lrM=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #2fe5df;
+  background-blend-mode: screen;
+  width: 100%;
+}
+.first-section p,
+.second-section p {
+  color: #278284;
+  font-size: 1.2rem;
+}
+
+.about-page h2 {
+  color: #1a6e74;
+  font-size: 1.5rem;
+}
+.last-section {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+.last-section ol,
+li {
+  color: #278284;
+  list-style: circle;
+  text-align: left;
+  display: inline-flex;
+}
+.last-section li {
+  gap: 2rem;
+}
+
+.warning h3 {
+  font-style: oblique;
+  font-weight: bolder;
+  color: #278284;
+  font-size: 2rem;
+}
+
+/*DARK THEME */
 [data-theme="dark"] .nav-bar {
   background-color: rgba(44, 44, 44, 0.8);
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
@@ -316,6 +336,16 @@ h4 {
   text-decoration: underline;
 }
 
+[data-theme="dark"] .about {
+  position: relative;
+  background-image: url("https://media.istockphoto.com/id/1349351147/fr/vectoriel/ic%C3%B4nes-de-puzzle-s%C3%A9rie-classic-line.jpg?s=612x612&w=0&k=20&c=8ouOTW33X-4o7CLdSkaZ4M--3P4s4Kf39pmW1476lrM=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #0a1818e0;
+  background-blend-mode: hue;
+  width: 100%;
+}
 /* 
 
 

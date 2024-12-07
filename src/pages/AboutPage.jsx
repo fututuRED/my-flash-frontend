@@ -8,82 +8,77 @@ import "../style/Home.css";
 function AboutPage() {
   return (
     <>
-      <div className="about-page">
-        <h2>What?</h2>
-        <p>
-          Ever thought about getting published in the next
-          <br />
-          <i>The Newyorker</i> issue? <br />
-          Well I have! If you too, well we can easily agree that the road, if it
-          exists is rather long but guess what?
-          <br /> What?
-          <br /> Wouldn't it be nice to share some piece of fiction or
-          non-fiction in a very easy and pleasant way?
-          <br />
-          If this of interest to you, WELCOME! <br />
-          Here you are now, have a look at some random but interesting writing
-          piece found in this pretty website <br />
-          <a
-            href="https://www.flashfictiononline.com/"
-            alt="Flashfictiononline site"
-            className="otherlink"
-          >
-            Flashfictiononline
-          </a>{" "}
-        </p>
-        <h2>About what?</h2>
-        <p>
-          Giving you the opportunity to access a platform for short-short or
-          flash-fiction as the trend goes.
-          <br />
-          We offer you a private and peculiar environment to write, and by using
-          Use a little web-notebook without any lines, as many as 300 words
-          (+/-),
-          <br />
-          Ain't that SHORT?
-          <br />
-          Sure, right?{" "}
-        </p>
-        <br />
+      {/* <div className="about-page"> */}
+      <div className="about">
+        <div className="first-section">
+          <h2>What?</h2>
+          <p>
+            Ever thought about getting published in the next
+            <i>The Newyorker</i> issue?
+            <br /> What?
+            <br /> Wouldn't it be nice to share some piece of fiction or
+            non-fiction in a very easy and pleasant way?
+            <br />
+            If this of interest to you, WELCOME! <br />
+            Short-Fiction is a trendy and challenging way to say a few things in
+            an efficient way. Have a look at{" "}
+            <a
+              href="https://www.flashfictiononline.com/"
+              alt="Flashfictiononline site"
+              className="otherlink"
+            >
+              Flashfictiononline
+            </a>{" "}
+            where you'll find great stories, pieces of advice and some stories
+            too!
+          </p>
+        </div>
+        <div className="second-section">
+          <h2>About what?</h2>
+          <p>
+            Giving you the opportunity to access a platform for short-short or
+            flash-fiction as the trend goes in a private or public environment
+            to write a few <br />
+            About 300 words...
+            <br />
+            using a little web-notebook. 300, <br />
+            Ain't that SHORT?
+            <br />
+            Sure, right?{" "}
+          </p>
+        </div>
+        <h2>How it works?</h2>
         <div className="last-section">
           <div className="rules">
-            <h2>How it works?</h2>
-            <ol className="rules">
+            <ol>
               <li>
-                <strong>Chose a title</strong>
+                <strong>PICK</strong> a title "␃" <br />
+                an emoticon 🏝️ 🪐 🪢
+                <br />a background-color 🟪 🟩 🟦
               </li>
               <li>
-                <strong>Take an emoticon</strong>
-                to set the mood...
-              </li>
-              <li>
-                <strong>Pick a colour</strong> as a background for your story,
-              </li>
-              <li>
-                <strong>Type your story</strong>
+                <strong>TYPE your story</strong>
               </li>{" "}
               <li>
-                either <strong>share</strong> by going <br />
+                either <br /> <strong>SHARE </strong> by going <br />
                 PUBLIC 📖
                 <br />
-                or <strong>keep it to yourself!</strong> <br />
+                or <strong>NOT! </strong> <br />
                 PRIVATE🔒 <br />
-                It's up to you...
+                It's up to you but...
               </li>
             </ol>
           </div>
           <div className="warning">
             <h3>
               <strong>
-                KEEP IN MIND
-                <br />
-                IF YOU GO PUBLIC, <br />
-                BE RESPECTFUL!!!!!!!{" "}
+                KEEP IN MIND IF YOU GO PUBLIC, BE RESPECTFUL!!!!!!!{" "}
               </strong>
             </h3>
           </div>
         </div>
       </div>
+      {/* </div> */}
     </>
   );
 }
