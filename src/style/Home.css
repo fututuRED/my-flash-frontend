@@ -182,7 +182,7 @@ li .theme-toggle {
 }
 
 .footer {
-  position: fixed;
+  position: static;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
