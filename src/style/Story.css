@@ -31,7 +31,7 @@ body,
   padding: 0;
   text-align: center;
 }
-html {
+body {
   position: relative;
   background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
   background-repeat: no-repeat;
@@ -66,11 +66,11 @@ html {
 .profile-stories-grid,
 .pond-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
   gap: 2rem;
   padding: 20px;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   justify-items: center;
   align-items: center;
 }
@@ -85,8 +85,8 @@ html {
   border: 5px ridge #3f496c;
   box-shadow: 0 2px 4px #0000001a;
   border-radius: 50%;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,7 +127,7 @@ html {
 .profile-story-grid-item blockquote {
   margin: 2px 0;
   font-size: 0.5rem;
-  color: rgb(109, 149, 176);
+  color: rgb(163, 90, 53);
 }
 
 .story-form {
@@ -147,7 +147,7 @@ button[aria-label="Delete"] {
   position: relative;
   color: #ff0000;
   background: none;
-  border: solid 2px white;
+
   cursor: pointer;
   padding: 10px;
 }
@@ -201,7 +201,7 @@ button[aria-label="Delete"]:hover::after {
 
 [data-theme="dark"] .profile-stories-grid h2 a,
 [data-theme="dark"] .pond h2 a {
-  color: #e0e0e0;
+  color: rgba(255, 255, 255, 0.906);
 }
 
 [data-theme="dark"] .profile-story-grid-item blockquote,

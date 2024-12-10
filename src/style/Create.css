@@ -31,7 +31,11 @@ body,
   padding: 0;
   text-align: center;
 }
-html {
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   position: relative;
   background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
   background-repeat: no-repeat;
@@ -39,22 +43,21 @@ html {
   background-color: #3f496c;
   background-blend-mode: lighten;
   background-position: center;
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   z-index: 1;
 }
 .story-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
-  justify-items: center;
-  justify-content: center;
   border: 2px solid #4860b8;
   border-radius: 10%;
   padding: 20px;
-  width: auto;
+  width: 100%;
   max-width: 500px;
   z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .story-form label,
@@ -71,16 +74,6 @@ html {
 .story-form legend {
   margin-bottom: 0.5rem;
 }
-
-/* .story-form .HexColorPicker {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-} */
 
 .story-form .emoticon-picker {
   display: flex;
@@ -113,4 +106,21 @@ html {
 
 .story-form-container h2 {
   color: #3f496c;
+}
+
+[data-theme="dark"] {
+  .story-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    border: 2px solid #d3ddff;
+    border-radius: 10%;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    z-index: 10;
+  }
 }
