@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContextWrapper";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineThunderbolt } from "react-icons/ai";
+
 import "../style/Home.css";
 
 function Navbar({ theme, toggleTheme }) {
