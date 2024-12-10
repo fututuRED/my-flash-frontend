@@ -29,7 +29,7 @@
   z-index: 1;
   text-align: right;
 }
-/* NAVBAR */
+/* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .nav-bar {
   list-style: none;
   text-decoration: none;
@@ -41,6 +41,7 @@
   padding: 10px 0;
   background-color: rgba(146, 217, 255, 0.2);
   z-index: 101;
+  margin: auto;
 }
 .nav-bar ul,
 .nav-bar a,
@@ -78,10 +79,11 @@ li .theme-toggle {
   background-color: #65adcd;
 }
 
-/* CONTAINER*/
+/* CONTAINER  //////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .about-container p {
   color: rgb(250, 91, 17);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
 }
 
 .about-container h1 {
@@ -90,7 +92,7 @@ li .theme-toggle {
   background: -webkit-linear-gradient(#535ec0, #852bb2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 5rem;
+  margin-bottom: 9rem;
 }
 
 .about-container h1 {
@@ -187,7 +189,18 @@ li .theme-toggle {
   padding: 10px;
 }
 
-/* ABOUT PAGE */
+a:hover .icon {
+  color: #0056b3;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #0a66c2;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+/* ABOUT PAGE ////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .about {
   position: relative;
@@ -195,20 +208,30 @@ li .theme-toggle {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: #2fe5df;
+  background-color: #d9eaf0f9;
   background-blend-mode: screen;
   width: 100%;
 }
-.first-section p,
-.second-section p {
-  color: #278284;
-  font-size: 1.2rem;
-}
-
 .about-page h2 {
   color: #1a6e74;
   font-size: 1.5rem;
 }
+.first-section p,
+.second-section p {
+  margin: 0 2rem;
+  color: #278284;
+  font-size: 1.2rem;
+}
+.first-section h2,
+.second-section h2,
+.last-section h2 {
+  font-size: 1.5 rem;
+  margin-top: 1rem;
+}
+.first-section a {
+  color: #742f1a;
+}
+
 .last-section {
   display: flex;
   flex-direction: column;
@@ -218,22 +241,123 @@ li .theme-toggle {
 .last-section ol,
 li {
   color: #278284;
-  list-style: circle;
-  text-align: left;
-  display: inline-flex;
+  display: inline-table;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 2rem;
 }
 .last-section li {
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .warning h3 {
+  text-align: end;
   font-style: oblique;
   font-weight: bolder;
   color: #278284;
-  font-size: 2rem;
+  font-size: 1rem;
+  margin-right: 5rem;
 }
 
-/*DARK THEME */
+/* RESPOSNIVENESS ////////////////////////////////////////////////////////////////////////////////////////////////////////////   */
+
+@media (max-width: 768px) {
+  .about-page {
+    position: relative;
+    background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #e0d2f4;
+    background-blend-mode: lighten;
+    filter: contrast(90%);
+    width: 100%;
+    padding: 100px;
+    z-index: 1;
+    text-align: right;
+  }
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  .about-container h1 {
+    font-size: 3rem;
+    margin-top: -4rem;
+    margin-bottom: 2rem;
+  }
+  .about-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-container ol {
+    font-size: 1rem;
+  }
+  .about-container p {
+    font-size: 1.3rem;
+  }
+
+  .about-container h4 {
+    font-size: 1.5rem;
+  }
+
+  .login-form {
+    width: auto;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgb(67, 109, 153);
+    border-radius: 50%;
+    padding: 30px;
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+    background-color: rgb(67, 109, 153);
+    text-align: center;
+    z-index: 10;
+    position: relative;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    color: rgb(60, 84, 101);
+  }
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .about-page h2 {
+  }
+  .first-section p,
+  .second-section p {
+    margin: 0 2rem;
+    color: #278284;
+    font-size: 1.4rem;
+  }
+  .first-section h2,
+  .second-section h2,
+  .last-section h2 {
+    color: #1a6e74;
+    font-size: 1.6 rem;
+    margin-top: 1rem;
+  }
+  .first-section a {
+    color: #742f1a;
+  }
+
+  .last-section {
+    display: inline-block;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 rem;
+  }
+}
+
+/* DARK THEME //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 [data-theme="dark"] .nav-bar {
   background-color: rgba(44, 44, 44, 0.8);
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
@@ -268,7 +392,7 @@ li {
   width: 100%;
   height: 100%;
   background-color: rgba(18, 27, 41, 0.5);
-  z-index: 0; /* Make sure this is lower than the login-form */
+  z-index: 0;
 }
 
 [data-theme="dark"] .about-page {
@@ -346,166 +470,3 @@ h4 {
   background-blend-mode: hue;
   width: 100%;
 }
-/* 
-
-
-
-
-.about-container ol {
-  list-style: circle;
-  margin-left: 20%;
-  margin-right: 20%;
-  font-size: 1.2rem;
-  color: rgb(124, 175, 246);
-}
-/* .otherlink {
-  color: rgb(129, 112, 213);
-  text-decoration: double;
-}
-.loglink {
-  text-decoration: double;
-  font-size: 1.5rem;
-  color: rgb(67, 109, 153);
-} 
-
-.otherlink:hover {
-  color: #30115e;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-  background-color: #5d2fac;
-}
-
-.signlink {
-  text-decoration: double;
-  font-size: 1.5rem;
-  color: rgb(67, 153, 144);
-}
-.signlink:hover {
-  color: rgb(67, 153, 144);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-  background-color: #5d2fac;
-}
-.loglink:hover {
-  color: rgb(28, 87, 150);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-  background-color: #5d2fac;
-}
-
-
-
-.icon {
-  font-size: 1rem;
-  color: #0a66c2;
-  transition: color 0.3s;
-  cursor: pointer;
-}
-
-a:hover .icon {
-  color: #0056b3;
-}
-
-
-
-
-
-.icon {
-  font-size: 1.5rem;
-  color: #0a66c2;
-  transition: color 0.3s;
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-    color: rgb(60, 84, 101);
-  }
-
-  .about-container {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-  }
-  .about-container h1 {
-    font-size: 2rem;
-  }
-  .about-container h2 {
-    font-size: 1.6rem;
-  }
-
-  .about-container ol {
-    font-size: 1rem;
-  }
-  .about-container p {
-    font-size: 1rem;
-  }
-
-  .about-container h4 {
-    font-size: 1.5rem;
-  }
-
-
-
-  .icon {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer {
-    padding: 60px;
-  }
-  .about-container p {
-    font-size: 1.3rem;
-  }
-  .about-container h4 {
-    font-size: 2rem;
-  }
-
-  .avatar {
-    width: 50px;
-    height: 50px;
-  }
-  .icon {
-    font-size: 1.7rem;
-  }
-}
-
-
-[data-theme="dark"] .about-page::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(18, 27, 41, 0.5);
-  z-index: 0;
-}
-
-
-}
-[data-theme="dark"] .about-container ol {
-  color: #a69e9e;
-}
-
-
-
-
-[data-theme="dark"] .login-form a {
-  color: rgb(255, 140, 0);
-}
-
-
-[data-theme="dark"] .footer {
-  background-color: rgb(49, 77, 106);
-}
-[data-theme="dark"] .footer h4 {
-  color: rgb(117, 160, 204);
-}
-[data-theme="dark"] .footer p {
-  color: rgb(76, 123, 170);
-} */

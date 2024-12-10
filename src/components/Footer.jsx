@@ -11,15 +11,15 @@ function Footer() {
     <div>
       <footer>
         <div className="footer">
-          <h4>About Me</h4>
           <img
             src="https://cdn.vox-cdn.com/thumbor/pRci-DNLZez5I-eoQuY5u6_oJwo=/78x0:1322x933/1520x1013/filters:focal(78x0:1322x933):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55912251/1_tQM0hcRiO1ZWEAj_if-Tzw.0.jpeg"
             alt="Avatar"
             className="avatar"
           />
+          <h4>About Me</h4>
           <p>
-            Hello! Im Reda, a passionate developer. Feel free to have a look at
-            these ➡️
+            Hello! Im Reda, a passionate developer!
+            <br /> Feel free to have a look at these ➡️
           </p>{" "}
           {/* <p>©2024 Short-so-short. All Rights Reserved.</p> */}
           <a

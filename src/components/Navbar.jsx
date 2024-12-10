@@ -26,9 +26,6 @@ function Navbar({ hidden, theme, toggleTheme }) {
             <li>
               <NavLink to="/signup">Sign Up</NavLink>
             </li>
-            {/* <li>
-              <NavLink to="/login">Login</NavLink>
-            </li> */}
           </>
         ) : (
           <>
@@ -48,7 +45,7 @@ function Navbar({ hidden, theme, toggleTheme }) {
             onChange={toggleTheme}
             name="opt-in"
             type="checkbox"
-            id="swutch"
+            id="switch"
             role="switch"
             checked={theme === "dark"}
             className="toggle-btn"

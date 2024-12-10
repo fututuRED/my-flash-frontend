@@ -71,7 +71,16 @@
   justify-content: center;
 }
 
-/*DARK mode */
+/* RESPOSNIVENESS /////////////////////////////////////////////////////////   */
+@media (max-width: 768px) {
+  .signup-form {
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+}
+
+/*DARK mode  /////////////////////////////////////////////////// */
 
 [data-theme="dark"] .signup-form {
   border: 4px solid rgb(141, 185, 66);

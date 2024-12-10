@@ -47,35 +47,40 @@ function AboutPage() {
             Sure, right?{" "}
           </p>
         </div>
-        <h2>How it works?</h2>
         <div className="last-section">
+          <h2>How it works?</h2>
+
           <div className="rules">
             <ol>
               <li>
-                <strong>PICK</strong> a title "␃" <br />
+                <strong>PICK</strong> <br /> a title "␃" <br />
                 an emoticon 🏝️ 🪐 🪢
-                <br />a background-color 🟪 🟩 🟦
+                <br />a background-color <br />
+                🟪 🟩 🟦
               </li>
               <li>
-                <strong>TYPE your story</strong>
+                <strong>
+                  TYPE <br />
+                  your story
+                </strong>
               </li>{" "}
               <li>
-                either <br /> <strong>SHARE </strong> by going <br />
+                either <strong>SHARE </strong> by going <br />
                 PUBLIC 📖
                 <br />
-                or <strong>NOT! </strong> <br />
+                or <strong>do NOT! </strong>
                 PRIVATE🔒 <br />
                 It's up to you but...
+                <p>
+                  <strong>
+                    Keep in mind that : <br /> IF YOU GO PUBLIC, <br />
+                    BE RESPECTFUL!!!!!!!{" "}
+                  </strong>
+                </p>
               </li>
             </ol>
           </div>
-          <div className="warning">
-            <h3>
-              <strong>
-                KEEP IN MIND IF YOU GO PUBLIC, BE RESPECTFUL!!!!!!!{" "}
-              </strong>
-            </h3>
-          </div>
+          <div className="warning"></div>
         </div>
       </div>
       {/* </div> */}
