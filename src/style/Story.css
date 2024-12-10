@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 *,
 *::before,
@@ -55,14 +55,13 @@ html {
   height: 100px;
   padding: 4px 8px;
   transition: color 0.3s, box-shadow 0.3s;
-} 
-  
+}
+
 .nav-bar a:hover {
   color: #022218;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
-
-} 
+}
 
 .profile-stories-grid,
 .pond-grid {
@@ -114,7 +113,6 @@ html {
   overflow: hidden;
   text-align: center;
   box-sizing: border-box;
-
 }
 
 .pond-grid h2 a,
@@ -187,7 +185,7 @@ button[aria-label="Delete"]:hover::after {
 [data-theme="dark"] .bg-color-custom {
   border-color: #475588;
   box-shadow: 0 2px 4px #fff1;
-} 
+}
 
 [data-theme="dark"] .profile-story-grid-item,
 [data-theme="dark"] .pond-tile {
@@ -217,4 +215,4 @@ button[aria-label="Delete"]:hover::after {
 
 [data-theme="dark"] .pond {
   color: #e0e0e0;
-} */
+}

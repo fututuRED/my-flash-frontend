@@ -30,6 +30,20 @@
   text-align: right;
 }
 /* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.nav-bar.visible {
+  max-height: 500px; /* Adjust based on content size */
+}
+
+.nav-toggle {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  transform: translateX(-50%);
+  z-index: 102;
+}
+
 .nav-bar {
   list-style: none;
   text-decoration: none;
@@ -354,6 +368,41 @@ li {
     flex-wrap: wrap;
     text-align: center;
     margin: 0 rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .nav-toggle {
+    display: block; /* Show toggle button */
+  }
+
+  .nav-bar {
+    display: none; /* Hide full navbar by default */
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(224, 227, 249, 0.95);
+    top: 60px; /* Position below the toggle */
+    left: 0;
+    width: 20%;
+    z-index: 101;
+  }
+
+  .nav-bar.visible {
+    display: flex; /* Override initial collapse */
+    z-index: 101;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    padding: 0;
+    z-index: 101;
+  }
+
+  .nav-bar a:hover {
+    color: #022218;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    background-color: #65adcd;
   }
 }
 
