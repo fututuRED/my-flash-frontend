@@ -15,7 +15,7 @@ function Navbar({ theme, toggleTheme }) {
 
   return (
     <div className="nav-container">
-      <button className="nav-toggle">
+      <button className="nav-toggle" onClick={handleToggle}>
         <GiHamburgerMenu />
       </button>
 
