@@ -277,7 +277,8 @@ li {
 /* RESPOSNIVENESS ////////////////////////////////////////////////////////////////////////////////////////////////////////////   */
 
 @media (max-width: 768px) {
-  .about-page {
+  .about-page,
+  body {
     position: relative;
     background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
     background-repeat: repeat;
@@ -291,6 +292,7 @@ li {
     z-index: 1;
     text-align: right;
   }
+
   .about-container {
     flex-direction: row;
     align-items: center;

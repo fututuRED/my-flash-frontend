@@ -15,22 +15,6 @@
   padding: 0;
 }
 
-html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-}
-
-html,
-body,
-#root,
-.App {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
 body {
   position: relative;
   background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
@@ -83,17 +67,6 @@ body {
   row-gap: 1.5rem;
 }
 
-@media (min-width: 600px) {
-  .pond-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1000px) {
-  .pond-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 .pond-tile {
   position: relative;
   overflow: hidden;
@@ -178,6 +151,14 @@ body {
   color: #e0e0e0;
 }
 
-.hidden-navbar {
-  display: none;
+@media (min-width: 600px) {
+  .pond-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .pond-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
