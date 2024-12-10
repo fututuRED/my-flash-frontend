@@ -15,23 +15,23 @@ function Navbar({ theme, toggleTheme }) {
 
   return (
     <div className="nav-container">
-      <button className="nav-toggle" onClick={handleToggle}>
+      <button className="nav-toggle">
         <GiHamburgerMenu />
       </button>
 
-      <nav className={`nav-bar ${isNavVisible ? "visible" : " "}`}>
+      <nav className={`nav-bar ${isNavVisible ? "visible" : ""}`}>
         <ul>
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/stories">Stories</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About</NavLink>
-          </li>
           {!isLoggedIn ? (
             <>
+              <li>
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/about">About</NavLink>
+              </li>
+              <li>
+                <NavLink to="/stories">Stories</NavLink>
+              </li>
               <li>
                 <NavLink to="/signup">Sign Up</NavLink>
               </li>
@@ -39,13 +39,16 @@ function Navbar({ theme, toggleTheme }) {
           ) : (
             <>
               <li>
+                <NavLink to="/profile">Profile</NavLink>
+              </li>
+              <li>
                 <NavLink to="/create-story">Create</NavLink>
               </li>
               <li>
-                <button onClick={disconnect}>Logout</button>
+                <NavLink to="/stories">Stories</NavLink>
               </li>
               <li>
-                <NavLink to="/profile">Profile</NavLink>
+                <button onClick={disconnect}>Logout</button>
               </li>
             </>
           )}

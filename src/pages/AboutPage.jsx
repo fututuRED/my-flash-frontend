@@ -55,8 +55,6 @@ function AboutPage() {
               <li>
                 <strong>PICK</strong> <br /> a title "␃" <br />
                 an emoticon 🏝️ 🪐 🪢
-                <br />a background-color <br />
-                🟪 🟩 🟦
               </li>
               <li>
                 <strong>

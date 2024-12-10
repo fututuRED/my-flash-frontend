@@ -86,20 +86,15 @@ function ProfilePage() {
                 Edit
               </button>
               <h2>
-                <Link
-                  className="story"
-                  to={`/stories/${oneStory._id}`}
-                  style={{ color: oneStory.textColor }}
-                >
+                <Link className="story" to={`/stories/${oneStory._id}`}>
                   {oneStory.title}
                 </Link>
               </h2>
               <span
                 className="emoticon"
-                style={{ color: oneStory.textColor }}
                 dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
               ></span>
-              <p style={{ color: oneStory.textColor }}>{oneStory.content}</p>
+              <p>{oneStory.content}</p>
               <label htmlFor={`status-${oneStory._id}`}>Status: </label>
               <input
                 type="checkbox"
