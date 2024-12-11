@@ -25,6 +25,8 @@ function AboutPage() {
             <a
               href="https://www.flashfictiononline.com/"
               alt="Flashfictiononline site"
+              target="_blank"
+              rel="noopener noreferrer"
               className="otherlink"
             >
               Flashfictiononline

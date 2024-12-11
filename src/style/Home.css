@@ -182,6 +182,18 @@ li .theme-toggle {
 }
 
 .footer {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* .footer {
   position: static;
   display: flex;
   flex-direction: row;
@@ -190,7 +202,7 @@ li .theme-toggle {
   padding: 20px;
   background-color: #f1f1f1;
   text-align: center;
-}
+} */
 
 .avatar {
   width: 50px;
@@ -275,9 +287,103 @@ li {
 }
 
 /* RESPOSNIVENESS ////////////////////////////////////////////////////////////////////////////////////////////////////////////   */
+@media (max-width: 530px) {
+  .about-container p {
+    color: rgb(250, 91, 17);
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  .about-container h1 {
+    font-size: 4rem;
+  }
+  .about-container h2 {
+    font-size: 2rem;
+    color: rgb(29, 65, 112);
+  }
+  .about-container h3 {
+    font-size: 1.4rem;
+    color: rgb(209, 138, 244);
+  }
+  .about-container h4 {
+    font-size: 1.2rem;
+  }
 
-@media (max-width: 768px) {
-  .about-page,
+  .login-form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 350px;
+    margin: 2rem;
+
+    border: 1px solid rgb(67, 109, 153);
+    border-radius: 50%;
+    padding: 30px;
+    /* margin-top: 1rem;
+    margin-bottom: -1rem; */
+    background-color: rgb(67, 109, 153);
+    text-align: center;
+    z-index: 10;
+  }
+
+  .login-form a {
+    cursor: pointer;
+    color: rgb(105, 188, 180);
+    font-weight: bold;
+    text-decoration: double;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .login-form a:hover {
+    background-color: rgba(255, 165, 0, 0.2);
+    text-decoration: underline;
+  }
+
+  .title-login {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  .input-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+  }
+
+  .input-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .footer {
+    font-size: 0.8;
+  }
+}
+
+/**/
+@media (max-width: 850px) {
+  /* .about-page,
   body {
     position: relative;
     background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
@@ -287,6 +393,21 @@ li {
     background-color: #e0d2f4;
     background-blend-mode: lighten;
     filter: contrast(90%);
+    width: 100%;
+    padding: 100px;
+    z-index: 1;
+    text-align: right;
+  } */
+  .about-page,
+  body {
+    position: relative;
+    background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #e0d2f4;
+    background-blend-mode: hard-light, lighten;
+    filter: contrast(70%);
     width: 100%;
     padding: 100px;
     z-index: 1;
@@ -347,8 +468,6 @@ li {
     font-size: 1.5rem;
   }
 
-  .about-page h2 {
-  }
   .first-section p,
   .second-section p {
     margin: 0 2rem;
@@ -373,8 +492,9 @@ li {
     margin: 0 rem;
   }
 }
+/**/
 
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
   .nav-toggle {
     display: block;
     z-index: 101;
@@ -385,8 +505,8 @@ li {
     flex-direction: column;
     position: absolute;
     background-color: rgba(224, 227, 249, 0.95);
-    top: 60px;
-    left: 0;
+    top: 65px;
+    left: 2rem;
     width: 20%;
     z-index: 101;
   }
@@ -408,7 +528,7 @@ li {
     transform: scale(1.1);
     background-color: #65adcd;
   }
-}
+} */
 
 /* DARK THEME //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 [data-theme="dark"] .nav-bar {
