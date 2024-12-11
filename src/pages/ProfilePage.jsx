@@ -5,7 +5,6 @@ import { useParams, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { TiDeleteOutline } from "react-icons/ti";
 import CreateStoryPage from "./CreateStoryPage";
-
 import "../style/Story.css";
 
 function ProfilePage() {

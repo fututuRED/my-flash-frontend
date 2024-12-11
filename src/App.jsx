@@ -2,15 +2,16 @@ import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignupPage";
-// import LoginPage from "./pages/LoginPage";
 import CreateStoryPage from "./pages/CreateStoryPage";
 import PublicStoriesPage from "./pages/PublicStoriesPage";
 import ProfilePage from "./pages/ProfilePage";
 import StoryPage from "./pages/StoryPage";
 import ErrorPage from "./pages/ErrorPage";
 import AboutPage from "./pages/AboutPage";
+
 import IsLoggedOut from "./components/Routing/isLoggedOut";
 import IsLoggedIn from "./components/Routing/isLoggedIn";
+
 import Footer from "./components/Footer";
 
 import "@picocss/pico";
@@ -39,11 +40,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Navbar
-          // hidden={shouldHideNavbar}
-          // heme={theme}
-          toggleTheme={toggleTheme}
-        />
+        <Navbar toggleTheme={toggleTheme} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/stories" element={<PublicStoriesPage />} />

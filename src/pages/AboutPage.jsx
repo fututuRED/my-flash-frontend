@@ -8,7 +8,6 @@ import "../style/Home.css";
 function AboutPage() {
   return (
     <>
-      {/* <div className="about-page"> */}
       <div className="about">
         <div className="first-section">
           <h2>What?</h2>
@@ -83,7 +82,6 @@ function AboutPage() {
           <div className="warning"></div>
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 }

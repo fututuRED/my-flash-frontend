@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContextWrapper";
 import { Link } from "react-router-dom";
 import service from "../assets/service/api";
-import "../style/Pond.css";
+import "../style/Story.css";
 
 function PublicStoriesPage() {
   const [stories, setStories] = useState([]);

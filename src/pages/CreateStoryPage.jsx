@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-// import { HexColorPicker } from "react-colorful";
+
 import service from "../assets/service/api";
 import { AuthContext } from "../context/AuthContextWrapper";
-import "../style/Create.css";
+import "../style/Story.css";
 
 function CreateStoryPage({ story, onSave }) {
   const [emoticon, setEmoticon] = useState(story?.emoticon || "");
@@ -12,7 +12,7 @@ function CreateStoryPage({ story, onSave }) {
   const [title, setTitle] = useState(story?.title || "");
   const [content, setContent] = useState(story?.content || "");
   const [status, setStatus] = useState(story?.status || "Private");
-  // const [textColor, setTextColor] = useState(story?.textColor || "#000000");
+
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -34,7 +34,7 @@ function CreateStoryPage({ story, onSave }) {
       title,
       content,
       status,
-      // textColor,
+
       author: user._id,
     };
 
@@ -95,9 +95,6 @@ function CreateStoryPage({ story, onSave }) {
                   <span>Loading emojis...</span>
                 )}
               </div>
-
-              {/* <label htmlFor="textColor">Text Color:</label>
-              <HexColorPicker color={textColor} onChange={setTextColor} /> */}
 
               <label htmlFor="content">Content:</label>
               <textarea
