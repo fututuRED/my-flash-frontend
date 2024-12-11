@@ -31,31 +31,33 @@
 }
 /* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.nav-bar.visible {
-  max-height: 500px; /* Adjust based on content size */
-}
+/* .nav-bar.visible {
+  max-height: 500px; 
+} */
 
 .nav-toggle {
   display: none;
-  position: absolute;
-  top: 10px;
-  left: 50px;
-  transform: translateX(-50%);
-  z-index: 102;
 }
+/*
+.nav-bar {
+  display: flex
+  flex-direction: column;
+  transition: max-height 0.3s ease-out;
+  max-height: 0; 
+  overflow: hidden;
+} */
 
 .nav-bar {
-  list-style: none;
-  text-decoration: none;
+  display: flex; /* Show full navbar by default on large screens */
+  flex-direction: row;
+  align-items: center;
   position: sticky;
   top: 0;
-  width: auto;
-  gap: 4rem;
-  box-shadow: 0 2px 4px rgba(149, 149, 149, 0.1);
+  width: 100%;
   padding: 10px 0;
   background-color: rgba(146, 217, 255, 0.2);
   z-index: 101;
-  margin: auto;
+  transition: max-height 0.3s ease-out;
 }
 .nav-bar ul,
 .nav-bar a,
@@ -94,13 +96,13 @@ li .theme-toggle {
 }
 
 /* CONTAINER  //////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.about-container p {
+p {
   color: rgb(250, 91, 17);
   font-size: 1.7rem;
   letter-spacing: 2px;
 }
 
-.about-container h1 {
+h1 {
   font-weight: bolder;
   color: rgb(250, 91, 17);
   background: -webkit-linear-gradient(#535ec0, #852bb2);
@@ -109,18 +111,18 @@ li .theme-toggle {
   margin-bottom: 9rem;
 }
 
-.about-container h1 {
+h1 {
   font-size: 5.5rem;
 }
-.about-container h2 {
+h2 {
   font-size: 2rem;
   color: rgb(29, 65, 112);
 }
-.about-container h3 {
+h3 {
   font-size: 1.4rem;
   color: rgb(209, 138, 244);
 }
-.about-container h4 {
+h4 {
   font-size: 1rem;
 }
 
@@ -193,17 +195,6 @@ li .theme-toggle {
   margin-bottom: 0;
 }
 
-/* .footer {
-  position: static;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #f1f1f1;
-  text-align: center;
-} */
-
 .avatar {
   width: 50px;
   height: 50px;
@@ -229,30 +220,17 @@ a:hover .icon {
 
 /* ABOUT PAGE ////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.about {
-  position: relative;
-  background-image: url("https://media.istockphoto.com/id/1349351147/fr/vectoriel/ic%C3%B4nes-de-puzzle-s%C3%A9rie-classic-line.jpg?s=612x612&w=0&k=20&c=8ouOTW33X-4o7CLdSkaZ4M--3P4s4Kf39pmW1476lrM=");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: #d9eaf0f9;
-  background-blend-mode: screen;
-  width: 100%;
-}
 .about-page h2 {
   color: #1a6e74;
-  font-size: 1.5rem;
 }
 .first-section p,
 .second-section p {
   margin: 0 2rem;
   color: #278284;
-  font-size: 1.2rem;
 }
 .first-section h2,
 .second-section h2,
 .last-section h2 {
-  font-size: 1.5 rem;
   margin-top: 1rem;
 }
 .first-section a {
@@ -288,23 +266,23 @@ li {
 
 /* RESPOSNIVENESS ////////////////////////////////////////////////////////////////////////////////////////////////////////////   */
 @media (max-width: 530px) {
-  .about-container p {
+  p {
     color: rgb(250, 91, 17);
     font-size: 1rem;
     letter-spacing: 2px;
   }
-  .about-container h1 {
+  h1 {
     font-size: 4rem;
   }
-  .about-container h2 {
+  h2 {
     font-size: 2rem;
     color: rgb(29, 65, 112);
   }
-  .about-container h3 {
+  h3 {
     font-size: 1.4rem;
     color: rgb(209, 138, 244);
   }
-  .about-container h4 {
+  h4 {
     font-size: 1.2rem;
   }
 
@@ -320,8 +298,6 @@ li {
     border: 1px solid rgb(67, 109, 153);
     border-radius: 50%;
     padding: 30px;
-    /* margin-top: 1rem;
-    margin-bottom: -1rem; */
     background-color: rgb(67, 109, 153);
     text-align: center;
     z-index: 10;
@@ -381,64 +357,60 @@ li {
   }
 }
 
-/**/
 @media (max-width: 850px) {
-  /* .about-page,
-  body {
-    position: relative;
-    background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
-    background-repeat: repeat;
-    background-size: contain;
-    background-position: center;
-    background-color: #e0d2f4;
-    background-blend-mode: lighten;
-    filter: contrast(90%);
-    width: 100%;
-    padding: 100px;
-    z-index: 1;
-    text-align: right;
-  } */
-  .about-page,
-  body {
-    position: relative;
-    background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: #e0d2f4;
-    background-blend-mode: hard-light, lighten;
-    filter: contrast(70%);
-    width: 100%;
-    padding: 100px;
-    z-index: 1;
-    text-align: right;
-  }
-
   .about-container {
     flex-direction: row;
     align-items: center;
     text-align: center;
   }
-  .about-container h1 {
+  h1 {
     font-size: 3rem;
     margin-top: -4rem;
     margin-bottom: 2rem;
   }
-  .about-container h2 {
+  h2 {
     font-size: 1.6rem;
   }
 
-  .about-container ol {
+  ol {
     font-size: 1rem;
   }
-  .about-container p {
+  p {
     font-size: 1.3rem;
   }
 
-  .about-container h4 {
+  h4 {
     font-size: 1.5rem;
   }
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 102;
+  }
 
+  .nav-bar {
+    display: none; /* Hide full navbar */
+    flex-direction: column;
+    background-color: rgba(224, 227, 249, 0.95);
+    top: 60px; /* Position below the toggle button */
+    left: 0;
+    width: auto; /* Cover the entire width */
+    z-index: 102;
+    overflow: hidden;
+  }
+
+  .nav-bar.visible {
+    display: flex; /* Show nav menu when toggled */
+    max-height: none;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    padding: 0;
+  }
   .login-form {
     width: auto;
     height: auto;
@@ -468,23 +440,6 @@ li {
     font-size: 1.5rem;
   }
 
-  .first-section p,
-  .second-section p {
-    margin: 0 2rem;
-    color: #278284;
-    font-size: 1.4rem;
-  }
-  .first-section h2,
-  .second-section h2,
-  .last-section h2 {
-    color: #1a6e74;
-    font-size: 1.6 rem;
-    margin-top: 1rem;
-  }
-  .first-section a {
-    color: #742f1a;
-  }
-
   .last-section {
     display: inline-block;
     flex-wrap: wrap;
@@ -492,43 +447,6 @@ li {
     margin: 0 rem;
   }
 }
-/**/
-
-/* @media (max-width: 850px) {
-  .nav-toggle {
-    display: block;
-    z-index: 101;
-  }
-
-  .nav-bar {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background-color: rgba(224, 227, 249, 0.95);
-    top: 65px;
-    left: 2rem;
-    width: 20%;
-    z-index: 101;
-  }
-
-  .nav-bar.visible {
-    display: flex;
-    z-index: 101;
-  }
-
-  .nav-bar ul {
-    flex-direction: column;
-    padding: 0;
-    z-index: 101;
-  }
-
-  .nav-bar a:hover {
-    color: #022218;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
-    background-color: #65adcd;
-  }
-} */
 
 /* DARK THEME //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 [data-theme="dark"] .nav-bar {
@@ -547,16 +465,6 @@ li {
   color: #ffffff;
 }
 
-/* [data-theme="dark"] .about-page {
-  position: relative;
-  background-image: url("https://cdn.pixabay.com/photo/2022/12/30/10/47/typewriter-7686633_1280.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: #010101;
-  background-blend-mode: screen;
-  width: 100%;
-} */
 [data-theme="dark"] .about-page::before {
   content: "";
   position: absolute;

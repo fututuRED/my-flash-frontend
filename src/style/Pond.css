@@ -15,15 +15,6 @@
   padding: 0;
 }
 
-body {
-  position: relative;
-  background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: grayscale(50%) brightness(90%);
-  background-position: center;
-  min-height: 100vh;
-}
 .content-story {
   display: none;
 }
@@ -31,7 +22,7 @@ body {
 .content-story.show {
   display: block;
 }
-.pond-page {
+/* .pond-page {
   position: relative;
   background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
   background-repeat: no-repeat;
@@ -50,7 +41,7 @@ body {
   bottom: 0;
 
   z-index: 0;
-}
+} */
 
 .pond-grid {
   position: relative;

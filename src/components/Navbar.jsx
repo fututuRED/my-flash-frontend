@@ -19,7 +19,7 @@ function Navbar({ theme, toggleTheme }) {
         <GiHamburgerMenu />
       </button>
 
-      <nav className={`nav-bar ${isNavVisible ? "visible" : ""}`}>
+      <nav className={`nav-bar ${isNavVisible ? "visible" : " "}`}>
         <ul>
           {!isLoggedIn ? (
             <>

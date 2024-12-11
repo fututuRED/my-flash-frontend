@@ -15,22 +15,6 @@
   padding: 0;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  position: relative;
-  background-image: url("https://images.freeimages.com/images/large-previews/e04/fairy-pond-1393019.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #3f496c;
-  background-blend-mode: lighten;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-}
 .story-form {
   display: flex;
   flex-direction: column;

@@ -53,10 +53,6 @@ body,
     text-decoration: overline;
   }
 
-  .hidden-navbar {
-    display: none;
-  }
-
   /* Indigo Dark scheme (Auto) */
   /* Automatically enabled if user has Dark mode enabled */
   @media only screen and (prefers-color-scheme: dark) {
