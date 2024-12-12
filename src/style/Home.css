@@ -46,7 +46,7 @@ a,
   background: -webkit-linear-gradient(#535ec0, #852bb2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 8rem;
+  margin-bottom: 9rem;
   text-overflow: clip;
   margin-top: 3rem;
 }
@@ -135,7 +135,7 @@ li .theme-toggle {
   border-radius: 50%;
   padding: 40px;
   margin-top: 40px;
-  background-color: rgb(173, 55, 247);
+  background-color: rgb(56, 43, 79);
   text-align: center;
   z-index: 10;
   position: relative;
@@ -185,7 +185,7 @@ li .theme-toggle {
   justify-content: center;
 }
 
-/*SIGN IN    ///////////////////////////////////////////////////////////////*/
+/*SIGN UP   ///////////////////////////////////////////////////////////////*/
 
 .signup-form {
   max-width: 650px;
@@ -193,20 +193,22 @@ li .theme-toggle {
   height: auto;
   margin: 40px auto;
   display: flex;
+  background-color: rgb(158, 230, 100);
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 4px solid rgb(67, 153, 144);
   border-radius: 50%;
   padding: 30px;
-  background-color: rgb(67, 153, 144);
   text-align: center;
   z-index: 10;
   position: relative;
   overflow: hidden;
 }
-.signup-form p {
+.signup-form p,
+.signup-form label {
   font-size: 1rem;
+  color: #003ea2;
 }
 .signup-form a {
   color: rgb(255, 140, 0);
@@ -223,6 +225,7 @@ li .theme-toggle {
 }
 
 .title-sign {
+  color: #0049bf;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -323,7 +326,9 @@ a:hover .icon {
   justify-content: space-around;
   gap: 4rem;
 }
-
+.about-container li {
+  color: #2a2c33;
+}
 /*ERROR PAGE*/
 .error-page {
   display: flex;
