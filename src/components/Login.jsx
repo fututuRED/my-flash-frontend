@@ -13,6 +13,7 @@ function Login() {
   });
   const { storeToken, authenticateUser } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   function handleChange(event) {
     const value = event.currentTarget.value;
