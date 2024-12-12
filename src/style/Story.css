@@ -5,6 +5,26 @@
   margin: 0;
   padding: 0;
 }
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "helvetica nueue", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.about-page {
+  background-position: center;
+  background-color: #c7b8da;
+  background-blend-mode: lighten;
+  filter: contrast(90%);
+  width: 100%;
+  padding: 100px;
+  z-index: 1;
+  text-align: center;
+}
 
 h1 {
   font-size: 4rem;
@@ -26,16 +46,6 @@ label {
   color: #2c2c2c;
 }
 
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: "helvetica nueue", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 .story-link {
   font-size: 1rem;
   text-decoration: underline;
