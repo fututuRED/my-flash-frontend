@@ -74,6 +74,7 @@
   overflow: hidden;
   text-align: center;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .pond-grid h2 a {
@@ -101,6 +102,7 @@
   max-width: 500px;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
 }
 
 .story-form label,
@@ -163,6 +165,7 @@
   height: auto;
   justify-items: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .profile-story-grid-item,
@@ -230,6 +233,7 @@
   width: 80%;
   max-width: 600px;
   box-shadow: 0 4px 8px rgba(147, 142, 142, 0.1);
+  overflow: hidden;
 }
 button[aria-label="Delete"] {
   position: relative;
@@ -264,16 +268,16 @@ button[aria-label="Delete"]:hover::after {
 
 [data-theme="dark"] {
   background-color: #2c2c2c;
-  color: #e0e0e0;
+  color: #fffdfd;
 }
 
 [data-theme="dark"] .pond-grid {
-  border-color: #9ba4c5;
+  border-color: #cdd7ff;
 }
 
 [data-theme="dark"] .pond-tile {
-  border-color: #afb8d7;
-  box-shadow: 0 2px 4px #fff1;
+  border-color: #d3dcfd;
+  box-shadow: 0 2px 4px rgba(255, 154, 154, 0.067);
 }
 
 [data-theme="dark"] .pond-tile-content {
@@ -282,45 +286,45 @@ button[aria-label="Delete"]:hover::after {
 
 [data-theme="dark"] .pond h2 a,
 [data-theme="dark"] .pond a.story {
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 [data-theme="dark"] .pond-tile blockquote {
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 [data-theme="dark"] .emoticon {
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 [data-theme="dark"] .pond {
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 [data-theme="dark"] {
   background-color: #2c2c2c;
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 [data-theme="dark"] .profile-stories-grid,
 [data-theme="dark"] .pond-grid {
-  border-color: #9da7c9;
+  border-color: #c9d5fb;
 }
 [data-theme="dark"] .bg-color-custom {
-  border-color: #475588;
+  border-color: #94acff;
   box-shadow: 0 2px 4px #fff1;
 }
 
 [data-theme="dark"] .profile-story-grid-item,
 [data-theme="dark"] .pond-tile {
-  border-color: #99a7da;
+  border-color: #6b8bff;
   box-shadow: 0 2px 4px #fff1;
 }
 
 [data-theme="dark"] .profile-story-grid-item-content,
 [data-theme="dark"] .pond-tile-content {
   color: #ffffff;
-  background-color: rgba(121, 99, 99, 0.5);
+  background-color: rgba(252, 164, 164, 0.5);
 }
 
 [data-theme="dark"] .profile-stories-grid h2 a,
@@ -330,15 +334,15 @@ button[aria-label="Delete"]:hover::after {
 
 [data-theme="dark"] .profile-story-grid-item blockquote,
 [data-theme="dark"] .pond-tile blockquote {
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 [data-theme="dark"] .emoticon {
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 [data-theme="dark"] .pond {
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -356,6 +360,7 @@ button[aria-label="Delete"]:hover::after {
     width: auto;
     max-width: 500px;
     z-index: 10;
+    overflow: hidden;
   }
 }
 

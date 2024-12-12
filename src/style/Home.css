@@ -35,7 +35,8 @@ body {
 
 p,
 li,
-a {
+a,
+.flash-link {
   color: #373c44;
   font-size: 1.7rem;
   letter-spacing: 2px;
@@ -49,7 +50,8 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 8rem;
-  flex-wrap: wrap;
+  text-overflow: clip;
+  margin-top: 3rem;
 }
 h1 {
   font-size: 5.5rem;
@@ -65,9 +67,6 @@ h3 {
 h4 {
   font-size: 1rem;
 }
-/* li {
-  font-size: 1rem;
-} */
 
 /* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -142,6 +141,7 @@ li .theme-toggle {
   text-align: center;
   z-index: 10;
   position: relative;
+  overflow: hidden;
 }
 
 .login-form a {
@@ -164,7 +164,7 @@ li .theme-toggle {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  font-size: 50px;
+  font-size: 4rem;
   font-weight: bolder;
 }
 
@@ -245,18 +245,19 @@ li .theme-toggle {
 /*FOOTER  //////////////////////////////*/
 
 .footer {
-  position: relative; /* Keeps the footer at the bottom of the viewport */
-  bottom: 0; /* Position it at the bottom */
+  position: relative;
+  bottom: 0;
   left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  height: 11rem;
   background-color: #f1f1f1;
   text-align: center;
   width: 100%;
   z-index: 10;
+  overflow: hidden;
 }
 .footer p {
   font-size: 1rem;
@@ -312,7 +313,7 @@ a:hover .icon {
   background-color: #65adcd;
 }
 
-.about-page ol {
+.about-container ol {
   list-style-type: disc;
   display: inline-flex;
   flex-direction: row;
@@ -373,17 +374,17 @@ a:hover .icon {
   z-index: 1;
 }
 
-[data-theme="dark"] .about-container h1,
+[data-theme="dark"] h1,
 a,
 h4 {
-  color: white;
+  color: #ffffff;
 }
-[data-theme="dark"] .about-container h2 {
-  color: white;
+[data-theme="dark"] h2 {
+  color: #ffffff;
 }
 
-[data-theme="dark"] .about-container p {
-  color: white;
+[data-theme="dark"] p {
+  color: #ffffff;
 }
 [data-theme="dark"] .nav-bar {
   background-color: rgba(44, 44, 44, 0.8);
@@ -391,7 +392,7 @@ h4 {
 }
 
 [data-theme="dark"] .nav-bar a {
-  color: #e0e0e0;
+  color: #ffffff;
   border-color: #475588;
   background-color: rgba(44, 44, 44, 0.7);
 }
@@ -404,12 +405,12 @@ h4 {
 }
 
 [data-theme="dark"] .login-form {
-  border: 4px solid rgb(111, 67, 153);
+  border: 4px solid rgb(159, 120, 195);
   background-color: rgb(133, 74, 188);
 }
 
 [data-theme="dark"] .login-form a:hover {
-  background-color: rgba(255, 140, 0, 0.2);
+  background-color: rgba(255, 158, 39, 0.2);
 }
 
 [data-theme="dark"] .login-form a {
@@ -422,7 +423,7 @@ h4 {
 }
 
 [data-theme="dark"] .login-form a:hover {
-  background-color: rgba(149, 255, 0, 0.2);
+  background-color: rgb(1, 2, 1);
   text-decoration: underline;
 }
 
@@ -437,7 +438,7 @@ h4 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: #0a1818e0;
+  background-color: #060b0be0;
   background-blend-mode: hue;
   width: 100%;
   padding: 50px;
@@ -466,7 +467,8 @@ h4 {
     font-size: 1rem;
   }
   p,
-  li {
+  li,
+  .flash-link {
     font-size: 1.1rem;
   }
   .nav-toggle {
@@ -483,13 +485,13 @@ h4 {
     flex-direction: column;
     background-color: rgba(224, 227, 249, 0.95);
     top: 60px;
-    left: 0;
+    left: 2rem;
     width: 20%;
     z-index: 102;
   }
 
   .nav-bar.visible {
-    display: flex; /* Show nav menu when toggled */
+    display: flex;
     max-height: none;
   }
 
@@ -498,40 +500,11 @@ h4 {
     padding: 0;
   }
   .login-form {
-    width: auto;
-    height: auto;
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 4px solid rgb(67, 109, 153);
-    border-radius: 50%;
     padding: 30px;
-    margin-top: 3rem;
-    margin-bottom: -2rem;
-    background-color: rgb(67, 109, 153);
-    text-align: center;
-    z-index: 10;
-    position: relative;
   }
 
   .signup-form {
     padding: 30px;
-    /* width: auto;
-    height: auto;
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 4px solid rgb(67, 153, 144);
-    border-radius: 50%;
-    padding: 30px;
-    background-color: rgb(67, 153, 144);
-    text-align: center;
-    z-index: 10;
-    position: relative; */
   }
 
   .title-sign {
@@ -574,7 +547,8 @@ h4 {
 
 @media (max-width: 530px) {
   p,
-  li {
+  li,
+  .flash-link {
     font-size: 0.9rem;
   }
 
@@ -590,18 +564,6 @@ h4 {
 
   .signup-form {
     padding: 20px;
-    /* display: inline-flex;
-    flex-direction: column;
-    width: 300px;
-    height: 350px;
-    align-items: center;
-    justify-content: center;
-    border: 4px solid rgb(67, 153, 144);
-    border-radius: 50%;
-    padding: 30px;
-    background-color: rgb(67, 153, 144);
-    text-align: center;
-    z-index: 10; */
   }
   .title-sign {
     font-size: 1.8rem;
@@ -613,16 +575,7 @@ h4 {
     font-size: 1rem;
   }
   .login-form {
-    display: inline-flex;
-    flex-direction: column;
-    width: 300px;
-    height: 350px;
-    border: 1px solid rgb(67, 109, 153);
-    border-radius: 50%;
     padding: 30px;
-    background-color: rgb(67, 109, 153);
-    text-align: center;
-    z-index: 10;
   }
 
   .login-form a {
@@ -640,7 +593,6 @@ h4 {
 
   .title-login {
     font-size: 1rem;
-    color: white;
   }
 
   .input-button {
@@ -668,7 +620,8 @@ h4 {
 
 @media (max-width: 420px) {
   p,
-  li {
+  li,
+  .flash-link {
     font-size: 0.8rem;
   }
 
@@ -683,41 +636,45 @@ h4 {
   }
 
   .signup-form {
-    padding: 40px;
-    display: inline-flex;
-    flex-direction: column;
-    /* 
-    align-items: center;
-    justify-content: center;
-    border: 4px solid rgb(67, 153, 144);
-    border-radius: 50%;
-    padding: 30px;
-    background-color: rgb(67, 153, 144);
-    text-align: center;
-    z-index: 10; */
+    padding: 25px;
+    display: flex;
+    border-radius: 40%;
   }
   .title-sign {
-    font-size: 2rem; /* Reduce size for smaller screens */
+    font-size: 2rem;
   }
 
   .signup-form a,
   .signup-form p {
-    font-size: 1rem; /* Reduce size for smaller screens */
+    font-size: 1rem;
   }
   .login-form {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 150px;
-    border: 1px solid rgb(67, 109, 153);
-    border-radius: 50%;
+    border-radius: 15%;
     padding: 30px;
-    background-color: rgb(67, 109, 153);
-    text-align: center;
-    z-index: 10;
+  }
+  .about-container ol {
+    gap: 2rem;
+  }
+  .footer {
+    display: inline-flex;
+  }
+  .footer p {
+    font-size: 0.8rem;
+  }
+  .avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 5px 0;
   }
 
   .icon {
     font-size: 0.8rem;
+    color: #0a66c2;
+    transition: color 0.3s;
+    cursor: pointer;
   }
 }
