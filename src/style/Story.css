@@ -66,13 +66,14 @@ body {
   box-shadow: 0 2px 4px #0000001a;
   border-radius: 50%;
   width: 100%;
-  max-width: 450px;
-  height: 450px;
+  max-width: 500px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  overflow: scroll;
 }
 
 .pond-tile:hover {
@@ -89,7 +90,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  overflow: scroll;
 }
 
 .pond-grid h2 a {
@@ -118,7 +118,7 @@ body {
   align-items: center;
   border: 2px solid #4860b8;
   border-radius: 10%;
-  padding: 20px;
+  padding: 30px;
   width: 100%;
   max-width: 500px;
   z-index: 10;
@@ -407,14 +407,13 @@ button[aria-label="Delete"]:hover::after {
   .pond-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .profile-story-grid-item,
   .pond-tile {
     width: 300px;
     height: 300px;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   h1 {
     font-size: 2rem;
   }
@@ -434,7 +433,7 @@ button[aria-label="Delete"]:hover::after {
   .pond-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .profile-story-grid-item,
+
   .pond-tile {
     width: 250px;
     height: 250px;

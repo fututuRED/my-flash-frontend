@@ -10,6 +10,7 @@ function AuthContextWrapper({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
+
   const storeToken = (token) => {
     localStorage.setItem("authToken", token);
   };
