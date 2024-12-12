@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContextWrapper";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import service from "../assets/service/api";
 
 import "../style/Home.css";
@@ -28,6 +28,7 @@ function Login() {
       if (response.status === 200) {
         storeToken(response.data.accessToken);
         await authenticateUser();
+        navigate("/profile");
       }
     } catch (error) {
       console.log(error);

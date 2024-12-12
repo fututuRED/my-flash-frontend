@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import service from "../assets/service/api";
 
 export const AuthContext = React.createContext();
@@ -52,6 +53,7 @@ function AuthContextWrapper({ children }) {
   function disconnect() {
     removeToken();
     authenticateUser();
+    navigate("/login");
   }
 
   const contextValues = {

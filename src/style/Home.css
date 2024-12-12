@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"); */
-
 *,
 *::before,
 *::after {
@@ -67,6 +65,28 @@ h4 {
 
 /* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+/* .nav-toggle {
+  display: none; 
+}
+
+.nav-bar {
+  position: sticky; 
+  top: 0;
+  z-index: 101;
+  background-color: rgba(146, 217, 255, 0.2);
+}
+
+.nav-bar.visible .nav-toggle {
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 102; 
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+} */
+
 .nav-toggle {
   display: none;
 }
@@ -80,7 +100,7 @@ h4 {
   width: 100%;
   padding: 10px 0;
   background-color: rgba(146, 217, 255, 0.2);
-  z-index: 101;
+  z-index: 102;
   transition: max-height 0.3s ease-out;
 }
 .nav-bar ul,
@@ -493,7 +513,7 @@ a,
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 102;
+    z-index: 101;
   }
   .nav-bar {
     display: none;
@@ -503,7 +523,7 @@ a,
     top: 60px;
     left: 2rem;
     width: 20%;
-    z-index: 102;
+    z-index: 101;
   }
 
   .nav-bar.visible {
