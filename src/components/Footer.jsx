@@ -10,31 +10,31 @@ function Footer() {
     <div>
       <footer>
         <div className="footer">
-          <img
-            src="https://cdn.vox-cdn.com/thumbor/pRci-DNLZez5I-eoQuY5u6_oJwo=/78x0:1322x933/1520x1013/filters:focal(78x0:1322x933):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55912251/1_tQM0hcRiO1ZWEAj_if-Tzw.0.jpeg"
-            alt="Avatar"
-            className="avatar"
-          />
-          <h4>About Me</h4>
+          <p>©2024 Short-so-short. Site designed by Reda.</p>
           <p>
-            Hello! Im Reda, a passionate developer!
-            <br /> Feel free to have a look at these ➡️
-          </p>{" "}
-          {/* <p>©2024 Short-so-short. All Rights Reserved.</p> */}
-          <a
-            href="https://www.linkedin.com/in/reda-d-76b0942b9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin className="icon" />
-          </a>
-          <a
-            href="https://github.com/fututuRED"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub className="icon" />
-          </a>
+            <img
+              src="https://cdn.vox-cdn.com/thumbor/pRci-DNLZez5I-eoQuY5u6_oJwo=/78x0:1322x933/1520x1013/filters:focal(78x0:1322x933):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55912251/1_tQM0hcRiO1ZWEAj_if-Tzw.0.jpeg"
+              alt="Avatar"
+              className="avatar"
+            />
+            <br />
+            About Me
+            <br />
+            <a
+              href="https://www.linkedin.com/in/reda-d-76b0942b9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="icon" />
+            </a>
+            <a
+              href="https://github.com/fututuRED"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="icon" />
+            </a>
+          </p>
         </div>
       </footer>
     </div>

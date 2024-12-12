@@ -9,11 +9,21 @@ function AboutPage() {
   return (
     <>
       <div className="about">
-        <div className="first-section">
+        <div className="about-container">
+          <h1 className="site-title">
+            SHORT
+            <br />
+            <AiOutlineThunderbolt />
+            so
+            <AiOutlineThunderbolt />
+            <br />
+            short
+          </h1>
+
           <h2>What?</h2>
           <p>
             Ever thought about getting published in the next
-            <i>The Newyorker</i> issue?
+            <i> The Newyorker </i> issue?
             <br /> What?
             <br /> Wouldn't it be nice to share some piece of fiction or
             non-fiction in a very easy and pleasant way?
@@ -22,19 +32,18 @@ function AboutPage() {
             Short-Fiction is a trendy and challenging way to say a few things in
             an efficient way. Have a look at{" "}
             <a
+              className="flash-link"
               href="https://www.flashfictiononline.com/"
               alt="Flashfictiononline site"
               target="_blank"
               rel="noopener noreferrer"
-              className="otherlink"
             >
               Flashfictiononline
             </a>{" "}
             where you'll find great stories, pieces of advice and some stories
             too!
           </p>
-        </div>
-        <div className="second-section">
+
           <h2>About what?</h2>
           <p>
             Giving you the opportunity to access a platform for short-short or
@@ -47,39 +56,36 @@ function AboutPage() {
             <br />
             Sure, right?{" "}
           </p>
-        </div>
-        <div className="last-section">
+
           <h2>How it works?</h2>
 
-          <div className="rules">
-            <ol>
-              <li>
-                <strong>PICK</strong> <br /> a title "␃" <br />
-                an emoticon 🏝️ 🪐 🪢
-              </li>
-              <li>
-                <strong>
-                  TYPE <br />
-                  your story
-                </strong>
-              </li>{" "}
-              <li>
-                either <strong>SHARE </strong> by going <br />
-                PUBLIC 📖
-                <br />
-                or <strong>do NOT! </strong>
-                PRIVATE🔒 <br />
-                It's up to you but...
-                <p>
-                  <strong>
-                    Keep in mind that : <br /> IF YOU GO PUBLIC, <br />
-                    BE RESPECTFUL!!!!!!!{" "}
-                  </strong>
-                </p>
-              </li>
-            </ol>
-          </div>
-          <div className="warning"></div>
+          <ol>
+            <li>
+              <strong>PICK</strong> <br /> a title ("The...)" <br />
+              an emoticon 🏝️ 🪐 🪢
+              <br />
+            </li>
+            <li>
+              <strong>
+                TYPE <br />
+                your story
+              </strong>
+            </li>
+            <li>
+              either <strong>SHARE </strong> by going <br />
+              PUBLIC 📖
+              <br />
+              or <strong>do NOT! </strong>
+              PRIVATE🔒 <br />
+              It's up to you but...
+              <br />
+              Keep in mind that : <br />
+              <strong>
+                IF YOU GO PUBLIC, <br />
+                BE RESPECTFUL!{" "}
+              </strong>{" "}
+            </li>
+          </ol>
         </div>
       </div>
     </>

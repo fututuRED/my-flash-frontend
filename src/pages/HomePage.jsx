@@ -10,7 +10,7 @@ function HomePage() {
     <>
       <div className="about-page">
         <div className="about-container">
-          <h1>
+          <h1 className="site-title">
             SHORT
             <br />
             <AiOutlineThunderbolt />
