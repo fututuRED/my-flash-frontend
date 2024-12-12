@@ -49,7 +49,10 @@ function PublicStoriesPage() {
                   >
                     <p>{oneStory.content}</p>
                     <p>{oneStory.author.username}</p>
-                    <Link className="story" to={`/stories/${oneStory._id}`}>
+                    <Link
+                      className="story-link"
+                      to={`/stories/${oneStory._id}`}
+                    >
                       details
                     </Link>
                   </div>

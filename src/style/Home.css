@@ -314,7 +314,7 @@ a:hover .icon {
 /* ABOUT PAGE ////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .about {
-  position: relativs;
+  position: relative;
   background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
   background-repeat: no-repeat;
   background-size: cover;
