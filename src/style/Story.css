@@ -180,8 +180,7 @@ body {
 
 /*PROFILE*/
 
-.profile-stories-grid,
-.pond-grid {
+.profile-stories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
   gap: 2rem;
@@ -232,11 +231,9 @@ body {
   box-sizing: border-box;
 }
 
-.pond-grid h2 a,
 .profile-stories-grid h2 a {
   text-decoration: none;
   margin-bottom: 2px;
-  color: rgb(16, 38, 53);
 }
 
 .pond-tile blockquote,
@@ -389,11 +386,14 @@ button[aria-label="Delete"]:hover::after {
 }
 
 @media (max-width: 1000px) {
+}
+
+@media (max-width: 768px) {
   h1 {
     font-size: 3rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   h3 {
     font-size: 1.2rem;
@@ -405,21 +405,20 @@ button[aria-label="Delete"]:hover::after {
   li {
     font-size: 1rem;
   }
-  .pond-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
   .pond-tile {
     width: 300px;
     height: 300px;
+    .pond-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
-
-@media (max-width: 500px) {
+@media (max-width: 420px) {
   h1 {
     font-size: 2rem;
   }
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
   h3 {
     font-size: 1.4rem;
@@ -432,10 +431,10 @@ button[aria-label="Delete"]:hover::after {
     font-size: 1rem;
   }
   .pond-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .pond-tile {
-    width: 250px;
-    height: 250px;
+    max-width: 260px;
+    max-height: 260px;
   }
 }
