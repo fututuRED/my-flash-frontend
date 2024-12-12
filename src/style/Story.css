@@ -53,7 +53,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
-  margin: 1rem 2rem;
+  margin: 1rem ;
   width: auto;
   justify-items: center;
   align-items: center;
@@ -70,7 +70,6 @@ body {
   box-shadow: 0 2px 4px #0000001a;
   border-radius: 50%;
   width: 100%;
-  max-width: 500px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -96,7 +95,6 @@ body {
 
 .pond-grid h2 a {
   text-decoration: none;
-
   margin-bottom: 2px;
   color: rgb(54, 106, 140);
 }
@@ -363,6 +361,9 @@ button[aria-label="Delete"]:hover::after {
 [data-theme="dark"] .pond {
   color: #ffffff;
 }
+[data-theme="dark"] .pond-grid {
+  background-color: #2e3778;
+}
 
 [data-theme="dark"] {
   .story-form {
@@ -373,7 +374,7 @@ button[aria-label="Delete"]:hover::after {
     justify-items: center;
     justify-content: center;
     border: 2px solid #4b577f;
-    background-color: rgb(61, 59, 70);
+    background-color: rgb(19, 14, 44);
  
   }
 }
