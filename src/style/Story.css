@@ -54,7 +54,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
-  margin: 1rem;
   width: 100%;
   justify-items: center;
   align-items: center;
@@ -64,9 +63,8 @@ body {
   background-size: cover;
   background-position: center;
   background-color: #b5a1d0;
-  background-blend-mode: lighten;
+  background-blend-mode: screen;
   filter: contrast(90%);
-
   padding: 20px;
   text-align: center;
   z-index: 1;
@@ -372,7 +370,7 @@ button[aria-label="Delete"]:hover::after {
   color: #ffffff;
 }
 [data-theme="dark"] .pond-grid {
-  background-color: #2e3778;
+  background-color: #1b1e37;
 }
 
 [data-theme="dark"] {
