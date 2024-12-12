@@ -56,6 +56,7 @@ body {
   justify-items: center;
   align-items: center;
   row-gap: 1.5rem;
+  background-color: #c5c1ce;
 }
 
 .pond-tile {
@@ -66,8 +67,8 @@ body {
   box-shadow: 0 2px 4px #0000001a;
   border-radius: 50%;
   width: 100%;
-  max-width: 500px;
-  height: 250px;
+  max-width: 400px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
