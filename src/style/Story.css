@@ -20,10 +20,12 @@ h4 {
   font-size: 1.2rem;
 }
 p,
-li {
+li,
+label {
   font-size: 1rem;
   color: #2c2c2c;
 }
+
 body {
   height: 100%;
   margin: 0;
@@ -361,7 +363,9 @@ button[aria-label="Delete"]:hover::after {
 [data-theme="dark"] .pond-tile blockquote {
   color: #ffffff;
 }
-
+[data-theme="dark"] label {
+  color: #ffffff;
+}
 [data-theme="dark"] .emoticon {
   color: #ffffff;
 }
@@ -381,8 +385,8 @@ button[aria-label="Delete"]:hover::after {
     align-content: center;
     justify-items: center;
     justify-content: center;
-    border: 2px solid #4b577f;
-    background-color: rgb(19, 14, 44);
+    border: 2px solid #936ff7;
+    background-color: rgb(100, 77, 194);
   }
 }
 
