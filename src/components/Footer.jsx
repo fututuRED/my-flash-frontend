@@ -4,6 +4,7 @@ import { AiOutlineThunderbolt } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 import "../style/Home.css";
+import { PiX } from "react-icons/pi";
 
 function Footer() {
   return (
@@ -24,6 +25,7 @@ function Footer() {
               href="https://www.linkedin.com/in/reda-d-76b0942b9"
               target="_blank"
               rel="noopener noreferrer"
+              alt="linkedin-link"
             >
               <FaLinkedin className="icon" />
             </a>
@@ -31,6 +33,7 @@ function Footer() {
               href="https://github.com/fututuRED"
               target="_blank"
               rel="noopener noreferrer"
+              alt="github-link"
             >
               <FaGithub className="icon" />
             </a>

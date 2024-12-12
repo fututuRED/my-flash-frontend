@@ -20,11 +20,8 @@ body {
 }
 
 .about-page {
-  background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-  background-color: #b5a1d0;
+  background-color: #c7b8da;
   background-blend-mode: lighten;
   filter: contrast(90%);
   width: 100%;
@@ -37,7 +34,7 @@ p,
 li,
 a,
 .flash-link {
-  color: #373c44;
+  color: #5f94e8;
   font-size: 1.7rem;
   letter-spacing: 2px;
 }
@@ -58,7 +55,7 @@ h1 {
 }
 h2 {
   font-size: 3rem;
-  color: rgb(29, 65, 112);
+  color: rgb(48, 118, 210);
 }
 h3 {
   font-size: 1.4rem;
@@ -101,13 +98,14 @@ li .theme-toggle {
 li .theme-toggle {
   list-style: none;
   text-decoration: none;
-  color: #6491cf;
+  color: #7342c7;
   letter-spacing: 2px;
   font-size: 1rem;
+  font-weight: bolder;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #1f7c74;
+  border: 4px solid #007f90;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -133,11 +131,11 @@ li .theme-toggle {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 4px solid rgb(71, 143, 220);
+  border: 4px solid rgb(150, 185, 223);
   border-radius: 50%;
   padding: 40px;
   margin-top: 40px;
-  background-color: rgb(149, 190, 233);
+  background-color: rgb(173, 55, 247);
   text-align: center;
   z-index: 10;
   position: relative;
@@ -146,7 +144,7 @@ li .theme-toggle {
 
 .login-form a {
   cursor: pointer;
-  color: rgb(35, 173, 159);
+  color: rgb(34, 152, 18);
   font-weight: bold;
   text-decoration: double;
   padding: 5px 10px;
@@ -155,7 +153,7 @@ li .theme-toggle {
 }
 
 .login-form a:hover {
-  background-color: rgba(255, 165, 0, 0.2);
+  background-color: rgb(255, 166, 0);
   text-decoration: underline;
 }
 
@@ -215,7 +213,7 @@ li .theme-toggle {
 }
 
 .signup-form a:hover {
-  background-color: rgba(255, 165, 0, 0.2);
+  background-color: rgb(57, 0, 181);
   text-decoration: underline;
 }
 

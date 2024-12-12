@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContextWrapper";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { TfiLayoutMenuV } from "react-icons/tfi";
 
 import "../style/Home.css";
 
@@ -16,7 +16,9 @@ function Navbar({ theme, toggleTheme }) {
   return (
     <div className="nav-container">
       <button className="nav-toggle" onClick={handleToggle}>
-        <GiHamburgerMenu />
+        <TfiLayoutMenuV />
+        <br />
+        Menu
       </button>
 
       <nav className={`nav-bar ${isNavVisible ? "visible" : " "}`}>
