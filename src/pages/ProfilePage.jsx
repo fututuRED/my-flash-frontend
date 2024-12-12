@@ -69,45 +69,49 @@ function ProfilePage() {
 
   return (
     <>
-      <div className="profile-stories-grid">
-        {editingStory ? (
-          <CreateStoryPage story={editingStory} onSave={handleSave} />
-        ) : profileStories.length > 0 ? (
-          profileStories.map((oneStory) => (
-            <div key={oneStory._id} className="profile-story-grid-item">
-              <button
-                onClick={() => handleDelete(oneStory._id)}
-                aria-label="Delete"
-              >
-                <TiDeleteOutline />
-              </button>
-              <button onClick={() => handleEdit(oneStory)} aria-label="Edit">
-                Edit
-              </button>
-              <h2>
-                <Link className="story" to={`/stories/${oneStory._id}`}>
-                  {oneStory.title}
-                </Link>
-              </h2>
-              <span
-                className="emoticon"
-                dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
-              ></span>
-              <p>{oneStory.content}</p>
-              <label htmlFor={`status-${oneStory._id}`}>Status: </label>
-              <input
-                type="checkbox"
-                name={`status-${oneStory._id}`}
-                id={`status-${oneStory._id}`}
-                checked={oneStory.status === "Public"}
-                onChange={() => handleStatus(oneStory._id, oneStory.status)}
-              />
-              <span>{oneStory.status === "Public" ? "Public" : "Private"}</span>
-            </div>
-          ))
-        ) : (
-          <div>No stories available</div>
-        )}
+      <div className="about-page">
+        <div className="profile-stories-grid">
+          {editingStory ? (
+            <CreateStoryPage story={editingStory} onSave={handleSave} />
+          ) : profileStories.length > 0 ? (
+            profileStories.map((oneStory) => (
+              <div key={oneStory._id} className="profile-story-grid-item">
+                <button
+                  onClick={() => handleDelete(oneStory._id)}
+                  aria-label="Delete"
+                >
+                  <TiDeleteOutline />
+                </button>
+                <button onClick={() => handleEdit(oneStory)} aria-label="Edit">
+                  Edit
+                </button>
+                <h2>
+                  <Link className="story" to={`/stories/${oneStory._id}`}>
+                    {oneStory.title}
+                  </Link>
+                </h2>
+                <span
+                  className="emoticon"
+                  dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
+                ></span>
+                <p>{oneStory.content}</p>
+                <label htmlFor={`status-${oneStory._id}`}>Status: </label>
+                <input
+                  type="checkbox"
+                  name={`status-${oneStory._id}`}
+                  id={`status-${oneStory._id}`}
+                  checked={oneStory.status === "Public"}
+                  onChange={() => handleStatus(oneStory._id, oneStory.status)}
+                />
+                <span>
+                  {oneStory.status === "Public" ? "Public" : "Private"}
+                </span>
+              </div>
+            ))
+          ) : (
+            <div>No stories available</div>
+          )}
+        </div>
       </div>
     </>
   );

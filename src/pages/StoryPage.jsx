@@ -36,33 +36,35 @@ function StoryPage() {
   }
 
   return (
-    <div className="story">
-      {isEditing ? (
-        <CreateStoryPage story={story} onSave={handleSave} />
-      ) : (
-        <div key={story._id}>
-          <h2>{story.title}</h2>
-          <p>{story.content}</p>
-          <span
-            className="emoticon"
-            dangerouslySetInnerHTML={{ __html: story.emoticon }}
-          ></span>
-          <blockquote>
-            by {story.author?.username || "unknown author"}
-          </blockquote>
-          {user._id === story.author._id && (
-            <button onClick={() => setIsEditing(true)}>Edit Story</button>
-          )}
-        </div>
-      )}
-      <button
-        className="btn btn-primary"
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        Back
-      </button>
+    <div className="about-page">
+      <div className="story">
+        {isEditing ? (
+          <CreateStoryPage story={story} onSave={handleSave} />
+        ) : (
+          <div key={story._id}>
+            <h2>{story.title}</h2>
+            <p>{story.content}</p>
+            <span
+              className="emoticon"
+              dangerouslySetInnerHTML={{ __html: story.emoticon }}
+            ></span>
+            <blockquote>
+              by {story.author?.username || "unknown author"}
+            </blockquote>
+            {user._id === story.author._id && (
+              <button onClick={() => setIsEditing(true)}>Edit Story</button>
+            )}
+          </div>
+        )}
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          Back
+        </button>
+      </div>
     </div>
   );
 }

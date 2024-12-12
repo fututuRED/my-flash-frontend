@@ -29,39 +29,41 @@ function PublicStoriesPage() {
   }, []);
   return (
     <>
-      <div className="pond-page">
-        <div className="pond-grid">
-          {stories.length > 0 ? (
-            stories.map((oneStory) => (
-              <div className="pond-tile" key={oneStory._id}>
-                <div>
-                  <h2 onClick={() => toggleContent(oneStory._id)}>
-                    {oneStory.title}
-                  </h2>
-                  <span
-                    className="emoticon"
-                    dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
-                  ></span>
-                  <div
-                    className={`content-story ${
-                      visibleContent[oneStory._id] ? "show" : ""
-                    }`}
-                  >
-                    <p>{oneStory.content}</p>
-                    <p>{oneStory.author.username}</p>
-                    <Link
-                      className="story-link"
-                      to={`/stories/${oneStory._id}`}
+      <div className="about-page">
+        <div className="pond-page">
+          <div className="pond-grid">
+            {stories.length > 0 ? (
+              stories.map((oneStory) => (
+                <div className="pond-tile" key={oneStory._id}>
+                  <div>
+                    <h2 onClick={() => toggleContent(oneStory._id)}>
+                      {oneStory.title}
+                    </h2>
+                    <span
+                      className="emoticon"
+                      dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
+                    ></span>
+                    <div
+                      className={`content-story ${
+                        visibleContent[oneStory._id] ? "show" : ""
+                      }`}
                     >
-                      details
-                    </Link>
+                      <p>{oneStory.content}</p>
+                      <p>{oneStory.author.username}</p>
+                      <Link
+                        className="story-link"
+                        to={`/stories/${oneStory._id}`}
+                      >
+                        details
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))
-          ) : (
-            <div>No stories available</div>
-          )}
+              ))
+            ) : (
+              <div>No stories available</div>
+            )}
+          </div>
         </div>
       </div>
     </>
