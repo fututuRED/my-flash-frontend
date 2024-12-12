@@ -29,7 +29,7 @@ function PublicStoriesPage() {
   }, []);
   return (
     <>
-      <div className="pond-page" data-theme="dark">
+      <div className="pond-page">
         <div className="pond-grid">
           {stories.length > 0 ? (
             stories.map((oneStory) => (
@@ -41,19 +41,14 @@ function PublicStoriesPage() {
                   <span
                     className="emoticon"
                     dangerouslySetInnerHTML={{ __html: oneStory.emoticon }}
-                    style={{ color: oneStory.textColor }}
                   ></span>
                   <div
                     className={`content-story ${
                       visibleContent[oneStory._id] ? "show" : ""
                     }`}
                   >
-                    <p style={{ color: oneStory.textColor }}>
-                      {oneStory.content}
-                    </p>
-                    <p style={{ color: oneStory.textColor }}>
-                      {oneStory.author.username}
-                    </p>
+                    <p>{oneStory.content}</p>
+                    <p>{oneStory.author.username}</p>
                     <Link className="story" to={`/stories/${oneStory._id}`}>
                       details
                     </Link>

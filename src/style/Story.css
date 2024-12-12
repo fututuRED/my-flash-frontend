@@ -10,7 +10,8 @@ h1 {
   font-size: 4rem;
 }
 h2 {
-  font-size: 3rem;
+  color: #2c2c2c;
+  font-size: 1.5rem;
 }
 h3 {
   font-size: 1.5rem;
@@ -21,6 +22,7 @@ h4 {
 p,
 li {
   font-size: 1rem;
+  color: #2c2c2c;
 }
 body {
   height: 100%;
@@ -32,7 +34,10 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.story {
+  font-size: 1rem;
+  text-decoration: underline;
+}
 /*STORIES */
 
 .content-story {
@@ -56,7 +61,7 @@ body {
   justify-items: center;
   align-items: center;
   row-gap: 1.5rem;
-  background-color: #c5c1ce;
+  background-color: #8e62f4;
 }
 
 .pond-tile {
@@ -388,13 +393,13 @@ button[aria-label="Delete"]:hover::after {
     font-size: 3rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   p,
   li {
