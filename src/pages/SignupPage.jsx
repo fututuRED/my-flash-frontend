@@ -43,6 +43,9 @@ function SignUpPage() {
       <div className="about-page">
         <form onSubmit={handleSubmit} className="signup-form">
           <div className="title-sign">SignUp</div>
+          <p>
+            Already have an account? <Link to={"/"}>Login</Link>
+          </p>
           <div className="input-sign">
             <label htmlFor="username">Username: </label>
             <input
@@ -73,12 +76,6 @@ function SignUpPage() {
               onChange={handleChange}
             />
           </div>
-
-          <p className="error">{errorMessage}</p>
-
-          <p>
-            Already have an account? <Link to={"/"}>Login</Link>
-          </p>
           <button className="sign-button">Signup</button>
         </form>
       </div>

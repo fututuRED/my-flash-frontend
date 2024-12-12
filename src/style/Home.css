@@ -3,12 +3,16 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-* {
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   font-family: "Mulish", sans-serif;
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +20,6 @@
 }
 
 .about-page {
-  position: relative;
   background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,7 +48,7 @@ a {
   background: -webkit-linear-gradient(#535ec0, #852bb2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 9rem;
+  margin-bottom: 8rem;
   flex-wrap: wrap;
 }
 h1 {
@@ -178,7 +181,9 @@ li .theme-toggle {
   align-items: center;
   justify-content: center;
 }
-/*SIGN IN*/
+
+/*SIGN IN    ///////////////////////////////////////////////////////////////*/
+
 .signup-form {
   max-width: 650px;
   width: auto;
@@ -190,18 +195,21 @@ li .theme-toggle {
   justify-content: center;
   border: 4px solid rgb(67, 153, 144);
   border-radius: 50%;
-  padding: 40px;
+  padding: 30px;
   background-color: rgb(67, 153, 144);
   text-align: center;
   z-index: 10;
   position: relative;
+  overflow: hidden;
 }
-
+.signup-form p {
+  font-size: 1rem;
+}
 .signup-form a {
   color: rgb(255, 140, 0);
   font-weight: bold;
+  font-size: 1.4rem;
   text-decoration: double;
-  padding: 5px 10px;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -216,7 +224,7 @@ li .theme-toggle {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  font-size: 50px;
+  font-size: 4rem;
   font-weight: bolder;
 }
 
@@ -224,7 +232,7 @@ li .theme-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  height: 3rem;
 }
 
 .input-sign {
@@ -237,7 +245,9 @@ li .theme-toggle {
 /*FOOTER  //////////////////////////////*/
 
 .footer {
-  /* position: absolute; */
+  position: relative; /* Keeps the footer at the bottom of the viewport */
+  bottom: 0; /* Position it at the bottom */
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -245,7 +255,8 @@ li .theme-toggle {
   padding: 20px;
   background-color: #f1f1f1;
   text-align: center;
-  margin-bottom: 0;
+  width: 100%;
+  z-index: 10;
 }
 .footer p {
   font-size: 1rem;
@@ -506,7 +517,8 @@ h4 {
   }
 
   .signup-form {
-    width: auto;
+    padding: 30px;
+    /* width: auto;
     height: auto;
     margin: 10px auto;
     display: flex;
@@ -519,32 +531,35 @@ h4 {
     background-color: rgb(67, 153, 144);
     text-align: center;
     z-index: 10;
-    position: relative;
+    position: relative; */
+  }
+
+  .title-sign {
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+
+  .sign-button {
+    height: 2.4rem;
   }
 }
 @media (max-width: 768px) {
   .signup-form {
     width: auto;
     height: auto;
-    margin: 10px auto;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 4px solid rgb(67, 153, 144);
     border-radius: 50%;
-    padding: 30px;
+    padding: 0.5rem;
     background-color: rgb(67, 153, 144);
     text-align: center;
     z-index: 10;
-    position: relative;
   }
-  .footer {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px;
-    color: rgb(60, 84, 101);
-  }
+
   .icon {
     font-size: 1.5rem;
   }
@@ -574,7 +589,8 @@ h4 {
   }
 
   .signup-form {
-    display: inline-flex;
+    padding: 20px;
+    /* display: inline-flex;
     flex-direction: column;
     width: 300px;
     height: 350px;
@@ -585,7 +601,16 @@ h4 {
     padding: 30px;
     background-color: rgb(67, 153, 144);
     text-align: center;
-    z-index: 10;
+    z-index: 10; */
+  }
+  .title-sign {
+    font-size: 1.8rem;
+    font-weight: bolder;
+  }
+
+  .signup-form a,
+  .signup-form p {
+    font-size: 1rem;
   }
   .login-form {
     display: inline-flex;
@@ -619,7 +644,7 @@ h4 {
   }
 
   .input-button {
-    height: 2rem;
+    height: 1.5rem;
   }
 
   .input-login {
@@ -629,16 +654,11 @@ h4 {
     justify-content: center;
   }
 
-  .footer {
-    position: absolute;
+  .sign-button {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #f1f1f1;
-    text-align: center;
-    margin-bottom: 0;
+    justify-content: center;
+    height: 0.6rem;
   }
 
   .icon {
@@ -662,11 +682,11 @@ h4 {
     font-size: 1.2rem;
   }
 
-  signup-form {
+  .signup-form {
+    padding: 40px;
     display: inline-flex;
     flex-direction: column;
-    width: 150px;
-    height: 200px;
+    /* 
     align-items: center;
     justify-content: center;
     border: 4px solid rgb(67, 153, 144);
@@ -674,7 +694,15 @@ h4 {
     padding: 30px;
     background-color: rgb(67, 153, 144);
     text-align: center;
-    z-index: 10;
+    z-index: 10; */
+  }
+  .title-sign {
+    font-size: 2rem; /* Reduce size for smaller screens */
+  }
+
+  .signup-form a,
+  .signup-form p {
+    font-size: 1rem; /* Reduce size for smaller screens */
   }
   .login-form {
     display: inline-flex;
@@ -688,18 +716,7 @@ h4 {
     text-align: center;
     z-index: 10;
   }
-  .footer {
-    position: absolute;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    background-color: #f1f1f1;
-    text-align: center;
-    margin-bottom: 0;
-  }
   .icon {
     font-size: 0.8rem;
   }
