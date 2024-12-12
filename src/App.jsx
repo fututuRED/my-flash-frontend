@@ -8,7 +8,6 @@ import ProfilePage from "./pages/ProfilePage";
 import StoryPage from "./pages/StoryPage";
 import ErrorPage from "./pages/ErrorPage";
 import AboutPage from "./pages/AboutPage";
-
 import IsLoggedOut from "./components/Routing/isLoggedOut";
 import IsLoggedIn from "./components/Routing/isLoggedIn";
 
@@ -48,7 +47,6 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route element={<IsLoggedOut />}>
             <Route path="/signup" element={<SignUpPage />} />
-            {/* <Route path="/login" element={<LoginPage />} /> */}
           </Route>
           <Route element={<IsLoggedIn />}>
             <Route path="/profile" element={<ProfilePage />} />

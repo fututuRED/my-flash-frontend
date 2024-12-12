@@ -66,8 +66,8 @@ body {
   box-shadow: 0 2px 4px #0000001a;
   border-radius: 50%;
   width: 100%;
-  max-width: 400px;
-  height: 400px;
+  max-width: 450px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,9 +89,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  overflow-y: auto;
-  text-align: center;
-  box-sizing: border-box;
+  overflow: scroll;
 }
 
 .pond-grid h2 a {
@@ -108,7 +106,12 @@ body {
   overflow-wrap: break-word;
 }
 /*CREATE FORM */
-
+.story-form-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  min-height: 100vh; /* Ensures the parent container takes up the full viewport height */
+}
 .story-form {
   display: flex;
   flex-direction: column;
