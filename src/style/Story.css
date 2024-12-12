@@ -110,9 +110,9 @@ body {
 /*CREATE FORM */
 .story-form-container {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  min-height: 100vh; /* Ensures the parent container takes up the full viewport height */
+  justify-content: center;
+  align-items: center; 
+  min-height: 100vh; 
 }
 .story-form {
   display: flex;
@@ -372,19 +372,13 @@ button[aria-label="Delete"]:hover::after {
     align-content: center;
     justify-items: center;
     justify-content: center;
-    border: 2px solid #d3ddff;
-    background-color: gray;
-    border-radius: 10%;
-    padding: 20px;
-    width: auto;
-    max-width: 500px;
-    z-index: 10;
-    overflow: hidden;
+    border: 2px solid #4b577f;
+    background-color: rgb(61, 59, 70);
+ 
   }
 }
 
-@media (max-width: 1000px) {
-}
+
 
 @media (max-width: 768px) {
   h1 {
@@ -403,9 +397,7 @@ button[aria-label="Delete"]:hover::after {
   li {
     font-size: 1rem;
   }
-  .pond-tile {
-    width: 300px;
-    height: 300px;
+
     .pond-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -431,8 +423,5 @@ button[aria-label="Delete"]:hover::after {
   .pond-grid {
     grid-template-columns: 1fr;
   }
-  .pond-tile {
-    max-width: 260px;
-    max-height: 260px;
-  }
+
 }
