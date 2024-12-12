@@ -54,13 +54,13 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
-  margin: 1rem ;
+  margin: 1rem;
   width: 100%;
   justify-items: center;
   align-items: center;
   row-gap: 1.5rem;
-  background-image:url("https://images.unsplash.com/photo-1725714871731-024c4047bc3e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG55bXBoJUMzJUE5YXN8ZW58MHx8MHx8fDI%3D");
- background-repeat: no-repeat;
+  background-image: url("https://images.unsplash.com/photo-1725714871731-024c4047bc3e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG55bXBoJUMzJUE5YXN8ZW58MHx8MHx8fDI%3D");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #b5a1d0;
@@ -119,8 +119,8 @@ body {
 .story-form-container {
   display: flex;
   justify-content: center;
-  align-items: center; 
-  min-height: 100vh; 
+  align-items: center;
+  min-height: 100vh;
 }
 .story-form {
   display: flex;
@@ -385,11 +385,8 @@ button[aria-label="Delete"]:hover::after {
     justify-content: center;
     border: 2px solid #4b577f;
     background-color: rgb(19, 14, 44);
- 
   }
 }
-
-
 
 @media (max-width: 768px) {
   h1 {
@@ -409,11 +406,11 @@ button[aria-label="Delete"]:hover::after {
     font-size: 1rem;
   }
 
-    .pond-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .pond-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 420px) {
   h1 {
     font-size: 2rem;
@@ -434,5 +431,4 @@ button[aria-label="Delete"]:hover::after {
   .pond-grid {
     grid-template-columns: 1fr;
   }
-
 }
