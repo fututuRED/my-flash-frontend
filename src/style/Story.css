@@ -67,13 +67,12 @@ body {
   border-radius: 50%;
   width: 100%;
   max-width: 500px;
-  height: 500px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  overflow: scroll;
 }
 
 .pond-tile:hover {
@@ -90,6 +89,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
+  overflow: hidden;
 }
 
 .pond-grid h2 a {
@@ -188,8 +188,7 @@ body {
   align-items: center;
 }
 
-.profile-story-grid-item,
-.pond-tile {
+.profile-story-grid-item {
   position: relative;
   overflow: hidden;
   width: 50%;
@@ -210,13 +209,11 @@ body {
   box-sizing: border-box;
 }
 
-.pond-tile:hover,
 .profile-story-grid-item:hover {
   transform: scale(1.05);
 }
 
-.profile-story-grid-item-content,
-.pond-tile-content {
+.profile-story-grid-item-content {
   top: 0;
   left: 0;
   width: 100%;

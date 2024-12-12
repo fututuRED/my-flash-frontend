@@ -54,7 +54,7 @@ function AuthContextWrapper({ children }) {
   function disconnect() {
     removeToken();
     authenticateUser();
-    navigate("/login");
+    navigate("/");
   }
 
   const contextValues = {
