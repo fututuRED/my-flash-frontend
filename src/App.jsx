@@ -10,13 +10,11 @@ import ErrorPage from "./pages/ErrorPage";
 import AboutPage from "./pages/AboutPage";
 import IsLoggedOut from "./components/Routing/isLoggedOut";
 import IsLoggedIn from "./components/Routing/isLoggedIn";
-
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import "@picocss/pico";
 import "./App.css";
-
-import Navbar from "./components/Navbar";
 
 function App() {
   const defaultTheme = localStorage.getItem("theme") || "light";
@@ -32,9 +30,6 @@ function App() {
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };
-
-  const hideNavbarRoutes = ["/signup", "/login", "/home", "/create-story"];
-  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
 
   return (
     <>
