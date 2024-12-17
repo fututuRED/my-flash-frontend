@@ -109,7 +109,7 @@ function ProfilePage() {
               </div>
             ))
           ) : (
-            <div>
+            <div className="create-nav">
               <p>You have no stories yet.</p>
               <a href="/create-story">Create a story</a>
             </div>

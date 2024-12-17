@@ -315,7 +315,12 @@ button[aria-label="Delete"]:hover::after {
   color: #eceeff;
   text-decoration: dotted;
 }
-
+[data-theme="dark"] .create-nav {
+  z-index: 10;
+}
+[data-theme="dark"] .create-nav a {
+  color: #a4b7f4;
+}
 [data-theme="dark"] .pond-grid {
   border-color: #cdd7ff;
 }
