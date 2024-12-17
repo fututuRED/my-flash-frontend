@@ -31,7 +31,7 @@ function PublicStoriesPage() {
   if (!stories.length) {
     return (
       <>
-        <a href="#" aria-busy="true">
+        <a className="loading" href="#" aria-busy="true">
           Loading the artworks, please wait…
         </a>
       </>

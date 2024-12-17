@@ -36,6 +36,9 @@ a,
   font-size: 1.7rem;
   letter-spacing: 2px;
 }
+.about-container li {
+  color: #020102;
+}
 
 .site-title {
   font-size: 5rem;
@@ -390,6 +393,9 @@ h4 {
 li,
 a,
 .flash-link {
+  color: #f9f9ff;
+}
+[data-theme="dark"] .about-container li {
   color: #f9f9ff;
 }
 [data-theme="dark"] .nav-bar {
