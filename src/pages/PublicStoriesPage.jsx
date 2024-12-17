@@ -27,6 +27,17 @@ function PublicStoriesPage() {
   useEffect(() => {
     fetchStories();
   }, []);
+
+  if (!stories.length) {
+    return (
+      <>
+        <a href="#" aria-busy="true">
+          Loading the artworks, please wait…
+        </a>
+      </>
+    );
+  }
+
   return (
     <>
       <div className="about-page">

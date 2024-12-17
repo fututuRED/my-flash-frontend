@@ -109,7 +109,10 @@ function ProfilePage() {
               </div>
             ))
           ) : (
-            <div>No stories available</div>
+            <div>
+              <p>You have no stories yet.</p>
+              <a href="/create-story">Create a story</a>
+            </div>
           )}
         </div>
       </div>

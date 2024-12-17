@@ -32,7 +32,11 @@ function StoryPage() {
   }
 
   if (!story) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <span aria-busy="true">loading...</span>
+      </div>
+    );
   }
 
   return (
@@ -51,7 +55,7 @@ function StoryPage() {
             <blockquote>
               by {story.author?.username || "unknown author"}
             </blockquote>
-            {user._id === story.author._id && (
+            {user && user._id === story.author._id && (
               <button onClick={() => setIsEditing(true)}>Edit Story</button>
             )}
           </div>
