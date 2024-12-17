@@ -32,7 +32,7 @@ p,
 li,
 a,
 .flash-link {
-  color: #5f94e8;
+  /* color: #5f94e8; */
   font-size: 1.7rem;
   letter-spacing: 2px;
 }
@@ -407,7 +407,7 @@ a,
   color: #ffffff;
 }
 [data-theme="dark"] .nav-toggle {
-  display: none;
+  display: block;
   position: absolute;
   color: #c867ee;
 }
@@ -499,6 +499,11 @@ a,
     left: 50%;
     transform: translateX(-50%);
     z-index: 101;
+  }
+
+  [data-theme="dark"].nav-toggle {
+    display: block;
+    color: #b953e2;
   }
   .nav-bar {
     display: none;
