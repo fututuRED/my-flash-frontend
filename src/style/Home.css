@@ -508,7 +508,7 @@ a,
   }
 
   [data-theme="dark"].nav-toggle {
-    display: block;
+    display: none;
     color: #b953e2;
   }
   .nav-bar {
@@ -548,6 +548,7 @@ a,
     height: 2.4rem;
   }
 }
+
 @media (max-width: 768px) {
   .signup-form {
     width: auto;
@@ -648,6 +649,10 @@ a,
   .icon {
     font-size: 1rem;
   }
+  [data-theme="dark"].nav-toggle {
+    display: block;
+    color: #b953e2;
+  }
 }
 
 @media (max-width: 420px) {
@@ -708,5 +713,9 @@ a,
     color: #2c7ccd;
     transition: color 0.3s;
     cursor: pointer;
+  }
+  [data-theme="dark"].nav-toggle {
+    display: block;
+    color: #b953e2;
   }
 }
