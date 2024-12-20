@@ -64,28 +64,6 @@ label {
   display: block;
 }
 
-/* .pond-grid {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-  width: 100%;
-  justify-items: center;
-  align-items: center;
-  row-gap: 1.5rem;
-  background-image: url("https://images.unsplash.com/photo-1725714871731-024c4047bc3e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG55bXBoJUMzJUE5YXN8ZW58MHx8MHx8fDI%3D");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: #b5a1d0;
-  background-blend-mode: screen;
-  filter: contrast(90%);
-  padding: 20px;
-  text-align: center;
-  z-index: 1;
-} */
-
 .pond-tile {
   position: relative;
   overflow: hidden;
