@@ -19,6 +19,7 @@ function Footer() {
             <a
               href="https://www.linkedin.com/in/reda-d-76b0942b9"
               data-tooltip="LinkedIn"
+              data-placement="bottom"
               target="_blank"
               rel="noopener noreferrer"
               alt="linkedin-link"
@@ -28,6 +29,7 @@ function Footer() {
             <a
               href="https://github.com/fututuRED"
               data-tooltip="Github"
+              data-placement="bottom"
               target="_blank"
               rel="noopener noreferrer"
               alt="github-link"
