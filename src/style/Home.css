@@ -500,7 +500,8 @@ a,
   .nav-toggle {
     display: block;
     position: absolute;
-    color: #442152;
+    background-color: #b953e2;
+    color: #fefbff;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
