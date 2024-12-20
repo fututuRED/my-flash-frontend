@@ -2,11 +2,76 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
     <link rel="stylesheet" href="/src/style/Home.css" />
     <link rel="stylesheet" href="/src/style/Story.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore and create short-short fiction or flash fiction in a flexible environment. Use our web-notebook to write up to 300 words, pick a title and emoticon, and choose to share your story publicly or privately. Join the community and write with creativity and respect!"
+    />
     <title>short-so-short</title>
+    <style>
+      .about {
+        position: relative;
+        background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: #b5a1d0;
+        background-blend-mode: lighten;
+        filter: contrast(90%);
+        width: 100%;
+        padding: 20px;
+        z-index: 1;
+        text-align: center;
+      }
+      [data-theme="dark"] .about {
+        position: relative;
+        background-image: url("https://media.istockphoto.com/id/1349351147/fr/vectoriel/ic%C3%B4nes-de-puzzle-s%C3%A9rie-classic-line.jpg?s=612x612&w=0&k=20&c=8ouOTW33X-4o7CLdSkaZ4M--3P4s4Kf39pmW1476lrM=");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: #060b0be0;
+        background-blend-mode: hue;
+        width: 100%;
+        padding: 50px;
+        z-index: 1;
+        text-align: center;
+      }
+      .pond-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+        row-gap: 1.5rem;
+        background-image: url("https://images.unsplash.com/photo-1725714871731-024c4047bc3e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG55bXBoJUMzJUE5YXN8ZW58MHx8MHx8fDI%3D");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: #b5a1d0;
+        background-blend-mode: screen;
+        filter: contrast(90%);
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+      }
+      .error-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        background-image: url("https://cdn.pixabay.com/photo/2020/11/30/18/14/smpte-color-bars-5791787_1280.png");
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

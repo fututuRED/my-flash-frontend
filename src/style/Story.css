@@ -64,7 +64,7 @@ label {
   display: block;
 }
 
-.pond-grid {
+/* .pond-grid {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -84,7 +84,7 @@ label {
   padding: 20px;
   text-align: center;
   z-index: 1;
-}
+} */
 
 .pond-tile {
   position: relative;

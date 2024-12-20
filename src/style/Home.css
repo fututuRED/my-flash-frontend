@@ -294,7 +294,7 @@ a:hover .icon {
 
 /* ABOUT PAGE ////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.about {
+/* .about {
   position: relative;
   background-image: url("https://media.istockphoto.com/id/475803452/fr/photo/nouveau-chapitre-de-lhistoire-de-machine-%C3%A0-%C3%A9crire.jpg?s=612x612&w=0&k=20&c=NmvgKHnigK_mqy6CcmDhlVCpB5KtuicsSQzkloQHlVc=");
   background-repeat: no-repeat;
@@ -307,7 +307,7 @@ a:hover .icon {
   padding: 20px;
   z-index: 1;
   text-align: center;
-}
+} */
 
 .flash-link {
   text-decoration: wavy;
@@ -331,7 +331,7 @@ a:hover .icon {
   color: #2a2c33;
 }
 /*ERROR PAGE*/
-.error-page {
+/* .error-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -341,7 +341,7 @@ a:hover .icon {
   background-size: cover;
   text-align: center;
   background-image: url("https://cdn.pixabay.com/photo/2020/11/30/18/14/smpte-color-bars-5791787_1280.png");
-}
+} */
 
 /* DARK THEME //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 [data-theme="dark"] .nav-bar {
@@ -375,7 +375,7 @@ a:hover .icon {
   position: relative;
   background-position: center;
   background-color: #020102;
-  /* background-blend-mode: darken; */
+
   width: 100%;
   z-index: 1;
 }
@@ -456,7 +456,7 @@ a,
   background-color: rgb(121, 153, 67);
 }
 
-[data-theme="dark"] .about {
+/* [data-theme="dark"] .about {
   position: relative;
   background-image: url("https://media.istockphoto.com/id/1349351147/fr/vectoriel/ic%C3%B4nes-de-puzzle-s%C3%A9rie-classic-line.jpg?s=612x612&w=0&k=20&c=8ouOTW33X-4o7CLdSkaZ4M--3P4s4Kf39pmW1476lrM=");
   background-repeat: no-repeat;
@@ -468,7 +468,7 @@ a,
   padding: 50px;
   z-index: 1;
   text-align: center;
-}
+} */
 
 /* RESPOSNIVENESS ////////////////////////////////////////////////////////////////////////////////////////////////////////////   */
 
@@ -650,11 +650,6 @@ a,
   .icon {
     font-size: 1rem;
   }
-  /* [data-theme="dark"].nav-toggle {
-    display: block;
-    color: #ffffff;
-    background-color: #442152;
-  } */
 }
 
 @media (max-width: 420px) {
