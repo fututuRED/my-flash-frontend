@@ -509,7 +509,7 @@ a,
   }
 
   [data-theme="dark"].nav-toggle {
-    display: none;
+    display: block;
     color: #ffffff;
   }
   .nav-bar {
@@ -653,6 +653,7 @@ a,
   [data-theme="dark"].nav-toggle {
     display: block;
     color: #ffffff;
+    background-color: #442152;
   }
 }
 
@@ -716,6 +717,7 @@ a,
     cursor: pointer;
   }
   .nav-toggle {
+    display: block;
     background-color: #6e1b8f;
     color: #fefbff;
   }
