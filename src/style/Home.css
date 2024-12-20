@@ -714,6 +714,10 @@ a,
     transition: color 0.3s;
     cursor: pointer;
   }
+  .nav-toggle {
+    background-color: #b141dd;
+    color: white;
+  }
   [data-theme="dark"].nav-toggle {
     display: block;
     color: #b953e2;
