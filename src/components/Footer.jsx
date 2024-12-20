@@ -22,7 +22,7 @@ function Footer() {
               data-placement="bottom"
               target="_blank"
               rel="noopener noreferrer"
-              alt="linkedin-link"
+              aria-label="Visit my LinkedIn profile"
             >
               <FaLinkedin className="icon" />
             </a>
@@ -32,7 +32,7 @@ function Footer() {
               data-placement="bottom"
               target="_blank"
               rel="noopener noreferrer"
-              alt="github-link"
+              aria-label="Visit my GitHub"
             >
               <FaGithub className="icon" />
             </a>
