@@ -500,8 +500,10 @@ a,
   .nav-toggle {
     display: block;
     position: absolute;
-    background-color: #b953e2;
+    background-color: #6e1b8f;
     color: #fefbff;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -716,8 +718,8 @@ a,
     cursor: pointer;
   }
   .nav-toggle {
-    background-color: #b141dd;
-    color: white;
+    background-color: #6e1b8f;
+    color: #fefbff;
   }
   [data-theme="dark"].nav-toggle {
     display: block;
