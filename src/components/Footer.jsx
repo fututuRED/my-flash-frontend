@@ -20,9 +20,9 @@ function Footer() {
               href="https://www.linkedin.com/in/reda-d-76b0942b9"
               data-tooltip="LinkedIn"
               data-placement="bottom"
+              aria-label="Visit my LinkedIn profile"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Visit my LinkedIn profile"
             >
               <FaLinkedin className="icon" />
             </a>
@@ -30,9 +30,9 @@ function Footer() {
               href="https://github.com/fututuRED"
               data-tooltip="Github"
               data-placement="bottom"
+              aria-label="Visit my GitHub"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Visit my GitHub"
             >
               <FaGithub className="icon" />
             </a>
