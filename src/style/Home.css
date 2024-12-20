@@ -508,10 +508,10 @@ a,
     z-index: 101;
   }
 
-  [data-theme="dark"].nav-toggle {
+  /* [data-theme="dark"].nav-toggle {
     display: block;
     color: #ffffff;
-  }
+  } */
   .nav-bar {
     display: none;
     position: absolute;
@@ -650,11 +650,11 @@ a,
   .icon {
     font-size: 1rem;
   }
-  [data-theme="dark"].nav-toggle {
+  /* [data-theme="dark"].nav-toggle {
     display: block;
     color: #ffffff;
     background-color: #442152;
-  }
+  } */
 }
 
 @media (max-width: 420px) {
